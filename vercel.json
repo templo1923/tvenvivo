@@ -1,16 +1,8 @@
 {
-  "builds": [
+  "rewrites": [
     {
-      "src": "api/proxy.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.json",
-      "use": "@vercel/static"
+      "source": "/proxy/:path*",
+      "destination": "http://:path*"
     }
   ]
 }
