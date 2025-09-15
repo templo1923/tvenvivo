@@ -1,4 +1,4 @@
-// /api/proxy.js
+// /api/proxy.js - VERSIÓN ACTUALIZADA
 const fetch = require('node-fetch');
 
 module.exports = async (req, res) => {
