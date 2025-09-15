@@ -1603,7 +1603,7 @@
         // Función para obtener URL a través del proxy
         function getProxiedUrl(url) {
             // Si ya es una URL local o relativa, no usar proxy
-            if (url.startsWith('/') || url.startsWith(window.location.origin) || url.startsWith('data:')) {
+            if (url.startsWith('/api/proxy') || url.startsWith(window.location.origin) || url.startsWith('data:')) {
                 return url;
             }
             
@@ -2795,3 +2795,4 @@
     </script>
 </body>
 </html>
+
