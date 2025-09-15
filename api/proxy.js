@@ -1,9 +1,11 @@
-// /api/proxy.js - VERSIÓN CORREGIDA
+// /api/proxy.js
+// --- VERSIÓN FINAL Y LIMPIA ---
+
 const fetch = require('node-fetch');
 const { URL } = require('url');
 
 module.exports = async (req, res) => {
-  // Habilitar CORS
+  // 1. Configuración de CORS para permitir que tu página web use este proxy
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
@@ -12,102 +14,78 @@ module.exports = async (req, res) => {
     'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
   );
 
-  // Manejar solicitudes OPTIONS para CORS
+  // El navegador envía una solicitud OPTIONS primero, la aceptamos y terminamos
   if (req.method === 'OPTIONS') {
     res.status(200).end();
     return;
   }
 
+  // 2. Obtener la URL del canal que queremos ver
   const { url } = req.query;
-
   if (!url) {
     return res.status(400).send('Falta el parámetro "url"');
   }
 
   try {
     const decodedUrl = decodeURIComponent(url);
-    
-    console.log('Solicitando URL:', decodedUrl);
 
+    // 3. Hacer la solicitud al servidor de streaming original
     const response = await fetch(decodedUrl, {
       headers: {
-        'Referer': 'https://tutv.plus/',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': '*/*',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate',
-      },
-      timeout: 10000,
+        'Referer': 'https://google.com/', // Un Referer genérico ayuda a evitar bloqueos
+        'User-Agent': req.headers['user-agent'] || 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      }
     });
 
     if (!response.ok) {
-      console.error('Error en respuesta:', response.status, response.statusText);
       return res.status(response.status).send(`Error ${response.status}: ${response.statusText}`);
     }
     
-    // Obtener el contenido y tipo
-    const contentType = response.headers.get('content-type');
-    const content = await response.text();
+    const contentType = response.headers.get('content-type') || '';
     
-    if (contentType && contentType.includes('application/vnd.apple.mpegurl')) {
-      console.log('Procesando archivo M3U8');
-      
-      // Es un archivo M3U8 - procesar para reescribir URLs
+    // 4. Revisar si es una lista de reproducción M3U8
+    if (contentType.includes('application/vnd.apple.mpegurl') || contentType.includes('application/x-mpegURL')) {
+      const m3u8Content = await response.text();
       const baseUrl = new URL(decodedUrl);
       const origin = `${baseUrl.protocol}//${baseUrl.host}`;
       
-      const processedContent = content
+      const processedContent = m3u8Content
         .split('\n')
         .map(line => {
-          // Ignorar líneas vacías o comentarios
-          if (!line.trim() || line.startsWith('#')) {
-            return line;
-          }
-          
-          // Si es un segmento (TS o m3u8) y no es una URL absoluta
-          if ((line.endsWith('.ts') || line.includes('.m3u8')) && !line.startsWith('http')) {
+          // Si la línea es una ruta relativa (no comentario, no vacía, no URL completa)
+          if (line.trim() && !line.startsWith('#') && !line.startsWith('http')) {
             let segmentUrl;
-            
             if (line.startsWith('/')) {
-              // URL absoluta en el mismo dominio
+              // Si empieza con "/", la unimos al origen (ej: http://server.com/ruta.ts)
               segmentUrl = `${origin}${line}`;
             } else {
-              // URL relativa - construir path completo
+              // Si no, la unimos a la ruta base (ej: http://server.com/live/ruta.ts)
               const pathParts = baseUrl.pathname.split('/');
-              pathParts.pop(); // Remover el nombre del archivo actual
+              pathParts.pop();
               const basePath = pathParts.join('/');
               segmentUrl = `${origin}${basePath}/${line}`;
             }
-            
-            console.log('Reescribiendo segmento:', line, '->', `/api/proxy?url=${encodeURIComponent(segmentUrl)}`);
+            // Devolvemos la ruta, pero apuntando a nuestro propio proxy
             return `/api/proxy?url=${encodeURIComponent(segmentUrl)}`;
           }
-          
+          // Devolvemos la línea sin cambios (comentarios, URLs absolutas, etc.)
           return line;
         })
         .join('\n');
       
       res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
-      res.setHeader('Cache-Control', 'public, max-age=60');
       res.status(200).send(processedContent);
-      
-    } else if (contentType && contentType.includes('video/mp2t')) {
-      // Es un segmento TS - servir directamente
-      res.setHeader('Content-Type', 'video/mp2t');
-      res.setHeader('Cache-Control', 'public, max-age=300');
-      res.status(200).send(content);
-      
+
     } else {
-      // Otro tipo de contenido
+      // 5. Si no es una lista M3U8 (ej. un segmento .ts), lo pasamos directamente
       if (contentType) {
         res.setHeader('Content-Type', contentType);
       }
-      res.setHeader('Cache-Control', 'public, max-age=300');
-      res.status(200).send(content);
+      response.body.pipe(res);
     }
 
   } catch (error) {
-    console.error('Error en el proxy:', error);
-    res.status(500).send('Error al contactar el servidor de streaming: ' + error.message);
+    console.error('Error fatal en el proxy:', error);
+    res.status(500).send('Error en el servidor proxy: ' + error.message);
   }
 };
