@@ -1600,14 +1600,7 @@
         let streamCache = JSON.parse(localStorage.getItem('streamCache')) || {};
         let currentView = localStorage.getItem('viewPreference') || 'grid';
 
-        // Nuevo: Servidores proxy para evitar CORS
-        const PROXY_SERVERS = [
-            'https://corsproxy.io/?',
-            'https://api.codetabs.com/v1/proxy?quest=',
-            'https://cors-anywhere.herokuapp.com/'
-        ];
-        let currentProxyIndex = 0;
-
+        
         // Función para obtener URL a través de proxy
         function getProxiedUrl(url) {
             // Si ya es una URL local o relativa, no usar proxy
@@ -1619,17 +1612,22 @@
             if (url.includes('canales_organizados.json')) {
                 return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
             }
+
+            // Si es una URL HTTP, usar nuestro proxy de Vercel
+            if (url.startsWith('http://')) {
+                const encodedUrl = encodeURIComponent(url);
+                return `/api/proxy?url=${encodedUrl}`;
+             }
+            // Para HTTPS, usar directamente (no necesita proxy)
+            return url;
+        }
+           
             
             // Para streams, intentar sin proxy primero, luego con proxy si falla
             return url;
         }
 
-        // Función para rotar proxy si falla
-        function rotateProxy() {
-            currentProxyIndex = (currentProxyIndex + 1) % PROXY_SERVERS.length;
-            console.log(`Cambiando a proxy: ${PROXY_SERVERS[currentProxyIndex]}`);
-        }
-
+       
         // Función para cargar canales desde JSON (MODIFICADA)
         async function cargarCanales() {
             if (canalesCargados) return;
@@ -1637,44 +1635,19 @@
             try {
                 mostrarLoading(true);
                 
-                // Intentar cargar desde múltiples ubicaciones
-                const posiblesUbicaciones = [
-                    'canales_organizados.json',
-                    '/canales_organizados.json',
-                    './canales_organizados.json',
-                    'https://raw.githubusercontent.com/tu_usuario/tu_repo/main/canales_organizados.json'
-                ];
-                
-                let response = null;
-                let lastError = null;
-                
-                for (let i = 0; i < posiblesUbicaciones.length; i++) {
-                    try {
-                        const url = getProxiedUrl(posiblesUbicaciones[i]);
-                        console.log(`Intentando cargar canales desde: ${url}`);
-                        
-                        response = await fetch(url);
-                        if (response.ok) {
-                            todosCanales = await response.json();
-                            console.log('Canales cargados exitosamente desde:', posiblesUbicaciones[i]);
-                            break;
-                        }
-                    } catch (error) {
-                        lastError = error;
-                        console.error(`Error cargando desde ${posiblesUbicaciones[i]}:`, error);
-                        
-                        // Rotar proxy para el próximo intento
-                        if (i < posiblesUbicaciones.length - 1) {
-                            rotateProxy();
-                        }
-                    }
+                // MODIFICACIÓN: Usar proxy para cargar el JSON
+                 const jsonUrl = getProxiedUrl('canales_organizados.json');
+                console.log('Cargando canales desde:', jsonUrl);
+
+                const response = await fetch(jsonUrl);
+                if (!response.ok) {
+                    throw new Error('No se pudo cargar el archivo de canales');
                 }
-                
-                if (!response || !response.ok) {
-                    throw lastError || new Error('No se pudo cargar el archivo de canales desde ninguna ubicación');
-                }
-                
+
+                todosCanales = await response.json();
                 canalesCargados = true;
+                         
+                
                 
                 crearBotonesCategorias();
                 
@@ -2265,9 +2238,21 @@
         }
 
         // Función para cambiar de canal
-        function cambiarCanal(url, nombre, categoria, logo) {
-            console.log('Reproduciendo:', nombre, 'URL:', url);
-            changeChannel(url, nombre, categoria);
+        const proxiedUrl = getProxiedUrl(currentUrl);
+        console.log('Reproduciendo a través de proxy:', proxiedUrl);
+
+        if (Hls.isSupported()) {
+            currentHls = new Hls({
+                debug: false,
+                enableWorker: true,
+                lowLatencyMode: true,
+                 backBufferLength: 90
+        });
+
+            currentHls.loadSource(proxiedUrl); // ← Usar la URL con proxy
+            currentHls.attachMedia(video);
+            
+             changeChannel(url, nombre, categoria);
             
             document.querySelector('.channel-details').innerHTML = `
                 <p><i class="fas fa-info-circle"></i> ${nombre}</p>
@@ -2887,4 +2872,5 @@
     </script>
 </body>
 </html>
+
 
