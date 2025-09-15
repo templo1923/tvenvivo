@@ -46,17 +46,60 @@ module.exports = async (req, res) => {
       return res.status(response.status).send(`Error ${response.status}: ${response.statusText}`);
     }
     
-    // Copiar las cabeceras importantes del stream original
+    // Obtener el contenido
     const contentType = response.headers.get('content-type');
-    if (contentType) {
-      res.setHeader('Content-Type', contentType);
+    
+    if (contentType && contentType.includes('application/vnd.apple.mpegurl')) {
+      // Es un archivo M3U8 - necesitamos procesarlo para reescribir las URLs
+      const m3u8Content = await response.text();
+      
+      // Reescribir las URLs de los segmentos para que pasen por el proxy
+      const baseUrl = new URL(decodedUrl);
+      const origin = `${baseUrl.protocol}//${baseUrl.host}`;
+      
+      const processedContent = m3u8Content
+        .split('\n')
+        .map(line => {
+          // Si es un segmento TS y no comienza con http (es relativo)
+          if (line.endsWith('.ts') && !line.startsWith('http')) {
+            // Construir la URL completa del segmento
+            let segmentUrl;
+            if (line.startsWith('/')) {
+              // URL absoluta
+              segmentUrl = `${origin}${line}`;
+            } else {
+              // URL relativa
+              const pathParts = baseUrl.pathname.split('/');
+              pathParts.pop(); // Quitar el nombre del archivo m3u8
+              const basePath = pathParts.join('/');
+              segmentUrl = `${origin}${basePath}/${line}`;
+            }
+            
+            // Codificar la URL y devolver la versión con proxy
+            return `/api/proxy?url=${encodeURIComponent(segmentUrl)}`;
+          }
+          return line;
+        })
+        .join('\n');
+      
+      // Configurar headers
+      res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+      res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
+      
+      // Enviar el contenido procesado
+      res.status(200).send(processedContent);
+    } else {
+      // Es otro tipo de contenido (TS, etc.) - enviar directamente
+      if (contentType) {
+        res.setHeader('Content-Type', contentType);
+      }
+      
+      // Configurar headers de caching
+      res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
+      
+      // Pipe la respuesta
+      response.body.pipe(res);
     }
-    
-    // Configurar headers de caching
-    res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
-    
-    // Pipe la respuesta
-    response.body.pipe(res);
 
   } catch (error) {
     console.error('Error en el proxy:', error);
