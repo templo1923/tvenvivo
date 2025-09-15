@@ -1600,80 +1600,39 @@
         let streamCache = JSON.parse(localStorage.getItem('streamCache')) || {};
         let currentView = localStorage.getItem('viewPreference') || 'grid';
 
-        // Nuevo: Servidores proxy para evitar CORS
-        const PROXY_SERVERS = [
-            'https://corsproxy.io/?',
-            'https://api.codetabs.com/v1/proxy?quest=',
-            'https://cors-anywhere.herokuapp.com/'
-        ];
-        let currentProxyIndex = 0;
-
-        // Función para obtener URL a través de proxy
+        // Función para obtener URL a través del proxy
         function getProxiedUrl(url) {
             // Si ya es una URL local o relativa, no usar proxy
             if (url.startsWith('/') || url.startsWith(window.location.origin) || url.startsWith('data:')) {
                 return url;
             }
             
-            // Para el archivo JSON de canales, usar proxy
-            if (url.includes('canales_organizados.json')) {
-                return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
+            // Si es una URL HTTP, usar nuestro proxy de Vercel
+            if (url.startsWith('http://')) {
+                const encodedUrl = encodeURIComponent(url);
+                return `/api/proxy?url=${encodedUrl}`;
             }
             
-            // Para streams, intentar sin proxy primero, luego con proxy si falla
+            // Para HTTPS, usar directamente (no necesita proxy)
             return url;
         }
 
-        // Función para rotar proxy si falla
-        function rotateProxy() {
-            currentProxyIndex = (currentProxyIndex + 1) % PROXY_SERVERS.length;
-            console.log(`Cambiando a proxy: ${PROXY_SERVERS[currentProxyIndex]}`);
-        }
-
-        // Función para cargar canales desde JSON (MODIFICADA)
+        // Función para cargar canales desde JSON
         async function cargarCanales() {
             if (canalesCargados) return;
             
             try {
                 mostrarLoading(true);
                 
-                // Intentar cargar desde múltiples ubicaciones
-                const posiblesUbicaciones = [
-                    'canales_organizados.json',
-                    '/canales_organizados.json',
-                    './canales_organizados.json',
-                    'https://raw.githubusercontent.com/tu_usuario/tu_repo/main/canales_organizados.json'
-                ];
+                // Usar proxy para cargar el JSON si es necesario
+                const jsonUrl = getProxiedUrl('canales_organizados.json');
                 
-                let response = null;
-                let lastError = null;
-                
-                for (let i = 0; i < posiblesUbicaciones.length; i++) {
-                    try {
-                        const url = getProxiedUrl(posiblesUbicaciones[i]);
-                        console.log(`Intentando cargar canales desde: ${url}`);
-                        
-                        response = await fetch(url);
-                        if (response.ok) {
-                            todosCanales = await response.json();
-                            console.log('Canales cargados exitosamente desde:', posiblesUbicaciones[i]);
-                            break;
-                        }
-                    } catch (error) {
-                        lastError = error;
-                        console.error(`Error cargando desde ${posiblesUbicaciones[i]}:`, error);
-                        
-                        // Rotar proxy para el próximo intento
-                        if (i < posiblesUbicaciones.length - 1) {
-                            rotateProxy();
-                        }
-                    }
+                const response = await fetch(jsonUrl);
+                if (!response.ok) {
+                    throw new Error('No se pudo cargar el archivo de canales');
                 }
                 
-                if (!response || !response.ok) {
-                    throw lastError || new Error('No se pudo cargar el archivo de canales desde ninguna ubicación');
-                }
-                
+                todosCanales = await response.json();
                 canalesCargados = true;
                 
                 crearBotonesCategorias();
@@ -1718,108 +1677,13 @@
             }
         }
 
-        // Función para crear botones de categorías
-        function crearBotonesCategorias() {
-            const contenedor = document.getElementById('section-buttons');
-            if (!contenedor) return;
-            
-            contenedor.innerHTML = '';
-            
-            Object.keys(todosCanales).forEach(categoria => {
-                if (todosCanales[categoria].length > 0) {
-                    const boton = document.createElement('div');
-                    boton.className = 'section-button';
-                    boton.innerHTML = `<i class="fas fa-folder"></i> ${categoria}`;
-                    boton.onclick = () => {
-                        showingFavorites = false;
-                        document.querySelectorAll('.section-button').forEach(b => b.classList.remove('active'));
-                        boton.classList.add('active');
-                        mostrarCategoria(categoria);
-                        
-                        setTimeout(() => {
-                            smoothScrollTo('channels-container');
-                        }, 100);
-                    };
-                    contenedor.appendChild(boton);
-                }
-            });
-            
-            if (contenedor.firstChild) {
-                contenedor.firstChild.classList.add('active');
-            }
-            
-            setTimeout(adjustCategoryScroll, 100);
-        }
-
-        // Función para mostrar canales de una categoría
-        function mostrarCategoria(categoria) {
-            const canales = todosCanales[categoria];
-            if (!canales) return;
-            
-            document.querySelectorAll('.channel-list').forEach(el => {
-                el.style.display = 'none';
-            });
-            
-            const seccionId = `categoria-${categoria.replace(/\W+/g, '-').toLowerCase()}`;
-            let seccion = document.getElementById(seccionId);
-            
-            if (!seccion) {
-                seccion = document.createElement('div');
-                seccion.id = seccionId;
-                seccion.className = 'channel-list';
-                document.getElementById('channels-container').appendChild(seccion);
-            }
-            
-            seccion.innerHTML = `
-                <h2><i class="fas fa-folder"></i> ${categoria}</h2>
-                <div class="channel-grid"></div>
-            `;
-            
-            const grid = seccion.querySelector('.channel-grid');
-            canales.forEach(canal => {
-                const item = document.createElement('div');
-                item.className = 'channel-item';
-                
-                const logoSrc = canal.logo || canal['tvg-logo'] || '';
-                const channelId = `${categoria}-${canal.nombre}`;
-                const isFavorite = favorites[channelId] !== undefined;
-                
-                item.innerHTML = `
-                    <div class="image-container">
-                        <img src="${logoSrc}" 
-                             alt="${canal.nombre}" 
-                             onerror="handleImageError(this)">
-                        <div class="favorite-icon ${isFavorite ? 'active' : ''}" onclick="toggleFavorite('${canal.nombre}', '${categoria}', event)">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="channel-name">${canal.nombre}</div>
-                    <div class="channel-description">${categoria}</div>
-                `;
-                
-                const streamUrl = canal.url || canal.link || '';
-                item.onclick = () => {
-                    cambiarCanal(streamUrl, canal.nombre, categoria, logoSrc);
-                    toggleChannels();
-                    
-                    setTimeout(() => {
-                        smoothScrollTo('player-container');
-                    }, 300);
-                };
-                grid.appendChild(item);
-            });
-            
-            seccion.style.display = 'block';
-        }
-
-        // Función para cambiar de canal (MODIFICADA)
+        // Función para cambiar de canal usando proxy
         function changeChannel(videoUrl, channelName, channelDescription) {
             // Verificar conexión antes de intentar cargar un canal
             if (!navigator.onLine) {
                 mostrarError('No hay conexión a internet. No se puede cargar el canal.');
                 return;
             }
-            
             
             document.getElementById('loading').style.display = 'flex';
             document.getElementById('error-message').style.display = 'none';
@@ -1861,135 +1725,85 @@
             video.pause();
             video.src = '';
             
-            // Nuevo: Intentar con múltiples URLs si es necesario
-            const streamUrls = [
-                videoUrl,
-                ...(videoUrl.startsWith('http:') ? [videoUrl.replace('http:', 'https:')] : []),
-                ...(videoUrl.startsWith('https:') ? [videoUrl.replace('https:', 'http:')] : [])
-            ];
+            // Usar URL a través del proxy
+            const proxiedUrl = getProxiedUrl(videoUrl);
+            console.log('Reproduciendo a través de proxy:', proxiedUrl);
             
-            let currentStreamIndex = 0;
-            
-            function tryNextStream() {
-                if (currentStreamIndex >= streamUrls.length) {
-                    mostrarError('No se pudo conectar al canal con ninguna URL disponible.');
-                    return;
-                }
+            if (Hls.isSupported()) {
+                currentHls = new Hls({
+                    debug: false,
+                    enableWorker: true,
+                    lowLatencyMode: true,
+                    backBufferLength: 90
+                });
                 
-                const currentUrl = streamUrls[currentStreamIndex];
-                console.log(`Intentando stream ${currentStreamIndex + 1}/${streamUrls.length}: ${currentUrl}`);
+                currentHls.loadSource(proxiedUrl);
+                currentHls.attachMedia(video);
                 
-                // Verificar si está en caché
-                const cachedStream = getFromStreamCache(currentUrl);
-                if (cachedStream && Hls.isSupported()) {
-                    currentHls = new Hls({
-                        debug: false,
-                        enableWorker: true,
-                        lowLatencyMode: true,
-                        backBufferLength: 90
+                currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    document.getElementById('loading').style.display = 'none';
+                    retryCount = 0;
+                    
+                    document.querySelector('.channel-details').innerHTML = `
+                        <p><i class="fas fa-info-circle"></i> ${channelName}</p>
+                        <p><i class="fas fa-film"></i> Calidad: HD</p>
+                        <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
+                        <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
+                    `;
+                    
+                    video.play().catch(e => {
+                        mostrarError('Error al reproducir: ' + e.message);
                     });
                     
-                    currentHls.loadSource(cachedStream);
-                    currentHls.attachMedia(video);
-                    
-                    currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
-                        document.getElementById('loading').style.display = 'none';
-                        retryCount = 0;
-                        
-                        document.querySelector('.channel-details').innerHTML = `
-                            <p><i class="fas fa-info-circle"></i> ${channelName}</p>
-                            <p><i class="fas fa-film"></i> Calidad: HD</p>
-                            <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
-                            <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
-                        `;
-                        
-                        video.play().catch(e => {
-                            mostrarError('Error al reproducir: ' + e.message);
-                        });
-                        
-                        playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
-                    });
-                } else if (Hls.isSupported()) {
-                    currentHls = new Hls({
-                        debug: false,
-                        enableWorker: true,
-                        lowLatencyMode: true,
-                        backBufferLength: 90
-                    });
-                    
-                    currentHls.loadSource(currentUrl);
-                    currentHls.attachMedia(video);
-                    
-                    currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
-                        addToStreamCache(currentUrl, currentUrl);
-                        document.getElementById('loading').style.display = 'none';
-                        retryCount = 0;
-                        
-                        document.querySelector('.channel-details').innerHTML = `
-                            <p><i class="fas fa-info-circle"></i> ${channelName}</p>
-                            <p><i class="fas fa-film"></i> Calidad: HD</p>
-                            <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
-                            <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
-                        `;
-                        
-                        video.play().catch(e => {
-                            mostrarError('Error al reproducir: ' + e.message);
-                        });
-                        
-                        playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
-                    });
-                    
-                    currentHls.on(Hls.Events.ERROR, function(event, data) {
-                        console.error('Error HLS:', data);
-                        if (data.fatal) {
-                            switch(data.type) {
-                                case Hls.ErrorTypes.NETWORK_ERROR:
-                                    currentStreamIndex++;
-                                    setTimeout(tryNextStream, 1000);
-                                    break;
-                                case Hls.ErrorTypes.MEDIA_ERROR:
-                                    mostrarError('Error de medio. Recargando...');
-                                    currentHls.recoverMediaError();
-                                    break;
-                                default:
-                                    currentStreamIndex++;
-                                    setTimeout(tryNextStream, 1000);
-                                    break;
-                            }
+                    playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
+                });
+                
+                currentHls.on(Hls.Events.ERROR, function(event, data) {
+                    console.error('Error HLS:', data);
+                    if (data.fatal) {
+                        switch(data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                mostrarError('Error de red. Intentando reconectar...');
+                                setTimeout(() => tryReconnect(videoUrl, channelName, channelDescription), 3000);
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                mostrarError('Error de medio. Recargando...');
+                                currentHls.recoverMediaError();
+                                break;
+                            default:
+                                mostrarError('Error irreparable. Cambiando de canal...');
+                                break;
                         }
-                    });
-                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                    video.src = currentUrl;
-                    video.addEventListener('loadedmetadata', function() {
-                        addToStreamCache(currentUrl, currentUrl);
-                        document.getElementById('loading').style.display = 'none';
-                        retryCount = 0;
-                        
-                        document.querySelector('.channel-details').innerHTML = `
-                            <p><i class="fas fa-info-circle"></i> ${channelName}</p>
-                            <p><i class="fas fa-film"></i> Calidad: HD</p>
-                            <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
-                            <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
-                        `;
-                        
-                        video.play().catch(e => {
-                            mostrarError('Error al reproducir: ' + e.message);
-                        });
-                        
-                        playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
+                    }
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Para Safari
+                video.src = proxiedUrl;
+                video.addEventListener('loadedmetadata', function() {
+                    document.getElementById('loading').style.display = 'none';
+                    retryCount = 0;
+                    
+                    document.querySelector('.channel-details').innerHTML = `
+                        <p><i class="fas fa-info-circle"></i> ${channelName}</p>
+                        <p><i class="fas fa-film"></i> Calidad: HD</p>
+                        <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
+                        <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
+                    `;
+                    
+                    video.play().catch(e => {
+                        mostrarError('Error al reproducir: ' + e.message);
                     });
                     
-                    video.addEventListener('error', function() {
-                        currentStreamIndex++;
-                        setTimeout(tryNextStream, 1000);
-                    });
-                } else {
-                    mostrarError("Tu navegador no soporta la reproducción de este formato.");
-                }
+                    playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
+                });
+                
+                video.addEventListener('error', function() {
+                    mostrarError('Error al cargar el video. Intentando reconectar...');
+                    setTimeout(() => tryReconnect(videoUrl, channelName, channelDescription), 3000);
+                });
+            } else {
+                mostrarError("Tu navegador no soporta la reproducción de este formato.");
             }
-            
-            // Comenzar con el primer stream
-            tryNextStream();
             
             currentChannel = {
                 url: videoUrl,
@@ -1998,7 +1812,7 @@
             };
         }
 
-        // Función para manejar errores de carga de imágenes (MEJORADA)
+        // Función para manejar errores de carga de imágenes
         function handleImageError(img) {
             img.onerror = null;
             
@@ -2314,6 +2128,100 @@
                     smoothScrollTo('player-container');
                 }, 100);
             }
+        }
+
+        // Función para crear botones de categorías
+        function crearBotonesCategorias() {
+            const contenedor = document.getElementById('section-buttons');
+            if (!contenedor) return;
+            
+            contenedor.innerHTML = '';
+            
+            Object.keys(todosCanales).forEach(categoria => {
+                if (todosCanales[categoria].length > 0) {
+                    const boton = document.createElement('div');
+                    boton.className = 'section-button';
+                    boton.innerHTML = `<i class="fas fa-folder"></i> ${categoria}`;
+                    boton.onclick = () => {
+                        showingFavorites = false;
+                        document.querySelectorAll('.section-button').forEach(b => b.classList.remove('active'));
+                        boton.classList.add('active');
+                        mostrarCategoria(categoria);
+                        
+                        setTimeout(() => {
+                            smoothScrollTo('channels-container');
+                        }, 100);
+                    };
+                    contenedor.appendChild(boton);
+                }
+            });
+            
+            if (contenedor.firstChild) {
+                contenedor.firstChild.classList.add('active');
+            }
+            
+            setTimeout(adjustCategoryScroll, 100);
+        }
+
+        // Función para mostrar canales de una categoría
+        function mostrarCategoria(categoria) {
+            const canales = todosCanales[categoria];
+            if (!canales) return;
+            
+            document.querySelectorAll('.channel-list').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            const seccionId = `categoria-${categoria.replace(/\W+/g, '-').toLowerCase()}`;
+            let seccion = document.getElementById(seccionId);
+            
+            if (!seccion) {
+                seccion = document.createElement('div');
+                seccion.id = seccionId;
+                seccion.className = 'channel-list';
+                document.getElementById('channels-container').appendChild(seccion);
+            }
+            
+            seccion.innerHTML = `
+                <h2><i class="fas fa-folder"></i> ${categoria}</h2>
+                <div class="channel-grid"></div>
+            `;
+            
+            const grid = seccion.querySelector('.channel-grid');
+            canales.forEach(canal => {
+                const item = document.createElement('div');
+                item.className = 'channel-item';
+                
+                const logoSrc = canal.logo || canal['tvg-logo'] || '';
+                const channelId = `${categoria}-${canal.nombre}`;
+                const isFavorite = favorites[channelId] !== undefined;
+                
+                item.innerHTML = `
+                    <div class="image-container">
+                        <img src="${logoSrc}" 
+                             alt="${canal.nombre}" 
+                             onerror="handleImageError(this)">
+                        <div class="favorite-icon ${isFavorite ? 'active' : ''}" onclick="toggleFavorite('${canal.nombre}', '${categoria}', event)">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="channel-name">${canal.nombre}</div>
+                    <div class="channel-description">${categoria}</div>
+                `;
+                
+                const streamUrl = canal.url || canal.link || '';
+                item.onclick = () => {
+                    cambiarCanal(streamUrl, canal.nombre, categoria, logoSrc);
+                    toggleChannels();
+                    
+                    setTimeout(() => {
+                        smoothScrollTo('player-container');
+                    }, 300);
+                };
+                grid.appendChild(item);
+            });
+            
+            seccion.style.display = 'block';
         }
 
         // Inicializar búsqueda
@@ -2887,3 +2795,4 @@
     </script>
 </body>
 </html>
+
