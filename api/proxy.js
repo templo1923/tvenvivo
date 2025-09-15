@@ -50,17 +50,54 @@ module.exports = async (req, res) => {
     const content = await response.text();
     
     if (contentType && contentType.includes('application/vnd.apple.mpegurl')) {
+      const m3u8Content = await response.text();
+      const baseUrl = new URL(decodedUrl);
+      const origin = `${baseUrl.protocol}//${baseUrl.host}`;
+      
       console.log('Procesando archivo M3U8');
       
       // Es un archivo M3U8 - procesar para reescribir URLs
       const baseUrl = new URL(decodedUrl);
       const origin = `${baseUrl.protocol}//${baseUrl.host}`;
       
-      const processedContent = content
+      const processedContent = m3u8Content
         .split('\n')
         .map(line => {
           // Ignorar líneas vacías o comentarios
-          if (!line.trim() || line.startsWith('#')) {
+          if (line.trim() && !line.startsWith('#') && !line.startsWith('http')) {
+            let segmentUrl;
+            if (line.startsWith('/')) {
+              // Ruta absoluta desde el origen del streaming
+              segmentUrl = `${origin}${line}`;
+            } else {
+               // Ruta relativa al path del M3U8
+              const pathParts = baseUrl.pathname.split('/');
+              pathParts.pop(); // Quitar el nombre del archivo m3u8
+              const basePath = pathParts.join('/');
+              segmentUrl = `${origin}${basePath}/${line}`;
+            }
+            // Devolver la URL completa pasando por nuestro proxy
+            return `/api/proxy?url=${encodeURIComponent(segmentUrl)}`;
+          }
+          // Si no es una ruta o ya es una URL completa, devolverla sin cambio
+          return line;
+        })
+        .join('\n');
+
+      // Configurar headers para la respuesta
+      res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+      res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
+
+      // Enviar el contenido procesado
+      res.status(200).send(processedContent);
+    } else {
+      // Es otro tipo de contenido (TS, etc.) - enviar directamente
+       if (contentType) {
+          res.setHeader('Content-Type', contentType);
+          }
+       res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
+        response.body.pipe(res);
+       }              
             return line;
           }
           
@@ -111,3 +148,4 @@ module.exports = async (req, res) => {
     res.status(500).send('Error al contactar el servidor de streaming: ' + error.message);
   }
 };
+
