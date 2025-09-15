@@ -1601,21 +1601,26 @@
         let currentView = localStorage.getItem('viewPreference') || 'grid';
 
         // Función para obtener URL a través del proxy
-        function getProxiedUrl(url) {
-            // Si ya es una URL local o relativa, no usar proxy
-            if (url.startsWith('/api/proxy') || url.startsWith(window.location.origin) || url.startsWith('data:')) {
-                return url;
-            }
-            
-            // Si es una URL HTTP, usar nuestro proxy de Vercel
-            if (url.startsWith('http://')) {
-                const encodedUrl = encodeURIComponent(url);
-                return `/api/proxy?url=${encodedUrl}`;
-            }
-            
-            // Para HTTPS, usar directamente (no necesita proxy)
-            return url;
-        }
+function getProxiedUrl(url) {
+  // Si ya es una URL de proxy, no hacer nada
+  if (url.includes('/api/proxy?')) {
+    return url;
+  }
+  
+  // Si es una URL local o de mismo origen, no usar proxy
+  if (url.startsWith('/') || url.startsWith(window.location.origin) || url.startsWith('data:')) {
+    return url;
+  }
+  
+  // Si es una URL HTTP, usar proxy
+  if (url.startsWith('http://')) {
+    const encodedUrl = encodeURIComponent(url);
+    return `/api/proxy?url=${encodedUrl}`;
+  }
+  
+  // Para HTTPS, usar directamente
+  return url;
+}
 
         // Función para cargar canales desde JSON
         async function cargarCanales() {
@@ -2795,4 +2800,5 @@
     </script>
 </body>
 </html>
+
 
