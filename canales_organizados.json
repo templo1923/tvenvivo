@@ -1,1681 +1,2718 @@
 {
-  "🇨🇴 | COLOMBIA": [
+  "📺 Entretenimiento": [
     {
-      "nombre": "CO | Win Sports + ²",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Win%2B_F%C3%BAtbol_logo.svg/1200px-Win%2B_F%C3%BAtbol_logo.svg.png",
-      "url": "http://m3u.tvcluboficial.com/free/Isroir/IYh/43.m3u8"
+      "nombre": "A&E",
+      "logo": "https://img.tvcluboficial.com/ae.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/5.m3u8"
     },
     {
-      "nombre": "CO |  Win Sports + ³ ★",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Win%2B_F%C3%BAtbol_logo.svg/1200px-Win%2B_F%C3%BAtbol_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639548.m3u8"
+      "nombre": "A&E (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/ae.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/4.m3u8"
     },
     {
-      "nombre": "CO | Win Sports ¹ ★",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDVUunYUp8mfxTy2aHFZDG_BN9697t1PZDkSRPq2_Fd68u261vfZGUmej24YqML73yR0g&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639566.m3u8"
+      "nombre": "A&E HD",
+      "logo": "https://img.tvcluboficial.com/ae.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/8.m3u8"
     },
     {
-      "nombre": "CO |  Win Sports 2 *",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDVUunYUp8mfxTy2aHFZDG_BN9697t1PZDkSRPq2_Fd68u261vfZGUmej24YqML73yR0g&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639586.m3u8"
+      "nombre": "A+",
+      "logo": "https://img.tvcluboficial.com/aplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/9.m3u8"
     },
     {
-      "nombre": "CO | CARACOL INTERNACIONAL ᴴᴰ¹ ★",
-      "logo": "https://i.postimg.cc/zBdCSb4L/ESTOESTV-Caracol-Internacional2025.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639555.m3u8"
+      "nombre": "AMC",
+      "logo": "https://img.tvcluboficial.com/amc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/29.m3u8"
     },
     {
-      "nombre": "CO | CARACOL INTERNACIONAL ᴴᴰ²",
-      "logo": "https://i.postimg.cc/zBdCSb4L/ESTOESTV-Caracol-Internacional2025.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/801442.m3u8"
+      "nombre": "AMC (ES)",
+      "logo": "https://img.tvcluboficial.com/amc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/32.m3u8"
     },
     {
-      "nombre": "CO | RCN Plus •",
-      "logo": "https://i.postimg.cc/vmdY2gP9/ESTOESTV-RCN-PLUS.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/712722.m3u8"
+      "nombre": "AMC HD",
+      "logo": "https://img.tvcluboficial.com/amc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/33.m3u8"
     },
     {
-      "nombre": "CO | RCN NUESTRA TELE",
-      "logo": "https://i.postimg.cc/1tm9sx13/ESTOESTV-RCN-NUESTRA-TELE.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639565.m3u8"
+      "nombre": "AXN",
+      "logo": "https://img.tvcluboficial.com/axn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/54.m3u8"
     },
     {
-      "nombre": "CO | RCN Internacional •",
-      "logo": "https://i.postimg.cc/NMdQ0NQ7/ESTOESTV-RCN-INTERNACIONAL.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639550.m3u8"
+      "nombre": "AXN (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/axn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/57.m3u8"
     },
     {
-      "nombre": "CO | Cable Noticias HD",
-      "logo": "https://i.ibb.co/bPRRSwz/2702583238-9448b8b50f-b.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639581.m3u8"
+      "nombre": "AXN HD",
+      "logo": "https://img.tvcluboficial.com/axn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/58.m3u8"
     },
     {
-      "nombre": "CO | CALI TV ²",
-      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiiU7PFtco6GXMBltQTNGYBSBOdNnhYImFOLUN3k1y5e6aiqmwpRXDSWTJFIhiBiv9dEqRz1QFgzLdhVgA6g2A3jMoZILxaMkYrJTaBEdifGRLoh6ToG9gvR3oW5CQnwFIDuLNN1IRQLOchrI1GAhFYYIe6AxbvlY-NvbcXmTsFZc3u4LVKObvugM5/s540/cali-tv-plus-canalroku.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/749747.m3u8"
+      "nombre": "AXN HD (ES)",
+      "logo": "https://img.tvcluboficial.com/axn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/59.m3u8"
     },
     {
-      "nombre": "CO | CALI TV ¹",
-      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiiU7PFtco6GXMBltQTNGYBSBOdNnhYImFOLUN3k1y5e6aiqmwpRXDSWTJFIhiBiv9dEqRz1QFgzLdhVgA6g2A3jMoZILxaMkYrJTaBEdifGRLoh6ToG9gvR3oW5CQnwFIDuLNN1IRQLOchrI1GAhFYYIe6AxbvlY-NvbcXmTsFZc3u4LVKObvugM5/s540/cali-tv-plus-canalroku.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/749751.m3u8"
+      "nombre": "AXN WHITE HD (ES)",
+      "logo": "https://img.tvcluboficial.com/axn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/61.m3u8"
     },
     {
-      "nombre": "CO | Canal Capital",
-      "logo": "https://i.ibb.co/m0240zw/d91de5fba5abcb668b41cf5fc6bcecd1.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639588.m3u8"
+      "nombre": "Comedy Central",
+      "logo": "https://img.tvcluboficial.com/comedycentral.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/216.m3u8"
     },
     {
-      "nombre": "CO | Canal TRO",
-      "logo": "https://i.ibb.co/cTdD5Ys/fcanal-tro.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639587.m3u8"
+      "nombre": "Comedy Central (ES)",
+      "logo": "https://img.tvcluboficial.com/comedycentral.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/219.m3u8"
     },
     {
-      "nombre": "CO | Canal Uno ¹",
-      "logo": "https://i.ibb.co/NW5Dwrr/canal-1.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639572.m3u8"
+      "nombre": "Comedy Central HD",
+      "logo": "https://img.tvcluboficial.com/comedycentral.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/220.m3u8"
     },
     {
-      "nombre": "CO | CANAL Uno ¹",
-      "logo": "https://i.ibb.co/NW5Dwrr/canal-1.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/775595.m3u8"
+      "nombre": "E!",
+      "logo": "https://img.tvcluboficial.com/e.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/333.m3u8"
     },
     {
-      "nombre": "CO | City TV ²",
-      "logo": "https://i.ibb.co/K20WpbN/citytv.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639576.m3u8"
+      "nombre": "E! HD",
+      "logo": "https://img.tvcluboficial.com/e.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/336.m3u8"
     },
     {
-      "nombre": "CO | City TV ¹",
-      "logo": "https://i.ibb.co/K20WpbN/citytv.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639584.m3u8"
+      "nombre": "FX",
+      "logo": "https://img.tvcluboficial.com/fx.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/474.m3u8"
     },
     {
-      "nombre": "CO | Cosmovision",
-      "logo": "https://i.ibb.co/PCp617D/Y949-CQy-A-400x400.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639559.m3u8"
+      "nombre": "FX HD",
+      "logo": "https://img.tvcluboficial.com/fx.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/477.m3u8"
     },
     {
-      "nombre": "CO | El Tiempo",
-      "logo": "https://i.ibb.co/VQGFybL/y7-Nle-Jb3-400x400.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639571.m3u8"
+      "nombre": "FXM",
+      "logo": "https://img.tvcluboficial.com/fxm.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/478.m3u8"
     },
     {
-      "nombre": "CO | La Kalle HD",
-      "logo": "https://i.imgur.com/dba5z2c.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639575.m3u8"
+      "nombre": "FXM HD",
+      "logo": "https://img.tvcluboficial.com/fxm.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/480.m3u8"
     },
     {
-      "nombre": "CO | NTN24",
-      "logo": "https://i.ibb.co/Dtfqsn7/wwo-ZKuu-A-400x400.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639579.m3u8"
+      "nombre": "Glitz",
+      "logo": "https://img.tvcluboficial.com/glitz.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/488.m3u8"
     },
     {
-      "nombre": "CO | Señal Colombia",
-      "logo": "https://i.ibb.co/0GxPkFV/images.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639554.m3u8"
+      "nombre": "Golden",
+      "logo": "https://img.tvcluboficial.com/golden.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/494.m3u8"
     },
     {
-      "nombre": "CO | TELEANTIOQUIA ²",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Teleantioquia_logo.svg/2560px-Teleantioquia_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/749754.m3u8"
+      "nombre": "Golden Edge",
+      "logo": "https://img.tvcluboficial.com/goldenedge.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/495.m3u8"
     },
     {
-      "nombre": "CO | TeleCafe ¹",
-      "logo": "https://i.ibb.co/qdMQx4L/telecafe.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639585.m3u8"
+      "nombre": "Golden HD",
+      "logo": "https://img.tvcluboficial.com/golden.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/497.m3u8"
     },
     {
-      "nombre": "CO | Telecafe ²",
-      "logo": "https://i.ibb.co/qdMQx4L/telecafe.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639552.m3u8"
+      "nombre": "H2",
+      "logo": "https://img.tvcluboficial.com/h2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/509.m3u8"
     },
     {
-      "nombre": "CO | Telecaribe ¹",
-      "logo": "https://i.ibb.co/wBVxBV8/8-UG1-Chg-G-400x400.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639561.m3u8"
+      "nombre": "I.Sat",
+      "logo": "https://img.tvcluboficial.com/isat.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/572.m3u8"
     },
     {
-      "nombre": "CO | Telecaribe ²",
-      "logo": "https://i.ibb.co/wBVxBV8/8-UG1-Chg-G-400x400.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639556.m3u8"
+      "nombre": "Lifetime",
+      "logo": "https://img.tvcluboficial.com/lifetime.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/615.m3u8"
     },
     {
-      "nombre": "CO | TELEMEDELLIN ¹",
-      "logo": "https://logrospublicitarios.com/wp-content/uploads/2020/03/logo_parque_2020.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/749757.m3u8"
+      "nombre": "MTV",
+      "logo": "https://img.tvcluboficial.com/mtv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/673.m3u8"
     },
     {
-      "nombre": "CO | TELEMEDELLIN ²",
-      "logo": "https://logrospublicitarios.com/wp-content/uploads/2020/03/logo_parque_2020.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/749756.m3u8"
+      "nombre": "MTV (ES)",
+      "logo": "https://img.tvcluboficial.com/mtv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/674.m3u8"
     },
     {
-      "nombre": "CO | Telemedellin ³",
-      "logo": "https://logrospublicitarios.com/wp-content/uploads/2020/03/logo_parque_2020.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639583.m3u8"
+      "nombre": "MTV 00s",
+      "logo": "https://img.tvcluboficial.com/mtv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/675.m3u8"
     },
     {
-      "nombre": "CO | TelePacifico HD",
-      "logo": "https://s18.postimg.cc/rigarlzyh/Telepacifico.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639569.m3u8"
+      "nombre": "MTV 90s",
+      "logo": "https://img.tvcluboficial.com/mtv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/679.m3u8"
     },
     {
-      "nombre": "CO | TV AGRO",
-      "logo": "https://i.ibb.co/rQVSJJV/p0hj9tg6gvlllln.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/700854.m3u8"
+      "nombre": "MTV HD",
+      "logo": "https://img.tvcluboficial.com/mtv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/680.m3u8"
     },
     {
-      "nombre": "Cali TV | CO",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/54/Logo_CaliTV.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/861855.m3u8"
+      "nombre": "MTV Live",
+      "logo": "https://img.tvcluboficial.com/mtvlive.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/683.m3u8"
     },
     {
-      "nombre": "Canal Visión Dorada | CO",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/861861.m3u8"
+      "nombre": "MTV Shore",
+      "logo": "https://img.tvcluboficial.com/mtv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1151.m3u8"
     },
     {
-      "nombre": "Señal Colombia | CO",
-      "logo": "https://colombia.mom-gmr.org/uploads/tx_lfrogmom/media/514-941_import.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/861857.m3u8"
+      "nombre": "MTV WW",
+      "logo": "https://img.tvcluboficial.com/mtv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/685.m3u8"
     },
     {
-      "nombre": "Tele Familia | CO",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Tvfamilia_logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/861875.m3u8"
+      "nombre": "Much Music",
+      "logo": "https://img.tvcluboficial.com/muchmusic.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/686.m3u8"
+    },
+    {
+      "nombre": "Music Top",
+      "logo": "https://img.tvcluboficial.com/musictop.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/699.m3u8"
+    },
+    {
+      "nombre": "Paramount",
+      "logo": "https://img.tvcluboficial.com/paramount.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/752.m3u8"
+    },
+    {
+      "nombre": "Paramount HD",
+      "logo": "https://img.tvcluboficial.com/paramount.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/753.m3u8"
+    },
+    {
+      "nombre": "Paramount HD (ES)",
+      "logo": "https://img.tvcluboficial.com/paramount.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/754.m3u8"
+    },
+    {
+      "nombre": "Sony",
+      "logo": "https://img.tvcluboficial.com/sony.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/815.m3u8"
+    },
+    {
+      "nombre": "Sony HD",
+      "logo": "https://img.tvcluboficial.com/sony.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/818.m3u8"
+    },
+    {
+      "nombre": "Space",
+      "logo": "https://img.tvcluboficial.com/space.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/823.m3u8"
+    },
+    {
+      "nombre": "Space (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/space.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/825.m3u8"
+    },
+    {
+      "nombre": "Space HD",
+      "logo": "https://img.tvcluboficial.com/space.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/826.m3u8"
+    },
+    {
+      "nombre": "Star Channel",
+      "logo": "https://img.tvcluboficial.com/star.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/832.m3u8"
+    },
+    {
+      "nombre": "Star Channel HD",
+      "logo": "https://img.tvcluboficial.com/star.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/834.m3u8"
+    },
+    {
+      "nombre": "Star Channel HD",
+      "logo": "https://img.tvcluboficial.com/star.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/835.m3u8"
+    },
+    {
+      "nombre": "Star Fun",
+      "logo": "https://img.tvcluboficial.com/star_fun.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/836.m3u8"
+    },
+    {
+      "nombre": "Star Hits HD",
+      "logo": "https://img.tvcluboficial.com/star_hits.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/837.m3u8"
+    },
+    {
+      "nombre": "StarTVE",
+      "logo": "https://img.tvcluboficial.com/startve.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/838.m3u8"
+    },
+    {
+      "nombre": "SyFy",
+      "logo": "https://img.tvcluboficial.com/syfy.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/853.m3u8"
+    },
+    {
+      "nombre": "SyFy (ES) HD",
+      "logo": "https://img.tvcluboficial.com/syfy.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/856.m3u8"
+    },
+    {
+      "nombre": "SyFy HD",
+      "logo": "https://img.tvcluboficial.com/syfy.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/857.m3u8"
+    },
+    {
+      "nombre": "TBS Very Funny",
+      "logo": "https://img.tvcluboficial.com/tbs.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/859.m3u8"
+    },
+    {
+      "nombre": "TBS Very Funny HD",
+      "logo": "https://img.tvcluboficial.com/tbs.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/860.m3u8"
+    },
+    {
+      "nombre": "TLC",
+      "logo": "https://img.tvcluboficial.com/tlc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/911.m3u8"
+    },
+    {
+      "nombre": "TNT",
+      "logo": "https://img.tvcluboficial.com/tnt.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/921.m3u8"
+    },
+    {
+      "nombre": "TNT HD",
+      "logo": "https://img.tvcluboficial.com/tnt.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/926.m3u8"
+    },
+    {
+      "nombre": "TNT HD (ES)",
+      "logo": "https://img.tvcluboficial.com/tnt.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/927.m3u8"
+    },
+    {
+      "nombre": "TNT Series",
+      "logo": "https://img.tvcluboficial.com/tntseries.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/929.m3u8"
+    },
+    {
+      "nombre": "TNT Series HD",
+      "logo": "https://img.tvcluboficial.com/tntseries.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/933.m3u8"
+    },
+    {
+      "nombre": "TruTV",
+      "logo": "https://img.tvcluboficial.com/trutv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/949.m3u8"
+    },
+    {
+      "nombre": "TruTv HD",
+      "logo": "https://img.tvcluboficial.com/trutv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/950.m3u8"
+    },
+    {
+      "nombre": "Universal Channel",
+      "logo": "https://img.tvcluboficial.com/universal.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/984.m3u8"
+    },
+    {
+      "nombre": "Universal Cinema HD",
+      "logo": "https://img.tvcluboficial.com/universal_cinema.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/988.m3u8"
+    },
+    {
+      "nombre": "Universal Comedy HD",
+      "logo": "https://img.tvcluboficial.com/universal_comedy.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/992.m3u8"
+    },
+    {
+      "nombre": "Universal Crime HD",
+      "logo": "https://img.tvcluboficial.com/universal_crime.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/996.m3u8"
+    },
+    {
+      "nombre": "Universal HD",
+      "logo": "https://img.tvcluboficial.com/universal.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/998.m3u8"
+    },
+    {
+      "nombre": "Universal Premiere HD",
+      "logo": "https://img.tvcluboficial.com/universal_premier.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1003.m3u8"
+    },
+    {
+      "nombre": "Universal Reality HD",
+      "logo": "https://img.tvcluboficial.com/universal_reality.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1006.m3u8"
+    },
+    {
+      "nombre": "Warner Channel",
+      "logo": "https://img.tvcluboficial.com/warnerchannel.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1032.m3u8"
+    },
+    {
+      "nombre": "Warner Channel HD",
+      "logo": "https://img.tvcluboficial.com/warnerchannel.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1034.m3u8"
     }
   ],
-  "🏆 DEPORTES PREMIUM": [
+
+  "🏆 Deportes": [
     {
-      "nombre": "ADRENALINA SPORTS",
-      "logo": "http://fanc.tmsimg.com/assets/s83162_ll_h3_ad.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741874.m3u8"
+      "nombre": "Afizzionados HD",
+      "logo": "https://img.tvcluboficial.com/afizzionados.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/24.m3u8"
     },
     {
-      "nombre": "AT&T SportsNet Pittsburgh",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Logo_for_AT&T_SportsNet.svg/520px-Logo_for_AT&T_SportsNet.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809263.m3u8"
+      "nombre": "Afizzionados HD",
+      "logo": "https://img.tvcluboficial.com/afizzionados.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/25.m3u8"
     },
     {
-      "nombre": "AT&T SportsNet Pittsburgh-",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Logo_for_AT&T_SportsNet.svg/520px-Logo_for_AT&T_SportsNet.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809271.m3u8"
+      "nombre": "AyM Sports",
+      "logo": "https://img.tvcluboficial.com/aymsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/62.m3u8"
     },
     {
-      "nombre": "BARCA TV",
-      "logo": "https://dplnews.com/wp-content/uploads/2020/02/dplnews_Bar%C3%A7aTV_mc060220-e1581060736609.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/831373.m3u8"
+      "nombre": "BeinSports",
+      "logo": "https://img.tvcluboficial.com/beinsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/88.m3u8"
     },
     {
-      "nombre": "BEIN SPORTS XTRA Ñ",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/Bein_sport_logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741859.m3u8"
+      "nombre": "BeinSports HD",
+      "logo": "https://img.tvcluboficial.com/beinsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/89.m3u8"
     },
     {
-      "nombre": "BEIN SPORTS Ñ",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/Bein_sport_logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741852.m3u8"
+      "nombre": "BeinSports Ñ",
+      "logo": "https://img.tvcluboficial.com/beinsportsn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/90.m3u8"
     },
     {
-      "nombre": "BETIS TV",
-      "logo": "https://satcesc.com/wp-content/uploads/2017/06/Betis-TV-e1498666063509.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/831381.m3u8"
+      "nombre": "BeinSports Ñ HD",
+      "logo": "https://img.tvcluboficial.com/beinsportsn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/91.m3u8"
     },
     {
-      "nombre": "CLARO SPORTS",
-      "logo": "http://fanc.tmsimg.com/assets/s72291_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741870.m3u8"
+      "nombre": "CDF Premium",
+      "logo": "https://img.tvcluboficial.com/cdf.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/142.m3u8"
     },
     {
-      "nombre": "Fox Deportes XumoTv",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/FOX_Sports_logo.svg/1200px-FOX_Sports_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809273.m3u8"
+      "nombre": "CDF Premium HD",
+      "logo": "https://img.tvcluboficial.com/cdfpremium.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/143.m3u8"
     },
     {
-      "nombre": "Fubo Sports Network",
-      "logo": "https://www.slashgear.com/wp-content/uploads/2019/06/Fubo_TV_Main.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809265.m3u8"
+      "nombre": "CDN Sportsmax",
+      "logo": "https://img.tvcluboficial.com/cdnsportsmax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/146.m3u8"
     },
     {
-      "nombre": "FuboTv FS US HD",
-      "logo": "https://foxsports-wordpress-www-prsupports-prod.s3.amazonaws.com/uploads/sites/2/2016/12/FS1-1040x585.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809275.m3u8"
+      "nombre": "CDO Premium",
+      "logo": "https://img.tvcluboficial.com/cdopremium.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/149.m3u8"
     },
     {
-      "nombre": "GANWON 2024",
-      "logo": "https://cdn.clarosports.com/clarosports/2023/10/gangwon2024-m2-140741.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/816021.m3u8"
+      "nombre": "Claro Sports",
+      "logo": "https://img.tvcluboficial.com/clarosports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/201.m3u8"
     },
     {
-      "nombre": "GOL TV LATINOAMERICA",
-      "logo": "https://i.postimg.cc/3JZLx6xz/ESTOESTV_-_GOL_TV.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741871.m3u8"
+      "nombre": "Claro Sports 3 HD",
+      "logo": "https://img.tvcluboficial.com/clarosports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1056.m3u8"
     },
     {
-      "nombre": "GOLF CHANNEL",
-      "logo": "http://fanc.tmsimg.com/assets/s65385_ll_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741872.m3u8"
+      "nombre": "Claro Sports 4 HD",
+      "logo": "https://img.tvcluboficial.com/clarosports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1057.m3u8"
     },
     {
-      "nombre": "IZZI AFICIONADOS",
-      "logo": "http://fanc.tmsimg.com/assets/s108506_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741878.m3u8"
+      "nombre": "DAZN 2",
+      "logo": "https://img.tvcluboficial.com/dazn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1126.m3u8"
     },
     {
-      "nombre": "LSN SPORTS NETWORK",
-      "logo": "https://spng.pinpng.com/pngs/s/446-4461393_1519835956947-lsn-logo-red-16x9images-lax-sports-network.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809246.m3u8"
+      "nombre": "DAZN HD",
+      "logo": "https://img.tvcluboficial.com/dazn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1148.m3u8"
     },
     {
-      "nombre": "Marquee Sports Network",
-      "logo": "https://dupvhm5r1oaxt.cloudfront.net/uploads/2020/01/CUBS_MSN_Logo_RGB_Red.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809255.m3u8"
+      "nombre": "Deportes TVC | Honduras",
+      "logo": "https://img.tvcluboficial.com/ho_deportestvc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1071.m3u8"
     },
     {
-      "nombre": "NBCSPORTS BAY AREA",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/NBC_Sports_Bay_Area.png/1280px-NBC_Sports_Bay_Area.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809247.m3u8"
+      "nombre": "DSports",
+      "logo": "https://img.tvcluboficial.com/directvsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/312.m3u8"
     },
     {
-      "nombre": "NBCSPORTS BOSTON",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/93/NBC_Sports_Boston.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809259.m3u8"
+      "nombre": "DSports +",
+      "logo": "https://img.tvcluboficial.com/directvplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/314.m3u8"
     },
     {
-      "nombre": "NBCSPORTS PHILADELPHIA",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/f/f3/NBC_Sports_Philadelphia.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809242.m3u8"
+      "nombre": "DSports 2",
+      "logo": "https://img.tvcluboficial.com/directvsports2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/315.m3u8"
     },
     {
-      "nombre": "NBCSPORTS WASHINGTON",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fb/NBC_Sports_Washington.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809258.m3u8"
+      "nombre": "DSports 2 HD",
+      "logo": "https://img.tvcluboficial.com/directvsports2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/317.m3u8"
     },
     {
-      "nombre": "NESN HD",
-      "logo": "https://nesncom.files.wordpress.com/2013/07/nesn-ticket-white.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809244.m3u8"
+      "nombre": "DSports 2 Sur HD",
+      "logo": "https://img.tvcluboficial.com/directvsports2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/319.m3u8"
     },
     {
-      "nombre": "PREMIERE 1 CLUBES",
-      "logo": "http://iprime.live:30001/images/NP6p6vhlF-NNmgZrR8liT8fGy8JPcIbaGAtemFnzzXZXMc_VXUGJQXm9H1t9V0MH6-N61bJhK3uERFgOq34bICiEsp_0Wip173BuNXhMHzOQhqXUoeChYDKm3ivYIqn3IP--YIkzAl6UJzMLBW1S1A.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741846.m3u8"
+      "nombre": "DSports HD",
+      "logo": "https://img.tvcluboficial.com/directvsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/324.m3u8"
     },
     {
-      "nombre": "RED BULL TV",
-      "logo": "https://image.roku.com/developer_channels/prod/0560cd3757ba28d0525e524fe0d98c1b95721c5ecf5fda464eba3084eeed7f36.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741843.m3u8"
+      "nombre": "DSports HD op. 2",
+      "logo": "https://img.tvcluboficial.com/directvsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1144.m3u8"
     },
     {
-      "nombre": "SPECTRUM SPORTSNET DODGERS",
-      "logo": "https://www.rogerssportsandmedia.com/wp-content/uploads/2021/08/Media-Site-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/813568.m3u8"
+      "nombre": "El Canal Del Futbol",
+      "logo": "https://img.tvcluboficial.com/canaldelfutbol.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/342.m3u8"
     },
     {
-      "nombre": "SPECTRUM SPORTSNET LA DODGERS",
-      "logo": "http://p2086.securepoint.io:2086/images/81b30a9bc54cc6a21a9e6ff71826a693.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809257.m3u8"
+      "nombre": "El Canal del Futbol (ECDF)",
+      "logo": "https://img.tvcluboficial.com/canaldelfutbol.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1133.m3u8"
     },
     {
-      "nombre": "SPECTRUM SPORTSNET LAKERS",
-      "logo": "https://www.rogerssportsandmedia.com/wp-content/uploads/2021/08/Media-Site-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/813569.m3u8"
+      "nombre": "ESPN 1 | Chile",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1132.m3u8"
     },
     {
-      "nombre": "SportsGrid",
-      "logo": "https://pbs.twimg.com/profile_images/1208744581656928256/nMSHTKmZ_400x400.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809254.m3u8"
+      "nombre": "ESPN 1 | Colombia",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1107.m3u8"
     },
     {
-      "nombre": "Sportsgrid Network",
-      "logo": "https://cdn.newswire.com/files/x/0a/7a/5f59b76a6c811cf30d585c5d2ac6.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809252.m3u8"
+      "nombre": "ESPN 1 | Mexico",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/401.m3u8"
     },
     {
-      "nombre": "SPORTSNET 360",
-      "logo": "https://www.rogerssportsandmedia.com/wp-content/uploads/2021/08/Media-Site-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/813566.m3u8"
+      "nombre": "ESPN 1 | Mexico Centro",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1112.m3u8"
     },
     {
-      "nombre": "SPORTSNET EAST",
-      "logo": "https://www.rogerssportsandmedia.com/wp-content/uploads/2021/08/Media-Site-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/813572.m3u8"
-    },
-    {
-      "nombre": "Sportsnet New York",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/SNY_logo.svg/1280px-SNY_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809253.m3u8"
-    },
-    {
-      "nombre": "SPORTSNET NY",
-      "logo": "https://www.rogerssportsandmedia.com/wp-content/uploads/2021/08/Media-Site-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/813571.m3u8"
-    },
-    {
-      "nombre": "SPORTSNET ONTARIO",
-      "logo": "https://www.rogerssportsandmedia.com/wp-content/uploads/2021/08/Media-Site-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/813570.m3u8"
-    },
-    {
-      "nombre": "SPORTSNET PACIFIC",
-      "logo": "https://www.rogerssportsandmedia.com/wp-content/uploads/2021/08/Media-Site-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/813565.m3u8"
-    },
-    {
-      "nombre": "SPORTSNET WEST",
-      "logo": "https://www.rogerssportsandmedia.com/wp-content/uploads/2021/08/Media-Site-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/813567.m3u8"
-    },
-    {
-      "nombre": "SportsNews Highlights",
-      "logo": "https://files.elfsightcdn.com/90539f53-3c3e-4026-b9dc-19775f1b6f8f/bf47b616-3a0b-436d-9736-e1827736fb33/snhtv.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809241.m3u8"
-    },
-    {
-      "nombre": "SPORTV 2",
-      "logo": "http://fanc.tmsimg.com/assets/s110214_ll_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741806.m3u8"
-    },
-    {
-      "nombre": "SPORTV 3",
-      "logo": "http://fanc.tmsimg.com/assets/s76967_ll_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741841.m3u8"
-    },
-    {
-      "nombre": "Stadium",
-      "logo": "http://images.pluto.tv/channels/59974b6d7ec5063cb56f24c9/featuredImage.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809249.m3u8"
-    },
-    {
-      "nombre": "STADIUM SPORTS",
-      "logo": "https://s23455.pcdn.co/wp-content/uploads/2018/08/stadium-logo-640.jpeg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809250.m3u8"
-    },
-    {
-      "nombre": "STADIUM SPORTS",
-      "logo": "https://s23455.pcdn.co/wp-content/uploads/2018/08/stadium-logo-640.jpeg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809256.m3u8"
-    },
-    {
-      "nombre": "Tennis Channel",
-      "logo": "https://i.imgur.com/WEM9B83.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809245.m3u8"
-    },
-    {
-      "nombre": "Tennis Channel HD",
-      "logo": "https://i.imgur.com/wcmQ30R.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809260.m3u8"
-    },
-    {
-      "nombre": "TYC SPORTS",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741826.m3u8"
-    },
-    {
-      "nombre": "TNT Sports",
-      "logo": "https://i.imgur.com/wcmQ30R.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809243.m3u8"
-    },
-    {
-      "nombre": "TNT SPORTS | 1",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/1200px-TNT_Sports_2021_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581256.m3u8"
-    },
-    {
-      "nombre": "TNT SPORTS | 2",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/1200px-TNT_Sports_2021_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581255.m3u8"
-    },
-    {
-      "nombre": "TNT SPORTS | 3",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/TNT_Sports_2021_logo.svg/1200px-TNT_Sports_2021_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581257.m3u8"
-    },
-    {
-      "nombre": "TOROS",
-      "logo": "http://51.222.43.170:36995/images/88a7653c97c1fa7974b78d137fe20672.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741817.m3u8"
-    },
-    {
-      "nombre": "TOROS HD (OP B)",
-      "logo": "https://www.mundotoro.com/wp-content/uploads/2019/10/logo-mundotoro-797.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/743478.m3u8"
-    },
-    {
-      "nombre": "TUDN MEXICO",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yV0PDlvhcLJzoqL0s2um1lzyYDVunjb_T6R3bs4E8e6FWkDeOEjRr00xusUUmIfMg50&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/787048.m3u8"
-    },
-    {
-      "nombre": "TUDN USA HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yV0PDlvhcLJzoqL0s2um1lzyYDVunjb_T6R3bs4E8e6FWkDeOEjRr00xusUUmIfMg50&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581263.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 1",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554731.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 10",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554723.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 2",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554724.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 3",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554729.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 4",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554726.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 5",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554728.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 6",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554725.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 7",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554730.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 8",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554732.m3u8"
-    },
-    {
-      "nombre": "TUDN XTRA 9",
-      "logo": "https://static.epg.best/us/TUDN.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/554727.m3u8"
-    },
-    {
-      "nombre": "UFC NETWORK",
-      "logo": "https://shreveportbossiersports.com/wp-content/loads/2021/04/Presentation1-8.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741835.m3u8"
-    },
-    {
-      "nombre": "VIX",
-      "logo": "https://play-lh.googleusercontent.com/s2G05IFOkSB2E6w_lBAgVOJT8rYVSIX7cT5dRR7HjWhUM0smh606nQ3uqWM8sLPk7BI",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741807.m3u8"
-    },
-    {
-      "nombre": "WIN SPORTS +",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Win%2B_F%C3%BAtbol_logo.svg/1200px-Win%2B_F%C3%BAtbol_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741816.m3u8"
-    },
-    {
-      "nombre": "WWE NETWORK",
-      "logo": "http://fanc.tmsimg.com/assets/s90143_ll_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/741844.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TNT Sports  Brasil",
-      "logo": "http://www.latinspots.com/files/notas/Gnota_56697.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809262.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TNT Sports 2 Brasil",
-      "logo": "http://www.latinspots.com/files/notas/Gnota_56697.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809268.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TNT Sports 3 Brasil",
-      "logo": "http://www.latinspots.com/files/notas/Gnota_56697.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809280.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TNT Sports 4 Brasil",
-      "logo": "http://www.latinspots.com/files/notas/Gnota_56697.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809272.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TNT Sports 5 Brasil",
-      "logo": "http://www.latinspots.com/files/notas/Gnota_56697.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809266.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TyC SPORT PLAY 3",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809264.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TyC SPORT PLAY 4",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809267.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TyC SPORT PLAY 5",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809278.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TyC SPORT PLAY 6",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809261.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TyC SPORT PLAY 7",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809281.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TyC SPORT PLAY 8",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809269.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TyC SPORT PLAY 9",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809279.m3u8"
-    },
-    {
-      "nombre": "EVENTOS TyC SPORT PLAY 10",
-      "logo": "https://i.postimg.cc/6Q8zzpfN/ESTOESTV_-_TYC_SPORTS.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/809276.m3u8"
-    },
-    {
-      "nombre": "NFL RED ZONE",
-      "logo": "https://wallpaperset.com/w/full/2/b/5/199432.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/759689.m3u8"
-    },
-    {
-      "nombre": "MLB NETWORK",
-      "logo": "https://i.postimg.cc/65BtymqJ/ESTO-ES-TV-MLB.webp",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/892608.m3u8"
-    }
-  ],
-  "🏆 ESPN DEPORTES": [
-    {
-      "nombre": "ESPN PREMIUM ARG OPC # 1",
-      "logo": "https://1000marcas.net/wp-content/uploads/2020/02/logo-ESPN.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605413.m3u8"
-    },
-    {
-      "nombre": "ESPN PREMIUM ARG OPC # 2",
-      "logo": "https://1000marcas.net/wp-content/uploads/2020/02/logo-ESPN.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/678996.m3u8"
-    },
-    {
-      "nombre": "ESPN DEPORTES FHD",
-      "logo": "http://elmejorcpre.xyz:80/images/lHRwWC0a0_92u4ecr0b9OdBxe4qXu4OdCrGRovjoY_I.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/590605.m3u8"
-    },
-    {
-      "nombre": "ESPN DEPORTES MX HD",
-      "logo": "http://fanc.tmsimg.com/assets/s25595_ll_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/590604.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 ARG",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580788.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 ARG **",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605412.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 BR",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/562117.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 CH",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605400.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 COL",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580779.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 LATINO",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580789.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 MX",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580781.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 PER",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580790.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 SUR",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641589.m3u8"
-    },
-    {
-      "nombre": "ESPN 1 USA FHD",
-      "logo": "https://i.postimg.cc/MK0LjHdP/ESTOESTV_-_ESPN_1_1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/623136.m3u8"
-    },
-    {
-      "nombre": "ESPN 2 ARG ##",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580778.m3u8"
-    },
-    {
-      "nombre": "ESPN 2 ARG HD",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605414.m3u8"
-    },
-    {
-      "nombre": "ESPN 2 BR HD",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/623469.m3u8"
-    },
-    {
-      "nombre": "ESPN 2 CH -",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605401.m3u8"
-    },
-    {
-      "nombre": "ESPN 2 COL //",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580784.m3u8"
+      "nombre": "ESPN 1 | Sur",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/368.m3u8"
     },
     {
       "nombre": "ESPN 2 HD",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580794.m3u8"
+      "logo": "https://img.tvcluboficial.com/espn2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/375.m3u8"
     },
     {
-      "nombre": "ESPN 2 MX",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580787.m3u8"
+      "nombre": "ESPN 2 | Mexico",
+      "logo": "https://img.tvcluboficial.com/espn2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/378.m3u8"
     },
     {
-      "nombre": "ESPN 2 PE *",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580786.m3u8"
-    },
-    {
-      "nombre": "ESPN 2 SUR ®",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641586.m3u8"
-    },
-    {
-      "nombre": "ESPN 2 USA FHD",
-      "logo": "https://i.postimg.cc/BnqV53zq/ESTOESTV_-_ESPN_2_2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/623127.m3u8"
-    },
-    {
-      "nombre": "ESPN 3 ARG HD",
-      "logo": "https://i.postimg.cc/43y2M5Zq/ESTOESTV_-_ESPN_3_3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580802.m3u8"
-    },
-    {
-      "nombre": "ESPN 3 BR",
-      "logo": "https://i.postimg.cc/43y2M5Zq/ESTOESTV_-_ESPN_3_3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580793.m3u8"
-    },
-    {
-      "nombre": "ESPN | 3 COL -",
-      "logo": "https://static.epg.best/mx/ESPN3.mx.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580797.m3u8"
+      "nombre": "ESPN 2 | Sur",
+      "logo": "https://img.tvcluboficial.com/espn2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/372.m3u8"
     },
     {
       "nombre": "ESPN 3 HD",
-      "logo": "https://i.postimg.cc/43y2M5Zq/ESTOESTV_-_ESPN_3_3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580806.m3u8"
+      "logo": "https://img.tvcluboficial.com/espn3.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/386.m3u8"
     },
     {
-      "nombre": "ESPN 3 LAT",
-      "logo": "https://i.postimg.cc/43y2M5Zq/ESTOESTV_-_ESPN_3_3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580804.m3u8"
+      "nombre": "ESPN 3 | Mexico",
+      "logo": "https://img.tvcluboficial.com/espn3.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1110.m3u8"
     },
     {
-      "nombre": "ESPN 3 Mx",
-      "logo": "https://i.postimg.cc/43y2M5Zq/ESTOESTV_-_ESPN_3_3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580798.m3u8"
+      "nombre": "ESPN 3 | Sur",
+      "logo": "https://img.tvcluboficial.com/espn3.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1127.m3u8"
     },
     {
-      "nombre": "ESPN 3 PE *",
-      "logo": "https://i.postimg.cc/43y2M5Zq/ESTOESTV_-_ESPN_3_3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641587.m3u8"
+      "nombre": "ESPN 4 | Sur",
+      "logo": "https://img.tvcluboficial.com/espn4.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1069.m3u8"
     },
     {
-      "nombre": "ESPN 3 PERU",
-      "logo": "https://i.postimg.cc/43y2M5Zq/ESTOESTV_-_ESPN_3_3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580795.m3u8"
+      "nombre": "ESPN 5 HD",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1104.m3u8"
     },
     {
-      "nombre": "ESPN 3 SUR",
-      "logo": "https://i.postimg.cc/43y2M5Zq/ESTOESTV_-_ESPN_3_3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580783.m3u8"
+      "nombre": "ESPN 6 HD",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1105.m3u8"
     },
     {
-      "nombre": "ESPN 4 ARG FHD",
-      "logo": "https://i.postimg.cc/cLX5Xjqf/ESTOESTV_-_ESPN_4_4.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580805.m3u8"
+      "nombre": "ESPN 7 HD",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1106.m3u8"
     },
     {
-      "nombre": "ESPN 4 ARG HD",
-      "logo": "https://i.postimg.cc/cLX5Xjqf/ESTOESTV_-_ESPN_4_4.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605415.m3u8"
+      "nombre": "ESPN HD",
+      "logo": "https://img.tvcluboficial.com/espn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/400.m3u8"
     },
     {
-      "nombre": "ESPN 4 BRASIL",
-      "logo": "https://i.postimg.cc/cLX5Xjqf/ESTOESTV_-_ESPN_4_4.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/623470.m3u8"
+      "nombre": "ESPN Plus",
+      "logo": "https://img.tvcluboficial.com/espnplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/404.m3u8"
     },
     {
-      "nombre": "ESPN 4 HD",
-      "logo": "https://i.postimg.cc/cLX5Xjqf/ESTOESTV_-_ESPN_4_4.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580796.m3u8"
+      "nombre": "ESPN Plus HD",
+      "logo": "https://img.tvcluboficial.com/espnplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/405.m3u8"
     },
     {
-      "nombre": "ESPN 4 MX",
-      "logo": "https://i.postimg.cc/cLX5Xjqf/ESTOESTV_-_ESPN_4_4.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580792.m3u8"
+      "nombre": "ESPN Premium HD",
+      "logo": "https://img.tvcluboficial.com/espnpremium.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/408.m3u8"
     },
     {
-      "nombre": "ESPN 4 PE *",
-      "logo": "https://i.postimg.cc/cLX5Xjqf/ESTOESTV_-_ESPN_4_4.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641577.m3u8"
+      "nombre": "Formula 1 TV (F1)",
+      "logo": "https://img.tvcluboficial.com/f1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/426.m3u8"
     },
     {
-      "nombre": "ESPN 4 SUR ®",
-      "logo": "https://i.postimg.cc/cLX5Xjqf/ESTOESTV_-_ESPN_4_4.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580800.m3u8"
+      "nombre": "Formula 1 TV (F1) HD",
+      "logo": "https://img.tvcluboficial.com/f1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/427.m3u8"
     },
     {
-      "nombre": "ESPN 5",
-      "logo": "https://i.postimg.cc/RFnsCZWT/ESTOESTV_-_ESPN_5_5.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/824295.m3u8"
+      "nombre": "Fox Deportes",
+      "logo": "https://img.tvcluboficial.com/foxdeportes.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1114.m3u8"
     },
     {
-      "nombre": "ESPN 5 -",
-      "logo": "https://i.postimg.cc/RFnsCZWT/ESTOESTV_-_ESPN_5_5.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/633727.m3u8"
+      "nombre": "Fox Sports 1 | HD Sur",
+      "logo": "https://img.tvcluboficial.com/foxsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/452.m3u8"
     },
     {
-      "nombre": "ESPN 6",
-      "logo": "https://i.postimg.cc/0N4XqwyQ/ESTOESTV_-_ESPN_6_6.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/824296.m3u8"
+      "nombre": "Fox Sports 1 | Mexico",
+      "logo": "https://img.tvcluboficial.com/foxsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/456.m3u8"
     },
     {
-      "nombre": "ESPN 6 -",
-      "logo": "https://i.postimg.cc/0N4XqwyQ/ESTOESTV_-_ESPN_6_6.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/633719.m3u8"
+      "nombre": "Fox Sports 1 | Mexico (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/foxsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/458.m3u8"
     },
     {
-      "nombre": "ESPN 7",
-      "logo": "https://i.postimg.cc/fyc8Xqjt/ESTOESTV_-_ESPN_7_7.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/824297.m3u8"
+      "nombre": "Fox Sports 1 | Sur",
+      "logo": "https://img.tvcluboficial.com/foxsportssur.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/435.m3u8"
     },
     {
-      "nombre": "ESPN 7 -",
-      "logo": "https://i.postimg.cc/fyc8Xqjt/ESTOESTV_-_ESPN_7_7.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580791.m3u8"
+      "nombre": "Fox Sports 2 | Chile",
+      "logo": "https://img.tvcluboficial.com/foxsports2sur.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1123.m3u8"
     },
     {
-      "nombre": "ESPN EXTRA BR",
-      "logo": "http://fanc.tmsimg.com/assets/s65930_ll_h3_ad.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580807.m3u8"
+      "nombre": "Fox Sports 2 | HD",
+      "logo": "https://img.tvcluboficial.com/foxsports2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/439.m3u8"
     },
     {
-      "nombre": "ESPN EXTRA EC",
-      "logo": "http://fanc.tmsimg.com/assets/s65930_ll_h3_ad.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580782.m3u8"
+      "nombre": "Fox Sports 2 | Mexico",
+      "logo": "https://img.tvcluboficial.com/foxsports2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/441.m3u8"
     },
     {
-      "nombre": "ESPN EXTRA MX",
-      "logo": "http://fanc.tmsimg.com/assets/s88735_ll_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580780.m3u8"
+      "nombre": "Fox Sports 2 | Sur",
+      "logo": "https://img.tvcluboficial.com/foxsports2sur.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/436.m3u8"
     },
     {
-      "nombre": "ESPN NEWS USA FHD",
-      "logo": "https://static.epg.best/us/ESPNNews.us.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/623161.m3u8"
+      "nombre": "Fox Sports 3 | HD",
+      "logo": "https://img.tvcluboficial.com/foxsports3.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/446.m3u8"
     },
     {
-      "nombre": "ESPN | EXTRA MX -",
-      "logo": "http://fanc.tmsimg.com/assets/s88735_ll_h3_aa.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/580785.m3u8"
+      "nombre": "Fox Sports 3 | Mexico",
+      "logo": "https://img.tvcluboficial.com/foxsports3.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/448.m3u8"
+    },
+    {
+      "nombre": "Fox Sports 3 | Sur",
+      "logo": "https://img.tvcluboficial.com/foxsports3sur.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/468.m3u8"
+    },
+    {
+      "nombre": "Fox Sports HD",
+      "logo": "https://img.tvcluboficial.com/foxsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/454.m3u8"
+    },
+    {
+      "nombre": "Fox Sports MX (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/foxsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/459.m3u8"
+    },
+    {
+      "nombre": "Fox Sports Premium",
+      "logo": "https://img.tvcluboficial.com/foxsportspremium.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/461.m3u8"
+    },
+    {
+      "nombre": "Fox Sports Premium HD",
+      "logo": "https://img.tvcluboficial.com/foxsportspremium.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/464.m3u8"
+    },
+    {
+      "nombre": "Fox Sports Premium HD",
+      "logo": "https://img.tvcluboficial.com/foxsportspremium.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/463.m3u8"
+    },
+    {
+      "nombre": "Fox Sports Sur",
+      "logo": "https://img.tvcluboficial.com/foxsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/465.m3u8"
+    },
+    {
+      "nombre": "Fox Sports Sur 2",
+      "logo": "https://img.tvcluboficial.com/foxsports2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/467.m3u8"
+    },
+    {
+      "nombre": "FS1 USA HD",
+      "logo": "https://img.tvcluboficial.com/fs1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/471.m3u8"
+    },
+    {
+      "nombre": "FS2 USA HD",
+      "logo": "https://img.tvcluboficial.com/fs2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/472.m3u8"
+    },
+    {
+      "nombre": "Futv | Costa Rica",
+      "logo": "https://img.tvcluboficial.com/cr_futv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1074.m3u8"
+    },
+    {
+      "nombre": "Gol Peru",
+      "logo": "https://img.tvcluboficial.com/golperu.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/490.m3u8"
+    },
+    {
+      "nombre": "Gol Peru (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/golperu.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/489.m3u8"
+    },
+    {
+      "nombre": "Gol TV Ecuador",
+      "logo": "https://img.tvcluboficial.com/golperu.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1060.m3u8"
+    },
+    {
+      "nombre": "Gol TV HD",
+      "logo": "https://img.tvcluboficial.com/goltv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/492.m3u8"
+    },
+    {
+      "nombre": "Gol TV HD (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/goltv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/491.m3u8"
+    },
+    {
+      "nombre": "Gol TV | España",
+      "logo": "https://img.tvcluboficial.com/goltv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1125.m3u8"
+    },
+    {
+      "nombre": "Golf Channel HD",
+      "logo": "https://img.tvcluboficial.com/golfchannel.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/504.m3u8"
+    },
+    {
+      "nombre": "ITV Deportes",
+      "logo": "https://img.tvcluboficial.com/itv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1095.m3u8"
+    },
+    {
+      "nombre": "Liga 1 Max | Peru",
+      "logo": "https://img.tvcluboficial.com/pe_liga1max.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1070.m3u8"
+    },
+    {
+      "nombre": "Liga de Campeones",
+      "logo": "https://img.tvcluboficial.com/ligadecampeones.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/616.m3u8"
+    },
+    {
+      "nombre": "Liga de Campeones 2",
+      "logo": "https://img.tvcluboficial.com/ligadecampeones.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/617.m3u8"
+    },
+    {
+      "nombre": "MLB Network",
+      "logo": "https://img.tvcluboficial.com/mlb.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/658.m3u8"
+    },
+    {
+      "nombre": "Movistar Deportes 2 HD",
+      "logo": "https://img.tvcluboficial.com/movistar_deportes2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/664.m3u8"
+    },
+    {
+      "nombre": "Movistar Deportes HD",
+      "logo": "https://img.tvcluboficial.com/movistar_deportes.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/665.m3u8"
+    },
+    {
+      "nombre": "Movistar Deportes | Peru",
+      "logo": "https://img.tvcluboficial.com/movistar_deportes.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/666.m3u8"
+    },
+    {
+      "nombre": "Movistar LaLiga",
+      "logo": "https://img.tvcluboficial.com/movistar_laliga.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1100.m3u8"
+    },
+    {
+      "nombre": "Movistar LaLiga HD",
+      "logo": "https://img.tvcluboficial.com/movistar_laliga.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/668.m3u8"
+    },
+    {
+      "nombre": "NBA",
+      "logo": "https://img.tvcluboficial.com/nba.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/710.m3u8"
+    },
+    {
+      "nombre": "NBC Golf",
+      "logo": "https://img.tvcluboficial.com/nbcgolf.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/712.m3u8"
+    },
+    {
+      "nombre": "NFL Network",
+      "logo": "https://img.tvcluboficial.com/nfl.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/720.m3u8"
+    },
+    {
+      "nombre": "NHL Network",
+      "logo": "https://img.tvcluboficial.com/nhl.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/723.m3u8"
+    },
+    {
+      "nombre": "PAC12 HD",
+      "logo": "https://img.tvcluboficial.com/pac12.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/746.m3u8"
+    },
+    {
+      "nombre": "Sky Sports Bundesliga",
+      "logo": "https://img.tvcluboficial.com/skysports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1124.m3u8"
+    },
+    {
+      "nombre": "Sky Sports LaLiga",
+      "logo": "https://img.tvcluboficial.com/skysports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1079.m3u8"
+    },
+    {
+      "nombre": "SKY Sports MX HD",
+      "logo": "https://img.tvcluboficial.com/skysports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/810.m3u8"
+    },
+    {
+      "nombre": "SKY Sports Premier HD",
+      "logo": "https://img.tvcluboficial.com/skysports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/811.m3u8"
+    },
+    {
+      "nombre": "Teledeporte HD (ES)",
+      "logo": "https://img.tvcluboficial.com/teledeporte.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/872.m3u8"
+    },
+    {
+      "nombre": "Tigo Sports Guatemala",
+      "logo": "https://img.tvcluboficial.com/tigosports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/904.m3u8"
+    },
+    {
+      "nombre": "TigoSports Bolivia",
+      "logo": "https://img.tvcluboficial.com/tigosports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/905.m3u8"
+    },
+    {
+      "nombre": "TigoSports Paraguay",
+      "logo": "https://img.tvcluboficial.com/tigosports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/906.m3u8"
+    },
+    {
+      "nombre": "TigoSports | Costa Rica",
+      "logo": "https://img.tvcluboficial.com/tigosports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1077.m3u8"
+    },
+    {
+      "nombre": "TNT Sports Premium",
+      "logo": "https://img.tvcluboficial.com/tntsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1128.m3u8"
+    },
+    {
+      "nombre": "TNT Sports | Argentina",
+      "logo": "https://img.tvcluboficial.com/tntsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/934.m3u8"
+    },
+    {
+      "nombre": "TNT Sports | Argentina (Low)",
+      "logo": "https://img.tvcluboficial.com/tntsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1129.m3u8"
+    },
+    {
+      "nombre": "TNT Sports | Chile",
+      "logo": "https://img.tvcluboficial.com/tntsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/938.m3u8"
+    },
+    {
+      "nombre": "TUDN",
+      "logo": "https://img.tvcluboficial.com/tudn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/952.m3u8"
+    },
+    {
+      "nombre": "TUDN HD",
+      "logo": "https://img.tvcluboficial.com/tudn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/955.m3u8"
+    },
+    {
+      "nombre": "TUDN HD | Usa",
+      "logo": "https://img.tvcluboficial.com/tudn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/957.m3u8"
+    },
+    {
+      "nombre": "TUDN | Usa",
+      "logo": "https://img.tvcluboficial.com/tudn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/956.m3u8"
+    },
+    {
+      "nombre": "TVC Deportes",
+      "logo": "https://img.tvcluboficial.com/tvcdeportes.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/965.m3u8"
+    },
+    {
+      "nombre": "Tyc Sports",
+      "logo": "https://img.tvcluboficial.com/tycsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/974.m3u8"
+    },
+    {
+      "nombre": "Tyc Sports (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/tycsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/975.m3u8"
+    },
+    {
+      "nombre": "TyC Sports HD",
+      "logo": "https://img.tvcluboficial.com/tycsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1143.m3u8"
+    },
+    {
+      "nombre": "Tyc Sports Op. 2",
+      "logo": "https://img.tvcluboficial.com/tycsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/976.m3u8"
+    },
+    {
+      "nombre": "UFC Network",
+      "logo": "https://img.tvcluboficial.com/ufc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/977.m3u8"
+    },
+    {
+      "nombre": "Univisión Deportes",
+      "logo": "https://img.tvcluboficial.com/univisiondeportes.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1010.m3u8"
+    },
+    {
+      "nombre": "Univisión TDN",
+      "logo": "https://img.tvcluboficial.com/play.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1012.m3u8"
+    },
+    {
+      "nombre": "Vamos HD",
+      "logo": "https://img.tvcluboficial.com/vamos.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1015.m3u8"
+    },
+    {
+      "nombre": "Vix Deportes",
+      "logo": "https://img.tvcluboficial.com/vix.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1116.m3u8"
+    },
+    {
+      "nombre": "Vix Deportes 2",
+      "logo": "https://img.tvcluboficial.com/vix.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1136.m3u8"
+    },
+    {
+      "nombre": "Vix Deportes 4",
+      "logo": "https://img.tvcluboficial.com/vix.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1137.m3u8"
+    },
+    {
+      "nombre": "Vix Deportes 5",
+      "logo": "https://img.tvcluboficial.com/vix.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1152.m3u8"
+    },
+    {
+      "nombre": "Vix Deportes 7",
+      "logo": "https://img.tvcluboficial.com/vix.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1138.m3u8"
+    },
+    {
+      "nombre": "Win Sports",
+      "logo": "https://img.tvcluboficial.com/winsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1039.m3u8"
+    },
+    {
+      "nombre": "Win Sports (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/winsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1038.m3u8"
+    },
+    {
+      "nombre": "Win Sports +",
+      "logo": "https://img.tvcluboficial.com/winsportsplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1041.m3u8"
+    },
+    {
+      "nombre": "Win Sports + HD",
+      "logo": "https://img.tvcluboficial.com/winsportsplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1042.m3u8"
+    },
+    {
+      "nombre": "Win Sports HD",
+      "logo": "https://img.tvcluboficial.com/winsports.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1044.m3u8"
+    },
+    {
+      "nombre": "WWE Network",
+      "logo": "https://img.tvcluboficial.com/wwe.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1047.m3u8"
     }
   ],
-  "🏆 FOX SPORTS": [
+
+  "🎬 Cine": [
     {
-      "nombre": "■■■ FOX DEPORTES ■■■",
-      "logo": "http://Telegram-@estoestv",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/892618.m3u8"
+      "nombre": "A3Cine",
+      "logo": "https://img.tvcluboficial.com/a3cine.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/14.m3u8"
     },
     {
-      "nombre": "FOX DEPORTES HD",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581300.m3u8"
+      "nombre": "Az Cinema",
+      "logo": "https://img.tvcluboficial.com/azcinema.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/63.m3u8"
     },
     {
-      "nombre": "FOX SOCCER PLUS",
-      "logo": "https://ia903108.us.archive.org/35/items/FoxSoccerPlus/fox%20soccer%20plus.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581276.m3u8"
+      "nombre": "Cine Latino",
+      "logo": "https://img.tvcluboficial.com/cinelatino.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/173.m3u8"
     },
     {
-      "nombre": "FOX SOCCER PLUS -",
-      "logo": "http://api.rockettv.me/img/thumbnail.php?w=240&t=channel&id=202",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581283.m3u8"
+      "nombre": "Cinecanal",
+      "logo": "https://img.tvcluboficial.com/cinecanal.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/185.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 1 ARGENTINA",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581193.m3u8"
+      "nombre": "Cinecanal (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/cinecanal.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/187.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 1 BRASIL",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581907.m3u8"
+      "nombre": "Cinecanal (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/cinecanal.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/186.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 1 CHILE",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581196.m3u8"
+      "nombre": "Cinecanal HD",
+      "logo": "https://img.tvcluboficial.com/cinecanal.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/188.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 1 CHILE",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581206.m3u8"
+      "nombre": "Cinemax",
+      "logo": "https://img.tvcluboficial.com/cinemax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/190.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 1 COLOMBIA",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581195.m3u8"
+      "nombre": "Cinemax (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/cinemax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/194.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 1 MEXICO",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581203.m3u8"
+      "nombre": "Cinemax (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/cinemax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/191.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 1 USA",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581207.m3u8"
+      "nombre": "Cinemax HD",
+      "logo": "https://img.tvcluboficial.com/cinemax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/196.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 2 ARGENTINA",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581197.m3u8"
+      "nombre": "De Pelicula",
+      "logo": "https://img.tvcluboficial.com/depelicula.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/234.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 2 BRASIL",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581906.m3u8"
+      "nombre": "De Pelicula (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/depelicula.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/235.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 2 COLOMBIA",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581199.m3u8"
+      "nombre": "De Pelicula Clasico",
+      "logo": "https://img.tvcluboficial.com/dpeliculaclasico.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/236.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 2 MEXICO",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581205.m3u8"
+      "nombre": "De Pelicula HD",
+      "logo": "https://img.tvcluboficial.com/depelicula.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/237.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 2 USA",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581200.m3u8"
+      "nombre": "De Pelicula Plus HD",
+      "logo": "https://img.tvcluboficial.com/dpeliculaplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/239.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 3 ARGENTINA",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581201.m3u8"
+      "nombre": "Film & Arts HD",
+      "logo": "https://img.tvcluboficial.com/filmarts.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/419.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 3 CHILE",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581202.m3u8"
+      "nombre": "HBO",
+      "logo": "https://img.tvcluboficial.com/hbo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/512.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 3 COLOMBIA",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581194.m3u8"
+      "nombre": "HBO (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/hbo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/513.m3u8"
     },
     {
-      "nombre": "FOX SPORTS 3 MEXICO",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581204.m3u8"
+      "nombre": "HBO 2",
+      "logo": "https://img.tvcluboficial.com/hbo2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/518.m3u8"
     },
     {
-      "nombre": "FOX SPORTS PREMIUM",
-      "logo": "http://fanc.tmsimg.com/assets/s106781_ll_h3_ab.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/602350.m3u8"
+      "nombre": "HBO 2 (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/hbo2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/519.m3u8"
     },
     {
-      "nombre": "FOX SPORTS RACING USA FHD",
-      "logo": "https://imagenes.gatotv.com/logos/canales/oscuros/fox_deportes-mediano.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/591371.m3u8"
+      "nombre": "HBO 2 HD",
+      "logo": "https://img.tvcluboficial.com/hbo2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/520.m3u8"
     },
     {
-      "nombre": "FOX SPORTS | PREMIUM",
-      "logo": "https://vignette.wikia.nocookie.net/logopedia/images/c/cc/FOXSportsPremium2019.png/revision/latest/scale-to-width-down/340?cb=20190119140234",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/576242.m3u8"
+      "nombre": "HBO Family",
+      "logo": "https://img.tvcluboficial.com/hbofamily.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/525.m3u8"
+    },
+    {
+      "nombre": "HBO Family (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/hbofamily.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/523.m3u8"
+    },
+    {
+      "nombre": "HBO Family HD",
+      "logo": "https://img.tvcluboficial.com/hbofamily.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/526.m3u8"
+    },
+    {
+      "nombre": "HBO HD",
+      "logo": "https://img.tvcluboficial.com/hbo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/527.m3u8"
+    },
+    {
+      "nombre": "HBO Mundi",
+      "logo": "httpss://img.tvcluboficial.com/hbomundi.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1101.m3u8"
+    },
+    {
+      "nombre": "HBO Plus",
+      "logo": "https://img.tvcluboficial.com/hboplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/531.m3u8"
+    },
+    {
+      "nombre": "HBO Plus HD",
+      "logo": "https://img.tvcluboficial.com/hboplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/534.m3u8"
+    },
+    {
+      "nombre": "HBO Plus Oeste HD",
+      "logo": "https://img.tvcluboficial.com/hboplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/536.m3u8"
+    },
+    {
+      "nombre": "HBO Pop",
+      "logo": "https://img.tvcluboficial.com/hbopop.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/538.m3u8"
+    },
+    {
+      "nombre": "HBO Xtreme",
+      "logo": "https://img.tvcluboficial.com/hboxtreme.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/543.m3u8"
+    },
+    {
+      "nombre": "HBO Xtreme (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/hboxtreme.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/544.m3u8"
+    },
+    {
+      "nombre": "Max Prime HD",
+      "logo": "https://img.tvcluboficial.com/play.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/646.m3u8"
+    },
+    {
+      "nombre": "Max Up HD",
+      "logo": "https://img.tvcluboficial.com/play.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/648.m3u8"
+    },
+    {
+      "nombre": "Movie Max",
+      "logo": "https://img.tvcluboficial.com/moviemax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/660.m3u8"
+    },
+    {
+      "nombre": "Movistar Accion HD",
+      "logo": "https://img.tvcluboficial.com/maccion.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/661.m3u8"
+    },
+    {
+      "nombre": "Movistar Cine Ñ",
+      "logo": "https://img.tvcluboficial.com/movistar_comedia.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/662.m3u8"
+    },
+    {
+      "nombre": "Movistar Comedia",
+      "logo": "https://img.tvcluboficial.com/movistar_comedia.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/663.m3u8"
+    },
+    {
+      "nombre": "Movistar Estrenos HD",
+      "logo": "https://img.tvcluboficial.com/movistar_estrenos.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/667.m3u8"
+    },
+    {
+      "nombre": "Movistar Series HD",
+      "logo": "https://img.tvcluboficial.com/movistar_series.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/669.m3u8"
+    },
+    {
+      "nombre": "MultiPremier",
+      "logo": "https://img.tvcluboficial.com/multipremier.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/696.m3u8"
+    },
+    {
+      "nombre": "PopCornFlix HD",
+      "logo": "https://img.tvcluboficial.com/popcornflix.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/775.m3u8"
+    },
+    {
+      "nombre": "Starz Cinema",
+      "logo": "https://img.tvcluboficial.com/starz_cinema.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/839.m3u8"
+    },
+    {
+      "nombre": "Starz Comedy",
+      "logo": "https://img.tvcluboficial.com/starz_comedy.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/840.m3u8"
+    },
+    {
+      "nombre": "Starz Encore Action",
+      "logo": "https://img.tvcluboficial.com/starz_encoreaction.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/841.m3u8"
+    },
+    {
+      "nombre": "Starz Encore Black",
+      "logo": "https://img.tvcluboficial.com/starz_encoreblack.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/842.m3u8"
+    },
+    {
+      "nombre": "Starz Encore Family",
+      "logo": "https://img.tvcluboficial.com/starz_encorefamily.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/843.m3u8"
+    },
+    {
+      "nombre": "Starz HD",
+      "logo": "https://img.tvcluboficial.com/starz_hd.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/844.m3u8"
+    },
+    {
+      "nombre": "Studio Universal",
+      "logo": "https://img.tvcluboficial.com/studiouniversal.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/845.m3u8"
+    },
+    {
+      "nombre": "Studio Universal HD",
+      "logo": "https://img.tvcluboficial.com/studiouniversal.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/848.m3u8"
+    },
+    {
+      "nombre": "TCM",
+      "logo": "https://img.tvcluboficial.com/tcm.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/862.m3u8"
     }
   ],
-  "🏆 DSPORTS": [
+
+  "📺 Series": [
     {
-      "nombre": "■■■ DSPORTS ■■■",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605421.m3u8"
+      "nombre": "A3Series",
+      "logo": "https://img.tvcluboficial.com/a3series.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/17.m3u8"
     },
     {
-      "nombre": "DSPORTS 1 ARG ***",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605420.m3u8"
+      "nombre": "Breaking Bad 24/7",
+      "logo": "https://img.tvcluboficial.com/breakingbad.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/98.m3u8"
     },
     {
-      "nombre": "DSPORTS 1 COL ***",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581225.m3u8"
+      "nombre": "Caso Cerrado 24/7",
+      "logo": "https://img.tvcluboficial.com/casocerrado.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/138.m3u8"
     },
     {
-      "nombre": "DSPORTS 1 ECU",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581217.m3u8"
+      "nombre": "CSI: Miami 24/7",
+      "logo": "https://img.tvcluboficial.com/csi_miami.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/228.m3u8"
     },
     {
-      "nombre": "DSPORTS 1 ECU FHD",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641561.m3u8"
+      "nombre": "Elementary 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/363.m3u8"
     },
     {
-      "nombre": "DSPORTS 1 PE ***",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581208.m3u8"
+      "nombre": "Friends 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/470.m3u8"
     },
     {
-      "nombre": "DSPORTS 1 PE HD1",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641576.m3u8"
+      "nombre": "Game of Thrones 24/7",
+      "logo": "https://img.tvcluboficial.com/gameofthrones.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/484.m3u8"
     },
     {
-      "nombre": "DSPORTS1 UR HD",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/639624.m3u8"
+      "nombre": "Smallville 24/7",
+      "logo": "https://img.tvcluboficial.com/smallville.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/812.m3u8"
     },
     {
-      "nombre": "DSPORTS 2 ARG",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581220.m3u8"
+      "nombre": "The Big Bang Theory 24/7",
+      "logo": "https://img.tvcluboficial.com/thebigbangtheory.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/899.m3u8"
     },
     {
-      "nombre": "DSPORTS 2 ARG",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605422.m3u8"
+      "nombre": "The Walking Dead 24/7",
+      "logo": "https://img.tvcluboficial.com/thewalkingdead.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/901.m3u8"
     },
     {
-      "nombre": "DSPORTS 2 COL",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581219.m3u8"
+      "nombre": "The Walking Dead 24/7 Op. 2",
+      "logo": "https://img.tvcluboficial.com/thewalkingdead.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/902.m3u8"
     },
     {
-      "nombre": "DSPORTS 2 ECU FHD",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641531.m3u8"
-    },
-    {
-      "nombre": "DSPORTS 2 ECU HD",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641566.m3u8"
-    },
-    {
-      "nombre": "DSPORTS 2 PE",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641585.m3u8"
-    },
-    {
-      "nombre": "DSPORTS 2 PE HD",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/581212.m3u8"
-    },
-    {
-      "nombre": "DSPORTS PLUS ARG",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/605423.m3u8"
-    },
-    {
-      "nombre": "DSPORTS PLUS ECU FHD",
-      "logo": "https://i.ibb.co/hXtDK08/LOGO3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641554.m3u8"
-    },
-    {
-      "nombre": "DSPORTS PLUS PE",
-      "logo": "https://i.ibb.co/B6WqVtq/LOGO2.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641593.m3u8"
-    },
-    {
-      "nombre": "DSPORTS PLUS ECU HD",
-      "logo": "https://i.ibb.co/hXtDK08/LOGO3.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/641558.m3u8"
+      "nombre": "Two And a Half Men 24/7",
+      "logo": "https://img.tvcluboficial.com/twoandhalfmen.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/973.m3u8"
     }
   ],
-  "📺 | CINE PREMIUM": [
+
+  "👶 Infantiles": [
     {
-      "nombre": "CINE | A&E HD -",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/A%26E-Network-Logo.svg/2560px-A%26E-Network-Logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736227.m3u"
+      "nombre": "Animaniacs 24/7",
+      "logo": "https://img.tvcluboficial.com/animaniacs.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/43.m3u8"
     },
     {
-      "nombre": "CINE | A&E HD.",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/A%26E-Network-Logo.svg/2560px-A%26E-Network-Logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802828.m3u"
+      "nombre": "Baby TV",
+      "logo": "https://img.tvcluboficial.com/babytv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/79.m3u8"
     },
     {
-      "nombre": "CINE | A&E SD",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/A%26E-Network-Logo.svg/2560px-A%26E-Network-Logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802817.m3u"
+      "nombre": "Bayblade 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/85.m3u8"
     },
     {
-      "nombre": "CINE | A3SERIES",
-      "logo": "https://clarovideocdn3.clarovideo.net/ATRESPLAYER/PELICULAS/A3SERIES/EXPORTACION_WEB/SS/A3SERIES_t-290x163.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/737180.m3u"
+      "nombre": "Bob Esponja 24/7",
+      "logo": "https://img.tvcluboficial.com/bobesponja.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/96.m3u8"
     },
     {
-      "nombre": "CINE | AMAZON PRIME FHD",
-      "logo": "https://cdn.lovesavingsgroup.com/logos/amazon-prime.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/645814.m3u"
+      "nombre": "Calabozos y Dragones 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/103.m3u8"
     },
     {
-      "nombre": "CINE | AMC HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRPXbkxZVQKnNqZ0tcPBhMhdHUgLcP3Kw0fw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802823.m3u"
+      "nombre": "Cartoon Network",
+      "logo": "https://img.tvcluboficial.com/cartoonnetwork.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/128.m3u8"
     },
     {
-      "nombre": "CINE | AMC HD ®",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRPXbkxZVQKnNqZ0tcPBhMhdHUgLcP3Kw0fw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736249.m3u"
+      "nombre": "Cartoon Network (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/cartoonnetwork.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/131.m3u8"
     },
     {
-      "nombre": "CINE | AMC • 1",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRPXbkxZVQKnNqZ0tcPBhMhdHUgLcP3Kw0fw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802820.m3u"
+      "nombre": "Cartoon Network HD",
+      "logo": "https://img.tvcluboficial.com/cartoonnetwork.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/132.m3u8"
     },
     {
-      "nombre": "CINE | AXN 1",
-      "logo": "https://www.codigo3.net/wp-content/themes/yootheme/cache/logo-axn-blanco-5445d2af.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736208.m3u"
+      "nombre": "Cartoonito",
+      "logo": "https://img.tvcluboficial.com/cartoonito.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/134.m3u8"
     },
     {
-      "nombre": "CINE | AXN HD",
-      "logo": "https://www.codigo3.net/wp-content/themes/yootheme/cache/logo-axn-blanco-5445d2af.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736233.m3u"
+      "nombre": "Cartoonito HD",
+      "logo": "https://img.tvcluboficial.com/cartoonito.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/137.m3u8"
     },
     {
-      "nombre": "CINE | AXN SD",
-      "logo": "https://www.codigo3.net/wp-content/themes/yootheme/cache/logo-axn-blanco-5445d2af.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736207.m3u"
+      "nombre": "CBeebies",
+      "logo": "https://img.tvcluboficial.com/cbeebies.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/139.m3u8"
     },
     {
-      "nombre": "CINE | CINECANAL  FHD",
-      "logo": "https://i1.sndcdn.com/artworks-000198115180-wj5dj4-t500x500.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736224.m3u"
+      "nombre": "Coraje el Perro Cobarde 24/7",
+      "logo": "https://img.tvcluboficial.com/coraje.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/223.m3u8"
     },
     {
-      "nombre": "CINE | CINECANAL  HD",
-      "logo": "https://i1.sndcdn.com/artworks-000198115180-wj5dj4-t500x500.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736234.m3u"
+      "nombre": "Dinosaurios 24/7",
+      "logo": "https://img.tvcluboficial.com/dinosaurios.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/244.m3u8"
     },
     {
-      "nombre": "CINE | CINECANAL  SD",
-      "logo": "https://i1.sndcdn.com/artworks-000198115180-wj5dj4-t500x500.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736226.m3u"
+      "nombre": "Disney Channel",
+      "logo": "https://img.tvcluboficial.com/disneychannel.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/280.m3u8"
     },
     {
-      "nombre": "CINE | CINELATINO",
+      "nombre": "Disney Junior",
+      "logo": "https://img.tvcluboficial.com/disneyjr.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/284.m3u8"
+    },
+    {
+      "nombre": "Disney Junior HD",
+      "logo": "https://img.tvcluboficial.com/disneyjr.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/287.m3u8"
+    },
+    {
+      "nombre": "Disney XD",
+      "logo": "https://img.tvcluboficial.com/disneyxd.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/289.m3u8"
+    },
+    {
+      "nombre": "Disney XD HD",
+      "logo": "https://img.tvcluboficial.com/disneyxd.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/291.m3u8"
+    },
+    {
+      "nombre": "Doraemon 24/7",
+      "logo": "https://img.tvcluboficial.com/doraemon.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/297.m3u8"
+    },
+    {
+      "nombre": "Doug 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/298.m3u8"
+    },
+    {
+      "nombre": "Dragon Ball 24/7",
+      "logo": "https://img.tvcluboficial.com/dragonball.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/301.m3u8"
+    },
+    {
+      "nombre": "Dragon Ball GT 24/7",
+      "logo": "https://img.tvcluboficial.com/dragonballgt.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/303.m3u8"
+    },
+    {
+      "nombre": "Dragon Ball Super 24/7",
+      "logo": "https://img.tvcluboficial.com/dragonballsuper.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/305.m3u8"
+    },
+    {
+      "nombre": "Dragon Ball Z 24/7",
+      "logo": "https://img.tvcluboficial.com/dragonballz.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/307.m3u8"
+    },
+    {
+      "nombre": "Duelo Xiaolin 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/330.m3u8"
+    },
+    {
+      "nombre": "Ed, Edd y Eddy 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/339.m3u8"
+    },
+    {
+      "nombre": "El Coyote y el Correcaminos 24/7",
+      "logo": "https://img.tvcluboficial.com/elcoyote.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/346.m3u8"
+    },
+    {
+      "nombre": "El Gallo Claudio 24/7",
+      "logo": "https://img.tvcluboficial.com/elgalloclaudio.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/347.m3u8"
+    },
+    {
+      "nombre": "El Pajaro Loco 24/7",
+      "logo": "https://img.tvcluboficial.com/elpajaroloco.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/355.m3u8"
+    },
+    {
+      "nombre": "El Pato Darkwing 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/356.m3u8"
+    },
+    {
+      "nombre": "Garfield 24/7",
       "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867055.m3u"
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/486.m3u8"
     },
     {
-      "nombre": "CINE | CINEMAX • 1",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cinemax_%28Yellow%29.svg/800px-Cinemax_%28Yellow%29.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736251.m3u"
+      "nombre": "Hey Arnold 24/7",
+      "logo": "https://img.tvcluboficial.com/heyarnold.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/551.m3u8"
     },
     {
-      "nombre": "CINE | CINEMAX • 2",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cinemax_%28Yellow%29.svg/800px-Cinemax_%28Yellow%29.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736246.m3u"
+      "nombre": "Jorge el Curioso 24/7",
+      "logo": "https://img.tvcluboficial.com/jorgeelcurioso.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/585.m3u8"
     },
     {
-      "nombre": "CINE | CINEMAX • 3",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cinemax_%28Yellow%29.svg/800px-Cinemax_%28Yellow%29.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736217.m3u"
+      "nombre": "La Casa de los Dibujos 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/590.m3u8"
     },
     {
-      "nombre": "CINE | DE PELICULA",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/De_pelicula_logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779361.m3u"
+      "nombre": "La Familia Monster 24/7",
+      "logo": "https://img.tvcluboficial.com/lafamiliamonster.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/591.m3u8"
     },
     {
-      "nombre": "CINE | DE PELICULA -",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/De_pelicula_logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779362.m3u"
+      "nombre": "La Hormiga Atomica 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/594.m3u8"
     },
     {
-      "nombre": "CINE | DE PELICULA CLASICO",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/De_pelicula_logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779363.m3u"
+      "nombre": "La Mascara 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/595.m3u8"
     },
     {
-      "nombre": "CINE | DE PELICULA PLUS",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/De_pelicula_logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779364.m3u"
+      "nombre": "La Pantera Rosa 24/7",
+      "logo": "https://img.tvcluboficial.com/lapanterarosa.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/597.m3u8"
     },
     {
-      "nombre": "CINE | DE PELICULA PLUS -",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/De_pelicula_logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779365.m3u"
+      "nombre": "La Pequeña Lulu 24/7",
+      "logo": "https://img.tvcluboficial.com/lapequenalulu.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/598.m3u8"
     },
     {
-      "nombre": "CINE  | EUROPA EUROPA ¹",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/904280.m3u"
+      "nombre": "La Vaca y ElPollito 24/7",
+      "logo": "https://img.tvcluboficial.com/lavacayelpollito.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/606.m3u8"
     },
     {
-      "nombre": "CINE | DHE",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Canal_DHE_logo.svg/800px-Canal_DHE_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779369.m3u"
+      "nombre": "Las Aventuras de Tom Sawyer 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/607.m3u8"
     },
     {
-      "nombre": "CINE | DHE -",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Canal_DHE_logo.svg/800px-Canal_DHE_logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779370.m3u"
+      "nombre": "Las Chicas Super Poderosas 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/608.m3u8"
     },
     {
-      "nombre": "CINE | DINAMITA HD",
-      "logo": "https://archive.org/download/nota_cinema-dinamita-llega-a-la-plataforma-xfinity-tv-de-comcast/nota_cinema-dinamita-llega-a-la-plataforma-xfinity-tv-de-comcast.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/743479.m3u"
+      "nombre": "Looney Tunes 24/7",
+      "logo": "https://img.tvcluboficial.com/looneytunes.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/618.m3u8"
     },
     {
-      "nombre": "CINE | DINAMITA HD*",
-      "logo": "https://www.newslinereport.com/online/nota_cinema-dinamita-llega-a-la-plataforma-xfinity-tv-de-comcast.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/743480.m3u"
+      "nombre": "Los 3 Chiflados 24/7",
+      "logo": "https://img.tvcluboficial.com/los3chiflados.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/619.m3u8"
     },
     {
-      "nombre": "CINE | DISNEY+ FHD",
-      "logo": "https://i.ibb.co/kmbwWWv/descarga.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/645811.m3u"
+      "nombre": "Los Amigos de la Justicia 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/620.m3u8"
     },
     {
-      "nombre": "CiNE | DISTRITO COMEDIA HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe8-OZQYKbCJfjV2C44_gCvEeC-xrqomWNIg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736289.m3u"
+      "nombre": "Los Años Maravillosos 24/7",
+      "logo": "https://img.tvcluboficial.com/losaniosmaravillosos.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/621.m3u8"
     },
     {
-      "nombre": "CINE | DISTRITO COMEDIA SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe8-OZQYKbCJfjV2C44_gCvEeC-xrqomWNIg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736269.m3u"
+      "nombre": "Los Chicos del Barrio 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/622.m3u8"
     },
     {
-      "nombre": "CINE | ESTELAR",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867051.m3u"
+      "nombre": "Los Expedientes Secretos X 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/623.m3u8"
     },
     {
-      "nombre": "CINE | EUROPA EUROPA ²",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/904281.m3u"
+      "nombre": "Los Picapiedra 24/7",
+      "logo": "https://img.tvcluboficial.com/lospicapiedra.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/625.m3u8"
     },
     {
-      "nombre": "CINE | FILM & ART",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867052.m3u"
+      "nombre": "Los Pinguinos de Madagascar 24/7",
+      "logo": "https://img.tvcluboficial.com/lospinguinosdemadagascar.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/626.m3u8"
     },
     {
-      "nombre": "CINE | FILMEX ACCION HD",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/889107.m3u"
+      "nombre": "Los Pitufos 24/7",
+      "logo": "https://img.tvcluboficial.com/lospitufos.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/627.m3u8"
     },
     {
-      "nombre": "CINE | FILMEX CLASSICO HD",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/889110.m3u"
+      "nombre": "Los Simpson (Temporadas 1-5) 24/7",
+      "logo": "https://img.tvcluboficial.com/lossimpsons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/629.m3u8"
     },
     {
-      "nombre": "CINE | FILMEX COMEDIA",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/889108.m3u"
+      "nombre": "Los Simpson (Temporadas 12-17) 24/7",
+      "logo": "https://img.tvcluboficial.com/lossimpsons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/630.m3u8"
     },
     {
-      "nombre": "CINE | FILMEX HD",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/889109.m3u"
+      "nombre": "Los Simpson (Temporadas 18-21) 24/7",
+      "logo": "https://img.tvcluboficial.com/lossimpsons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/631.m3u8"
     },
     {
-      "nombre": "CINE | FX  HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJq1YUknstlcWYR_a39Pbh-VKNQP_noF_rDg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802821.m3u"
+      "nombre": "Los Simpson (Temporadas 22-26) 24/7",
+      "logo": "https://img.tvcluboficial.com/lossimpsons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/632.m3u8"
     },
     {
-      "nombre": "CINE | FX  SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJq1YUknstlcWYR_a39Pbh-VKNQP_noF_rDg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802818.m3u"
+      "nombre": "Los Simpson (Temporadas 27-30) 24/7",
+      "logo": "https://img.tvcluboficial.com/lossimpsons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/633.m3u8"
     },
     {
-      "nombre": "CINE | FX FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJq1YUknstlcWYR_a39Pbh-VKNQP_noF_rDg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736235.m3u"
+      "nombre": "Los Simpson (Temporadas 6-11) 24/7",
+      "logo": "https://img.tvcluboficial.com/lossimpsons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/634.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN  HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxytfwU0t7hq8tWkwnq1tr0_J-NnCk_nV1Ow&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802819.m3u"
+      "nombre": "Los Simpson 24/7",
+      "logo": "https://img.tvcluboficial.com/lossimpsons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/635.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN  SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxytfwU0t7hq8tWkwnq1tr0_J-NnCk_nV1Ow&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802822.m3u"
+      "nombre": "Los Simpson 24/7 (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/lossimpsons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/636.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN 1 FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxytfwU0t7hq8tWkwnq1tr0_J-NnCk_nV1Ow&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736204.m3u"
+      "nombre": "Los Vengadores Unidos 24/7",
+      "logo": "https://img.tvcluboficial.com/losvengadoresunidos.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/638.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN 1 HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxytfwU0t7hq8tWkwnq1tr0_J-NnCk_nV1Ow&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736241.m3u"
+      "nombre": "Max Steel 24/7",
+      "logo": "https://img.tvcluboficial.com/maxsteel.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/647.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN 1 SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxytfwU0t7hq8tWkwnq1tr0_J-NnCk_nV1Ow&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736215.m3u"
+      "nombre": "Mazinger Z 24/7",
+      "logo": "https://img.tvcluboficial.com/mazingerz.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/649.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN EDG FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw_MXCN8YTJUs_t4zTDTivh73cIHqA2A3Drw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736225.m3u"
+      "nombre": "Naruto 24/7",
+      "logo": "https://img.tvcluboficial.com/naruto.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/702.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN PLUS",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEUkFenrLxGFpEKOzzTEl2crLHBNePJehWFQ&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736218.m3u"
+      "nombre": "Nick",
+      "logo": "https://img.tvcluboficial.com/nick.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/724.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN PLUS FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEUkFenrLxGFpEKOzzTEl2crLHBNePJehWFQ&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736210.m3u"
+      "nombre": "Nick 2 HD",
+      "logo": "https://img.tvcluboficial.com/nick2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/726.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN PLUS HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEUkFenrLxGFpEKOzzTEl2crLHBNePJehWFQ&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736223.m3u"
+      "nombre": "Nick HD",
+      "logo": "https://img.tvcluboficial.com/nick.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/728.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN PREMIER  FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9O4LcnjKCXpeYqAKqoMBL8AlgEW4KvxMe9w&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736219.m3u"
+      "nombre": "Nick JR",
+      "logo": "https://img.tvcluboficial.com/nickjr.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/729.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN PREMIER  HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9O4LcnjKCXpeYqAKqoMBL8AlgEW4KvxMe9w&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736255.m3u"
+      "nombre": "Nick JR HD",
+      "logo": "https://img.tvcluboficial.com/nickjr.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/732.m3u8"
     },
     {
-      "nombre": "CINE | GOLDEN PREMIER  SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9O4LcnjKCXpeYqAKqoMBL8AlgEW4KvxMe9w&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736214.m3u"
+      "nombre": "Nick Toons",
+      "logo": "https://img.tvcluboficial.com/nicktoons.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/735.m3u8"
     },
     {
-      "nombre": "CINE | HBO 1 FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtbjnKsynnCmmwzyL97_V5eVimvq_l9nScg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736229.m3u"
+      "nombre": "Nickelodeon",
+      "logo": "https://img.tvcluboficial.com/nickelodeon.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/736.m3u8"
     },
     {
-      "nombre": "CINE | HBO 1 HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtbjnKsynnCmmwzyL97_V5eVimvq_l9nScg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736250.m3u"
+      "nombre": "One Punch Man 24/7",
+      "logo": "https://img.tvcluboficial.com/onepunchman.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/744.m3u8"
     },
     {
-      "nombre": "CINE | HBO 1 SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtbjnKsynnCmmwzyL97_V5eVimvq_l9nScg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736220.m3u"
+      "nombre": "PakaPaka",
+      "logo": "https://img.tvcluboficial.com/pakapaka.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/748.m3u8"
     },
     {
-      "nombre": "CINE | HBO 2 FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lZ0U7y83aMg8VcxHcLWyr8k4eK-vVK_TPw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802831.m3u"
+      "nombre": "Patoaventuras 24/7",
+      "logo": "https://img.tvcluboficial.com/patoaventuras.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/758.m3u8"
     },
     {
-      "nombre": "CINE | HBO 2 HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lZ0U7y83aMg8VcxHcLWyr8k4eK-vVK_TPw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736242.m3u"
+      "nombre": "Patrulla Canina 24/7",
+      "logo": "https://img.tvcluboficial.com/patrullacanina.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/759.m3u8"
     },
     {
-      "nombre": "CINE | HBO 2 HQ",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8lZ0U7y83aMg8VcxHcLWyr8k4eK-vVK_TPw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802830.m3u"
+      "nombre": "Peppa Pig 24/7",
+      "logo": "https://img.tvcluboficial.com/peppapig.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/760.m3u8"
     },
     {
-      "nombre": "CINE | HBO FAMILY 1",
-      "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/990f75eb-172d-42a8-bd8f-899ab38ba394/dh79w0v-80ddfcdd-4847-413c-8491-d0183fad462e.png/v1/fill/w_1280,h_720,q_80,strp/_my_au__hbo_family_id__2024___night__by_carxl2029_dh79w0v-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvOTkwZjc1ZWItMTcyZC00MmE4LWJkOGYtODk5YWIzOGJhMzk0XC9kaDc5dzB2LTgwZGRmY2RkLTQ4NDctNDEzYy04NDkxLWQwMTgzZmFkNDYyZS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.jYxq0cNvDwJQc7N-S35R-PMJ95EX0D1Wsrd2Amdnvtg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/899906.m3u"
+      "nombre": "Pinky y Cerebro 24/7",
+      "logo": "https://img.tvcluboficial.com/pinkyycerebro.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/771.m3u8"
     },
     {
-      "nombre": "CINE | HBO FAMILY 2",
-      "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/990f75eb-172d-42a8-bd8f-899ab38ba394/dh79w0v-80ddfcdd-4847-413c-8491-d0183fad462e.png/v1/fill/w_1280,h_720,q_80,strp/_my_au__hbo_family_id__2024___night__by_carxl2029_dh79w0v-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvOTkwZjc1ZWItMTcyZC00MmE4LWJkOGYtODk5YWIzOGJhMzk0XC9kaDc5dzB2LTgwZGRmY2RkLTQ4NDctNDEzYy04NDkxLWQwMTgzZmFkNDYyZS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.jYxq0cNvDwJQc7N-S35R-PMJ95EX0D1Wsrd2Amdnvtg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/899905.m3u"
+      "nombre": "Pokemon 24/7",
+      "logo": "https://img.tvcluboficial.com/pokemon.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/773.m3u8"
     },
     {
-      "nombre": "CINE | HBO FAMILY 3",
-      "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/990f75eb-172d-42a8-bd8f-899ab38ba394/dh79w0v-80ddfcdd-4847-413c-8491-d0183fad462e.png/v1/fill/w_1280,h_720,q_80,strp/_my_au__hbo_family_id__2024___night__by_carxl2029_dh79w0v-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvOTkwZjc1ZWItMTcyZC00MmE4LWJkOGYtODk5YWIzOGJhMzk0XC9kaDc5dzB2LTgwZGRmY2RkLTQ4NDctNDEzYy04NDkxLWQwMTgzZmFkNDYyZS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.jYxq0cNvDwJQc7N-S35R-PMJ95EX0D1Wsrd2Amdnvtg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/899904.m3u"
+      "nombre": "Ranma 1/2 24/7",
+      "logo": "https://img.tvcluboficial.com/ranma.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/782.m3u8"
     },
     {
-      "nombre": "CINE | HBO PLUS FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFTnuKd-uu1XQztepY5vFZUBhKCp8-Okbsg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736206.m3u"
+      "nombre": "Rugrats 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/797.m3u8"
     },
     {
-      "nombre": "CINE | HBO PLUS HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFTnuKd-uu1XQztepY5vFZUBhKCp8-Okbsg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736244.m3u"
+      "nombre": "Rugrats Crecidos 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/798.m3u8"
     },
     {
-      "nombre": "CINE | HBO PLUS SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFTnuKd-uu1XQztepY5vFZUBhKCp8-Okbsg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736203.m3u"
+      "nombre": "Sakura Card Captor 24/7",
+      "logo": "https://img.tvcluboficial.com/sakura.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/800.m3u8"
     },
     {
-      "nombre": "CINE | HBO POP",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrjaVQ_67o7XMUHTLunr3MrCREj8_Mfn_-g&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802825.m3u"
+      "nombre": "Samurai X 24/7",
+      "logo": "https://img.tvcluboficial.com/samuraix.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/802.m3u8"
     },
     {
-      "nombre": "CINE | HBO POP • 2",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrjaVQ_67o7XMUHTLunr3MrCREj8_Mfn_-g&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802832.m3u"
+      "nombre": "Scooby Doo 24/7",
+      "logo": "https://img.tvcluboficial.com/scoobydoo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/804.m3u8"
     },
     {
-      "nombre": "CINE | HBO POP • 3",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrjaVQ_67o7XMUHTLunr3MrCREj8_Mfn_-g&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802829.m3u"
+      "nombre": "Spiderman 24/7",
+      "logo": "https://img.tvcluboficial.com/spiderman.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/827.m3u8"
     },
     {
-      "nombre": "CINE | HBO SIGNATURE HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd8X6vH9jsyuXvtYEs56bNO1NlDkim-SJkQg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736212.m3u"
+      "nombre": "Super Campeones 24/7",
+      "logo": "https://img.tvcluboficial.com/supercampeones.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/850.m3u8"
     },
     {
-      "nombre": "CINE | HBO SIGNATURE SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd8X6vH9jsyuXvtYEs56bNO1NlDkim-SJkQg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736232.m3u"
+      "nombre": "TeenNick",
+      "logo": "https://img.tvcluboficial.com/teennick.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/865.m3u8"
     },
     {
-      "nombre": "CINE | HBO SIGNATURE • 1",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd8X6vH9jsyuXvtYEs56bNO1NlDkim-SJkQg&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736221.m3u"
+      "nombre": "Tiin",
+      "logo": "https://img.tvcluboficial.com/tiin.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/907.m3u8"
     },
     {
-      "nombre": "CINE | MULTICINEMA",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867062.m3u"
+      "nombre": "Tom y Jerry 24/7",
+      "logo": "https://img.tvcluboficial.com/tomyjerry.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/940.m3u8"
     },
     {
-      "nombre": "CINE | MULTIPREMIER",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867063.m3u"
+      "nombre": "Tooncast",
+      "logo": "https://img.tvcluboficial.com/tooncast.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/941.m3u8"
     },
     {
-      "nombre": "CINE | NETFLIX FHD",
-      "logo": "https://i.ibb.co/QP93v6B/daf30fac5e16393d66a3684dd27e29af.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/645813.m3u"
+      "nombre": "TrollHunters 24/7",
+      "logo": "https://img.tvcluboficial.com/trollhunters.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/945.m3u8"
     },
     {
-      "nombre": "CINE | PARAMOUNT CHANEL FHD",
-      "logo": "https://logowik.com/content/uploads/images/comedy-central.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736201.m3u"
+      "nombre": "Yogui 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1051.m3u8"
     },
     {
-      "nombre": "CINE | PARAMOUNT CHANEL HD",
-      "logo": "https://logowik.com/content/uploads/images/comedy-central.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736231.m3u"
-    },
-    {
-      "nombre": "CINE | PARAMOUNT CHANEL SD",
-      "logo": "https://logowik.com/content/uploads/images/comedy-central.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736252.m3u"
-    },
-    {
-      "nombre": "CINE | PARAMOUNT FHD",
-      "logo": "https://logowik.com/content/uploads/images/comedy-central.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/645812.m3u"
-    },
-    {
-      "nombre": "CINE | SONY MOVIES",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/1200px-Sony_Movies_Logo.svg.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736247.m3u"
-    },
-    {
-      "nombre": "CINE | SONY NOVELAS",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sony_Channel_Logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736238.m3u"
-    },
-    {
-      "nombre": "CINE | SONY NOVELAS",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Sony_Channel_Logo.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736243.m3u"
-    },
-    {
-      "nombre": "CINE | SPACE FHD -",
-      "logo": "https://seeklogo.com/images/S/space-channel-logo-4AD3528E2F-seeklogo.com.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779366.m3u"
-    },
-    {
-      "nombre": "CINE | SPACE HD -",
-      "logo": "https://seeklogo.com/images/S/space-channel-logo-4AD3528E2F-seeklogo.com.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779367.m3u"
-    },
-    {
-      "nombre": "CINE | SPACE SD",
-      "logo": "https://seeklogo.com/images/S/space-channel-logo-4AD3528E2F-seeklogo.com.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/779368.m3u"
-    },
-    {
-      "nombre": "CINE | STAR CHANEL • 1",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpUSC9j9pUIeP68TVeZFtU_BOi3beYtu0zAw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736198.m3u"
-    },
-    {
-      "nombre": "CINE | STAR CHANNEL • 2",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpUSC9j9pUIeP68TVeZFtU_BOi3beYtu0zAw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736196.m3u"
-    },
-    {
-      "nombre": "CINE | STAR CHANNEL • 3",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpUSC9j9pUIeP68TVeZFtU_BOi3beYtu0zAw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736188.m3u"
-    },
-    {
-      "nombre": "CINE | STAR+ FHD",
-      "logo": "https://i.ibb.co/z8t9rC6/descarga-1.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/645810.m3u"
-    },
-    {
-      "nombre": "CINE | STARZ CINEMA LATINO",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867068.m3u"
-    },
-    {
-      "nombre": "CINE | STARZ LATINO",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867069.m3u"
-    },
-    {
-      "nombre": "CINE | STUDIO UNIVERSAL",
-      "logo": "https://i.pinimg.com/474x/3b/57/1f/3b571f7ccc4a1fe6c73cb778c58a2833.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802827.m3u"
-    },
-    {
-      "nombre": "CINE | STUDIO UNIVERSAL FHD",
-      "logo": "https://i.pinimg.com/474x/3b/57/1f/3b571f7ccc4a1fe6c73cb778c58a2833.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802824.m3u"
-    },
-    {
-      "nombre": "CINE | STUDIO UNIVERSAL • 1",
-      "logo": "https://i.pinimg.com/474x/3b/57/1f/3b571f7ccc4a1fe6c73cb778c58a2833.jpg",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/802826.m3u"
-    },
-    {
-      "nombre": "CINE | TCM FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5C2mxnbZhloXPJ9g7G5nwhyJmJNq06VlqpQ&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736193.m3u"
-    },
-    {
-      "nombre": "CINE | TCM HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5C2mxnbZhloXPJ9g7G5nwhyJmJNq06VlqpQ&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736185.m3u"
-    },
-    {
-      "nombre": "CINE | TCM SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5C2mxnbZhloXPJ9g7G5nwhyJmJNq06VlqpQ&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736172.m3u"
-    },
-    {
-      "nombre": "CINE | TNT HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREx6xag_8jHvToBLGBqlHfK3Y6oMAi5cqnLw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736177.m3u"
-    },
-    {
-      "nombre": "CINE | TNT NOVELAS",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867071.m3u"
-    },
-    {
-      "nombre": "CINE | TNT NOVELAS",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867072.m3u"
-    },
-    {
-      "nombre": "CINE | TNT SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREx6xag_8jHvToBLGBqlHfK3Y6oMAi5cqnLw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736189.m3u"
-    },
-    {
-      "nombre": "CINE | TNT SERIES HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS412_DLemKjbNR286Bqh-5--md7yWlo7F9sw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736176.m3u"
-    },
-    {
-      "nombre": "CINE | TNT SERIES SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS412_DLemKjbNR286Bqh-5--md7yWlo7F9sw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736168.m3u"
-    },
-    {
-      "nombre": "CINE | TNT • 1",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREx6xag_8jHvToBLGBqlHfK3Y6oMAi5cqnLw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736183.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL CHANNEL FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS412_DLemKjbNR286Bqh-5--md7yWlo7F9sw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736186.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL CHANNEL HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS412_DLemKjbNR286Bqh-5--md7yWlo7F9sw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736175.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL CHANNEL SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS412_DLemKjbNR286Bqh-5--md7yWlo7F9sw&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736197.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL CINEMA",
-      "logo": "https://www.universalplus.com/assets/logo_cinema_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736182.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL CINEMA HD",
-      "logo": "https://www.universalplus.com/assets/logo_cinema_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736184.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL COMEDY",
-      "logo": "https://www.universalplus.com/assets/logo_comedy_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736171.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL COMEDY HD",
-      "logo": "https://www.universalplus.com/assets/logo_comedy_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736195.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL CRIME",
-      "logo": "https://www.universalplus.com/assets/logo_crime_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736174.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL CRIMEN HD",
-      "logo": "https://www.universalplus.com/assets/logo_crime_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736180.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL PREMIER HD",
-      "logo": "https://www.universalplus.com/assets/logo_premiere_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736169.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL PREMIERE •",
-      "logo": "https://www.universalplus.com/assets/logo_premiere_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736167.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL REALITY",
-      "logo": "https://www.universalplus.com/assets/logo_reality_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736179.m3u"
-    },
-    {
-      "nombre": "CINE | UNIVERSAL REALITY HD",
-      "logo": "https://www.universalplus.com/assets/logo_reality_hero.png",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736192.m3u"
-    },
-    {
-      "nombre": "CINE | WARNER FHD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHNIfv7VLUeS2w8eoF4b-k5psDxmpHYqkxew&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736191.m3u"
-    },
-    {
-      "nombre": "CINE | WARNER HD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHNIfv7VLUeS2w8eoF4b-k5psDxmpHYqkxew&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736181.m3u"
-    },
-    {
-      "nombre": "CINE | WARNER SD",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHNIfv7VLUeS2w8eoF4b-k5psDxmpHYqkxew&usqp=CAU",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/736173.m3u"
-    },
-    {
-      "nombre": "CINE| CINEMAX ESPANOL USA HD",
-      "logo": "",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/867048.m3u"
-    },
-    {
-      "nombre": "■■■ CINE PREMIUM ■■■",
-      "logo": "http://Telegram-@estoestv",
-      "url": "http://tutv.plus:8080/live/PAEJ1992/PANDA2022/892629.m3u"
+      "nombre": "Yu-Gi-Oh! 24/7",
+      "logo": "https://img.tvcluboficial.com/yugioh.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1052.m3u8"
     }
-  ]  
+  ],
+
+  "📡 Noticias": [
+    {
+      "nombre": "ADN 40",
+      "logo": "https://img.tvcluboficial.com/adn40.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/20.m3u8"
+    },
+    {
+      "nombre": "Al Jazeera",
+      "logo": "https://img.tvcluboficial.com/aljazeera.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/27.m3u8"
+    },
+    {
+      "nombre": "BBC HD",
+      "logo": "https://img.tvcluboficial.com/bbc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/86.m3u8"
+    },
+    {
+      "nombre": "CBS HD",
+      "logo": "https://img.tvcluboficial.com/cbs.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/140.m3u8"
+    },
+    {
+      "nombre": "DW",
+      "logo": "https://img.tvcluboficial.com/dw.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1091.m3u8"
+    },
+    {
+      "nombre": "Fox News",
+      "logo": "https://img.tvcluboficial.com/foxnews.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/433.m3u8"
+    },
+    {
+      "nombre": "NBC HD",
+      "logo": "https://img.tvcluboficial.com/nbc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/713.m3u8"
+    }
+  ],
+
+  "🌍 Documentales": [
+    {
+      "nombre": "Animal Planet",
+      "logo": "https://img.tvcluboficial.com/animalplanet.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/41.m3u8"
+    },
+    {
+      "nombre": "Animal Planet (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/animalplanet.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/38.m3u8"
+    },
+    {
+      "nombre": "Animal Planet HD",
+      "logo": "https://img.tvcluboficial.com/animalplanet.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/42.m3u8"
+    },
+    {
+      "nombre": "Discovery Channel",
+      "logo": "https://img.tvcluboficial.com/discoverychannel.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/247.m3u8"
+    },
+    {
+      "nombre": "Discovery Channel (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/discoverychannel.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/250.m3u8"
+    },
+    {
+      "nombre": "Discovery Channel HD",
+      "logo": "https://img.tvcluboficial.com/discoverychannel.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/251.m3u8"
+    },
+    {
+      "nombre": "Discovery Civilization",
+      "logo": "https://img.tvcluboficial.com/discoverycivilization.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/252.m3u8"
+    },
+    {
+      "nombre": "Discovery H&H",
+      "logo": "https://img.tvcluboficial.com/discoveryhh.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/254.m3u8"
+    },
+    {
+      "nombre": "Discovery H&H HD",
+      "logo": "https://img.tvcluboficial.com/discoveryhh.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/258.m3u8"
+    },
+    {
+      "nombre": "Discovery Kids",
+      "logo": "https://img.tvcluboficial.com/discoverykids.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/264.m3u8"
+    },
+    {
+      "nombre": "Discovery Kids HD",
+      "logo": "https://img.tvcluboficial.com/discoverykids.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/266.m3u8"
+    },
+    {
+      "nombre": "Discovery SCI",
+      "logo": "https://img.tvcluboficial.com/discoverysci.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/267.m3u8"
+    },
+    {
+      "nombre": "Discovery Theater HD",
+      "logo": "https://img.tvcluboficial.com/discoverytheater.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/271.m3u8"
+    },
+    {
+      "nombre": "Discovery Turbo",
+      "logo": "https://img.tvcluboficial.com/discoveryturbo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/274.m3u8"
+    },
+    {
+      "nombre": "Discovery Turbo HD",
+      "logo": "https://img.tvcluboficial.com/discoveryturbo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/275.m3u8"
+    },
+    {
+      "nombre": "Discovery World",
+      "logo": "https://img.tvcluboficial.com/discoveryworld.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/276.m3u8"
+    },
+    {
+      "nombre": "DMax HD",
+      "logo": "https://img.tvcluboficial.com/dmax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/296.m3u8"
+    },
+    {
+      "nombre": "Historia (ES)",
+      "logo": "https://img.tvcluboficial.com/history.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/554.m3u8"
+    },
+    {
+      "nombre": "History Channel",
+      "logo": "https://img.tvcluboficial.com/history.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/558.m3u8"
+    },
+    {
+      "nombre": "History Channel (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/history.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/557.m3u8"
+    },
+    {
+      "nombre": "History Channel HD",
+      "logo": "https://img.tvcluboficial.com/history.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/560.m3u8"
+    },
+    {
+      "nombre": "Investigation Discovery",
+      "logo": "https://img.tvcluboficial.com/investigationdiscovery.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/579.m3u8"
+    },
+    {
+      "nombre": "Investigation Discovery (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/investigationdiscovery.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/580.m3u8"
+    },
+    {
+      "nombre": "Investigation Discovery HD",
+      "logo": "https://img.tvcluboficial.com/investigationdiscovery.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/581.m3u8"
+    },
+    {
+      "nombre": "Nat Geo",
+      "logo": "https://img.tvcluboficial.com/natgeo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/703.m3u8"
+    },
+    {
+      "nombre": "Nat Geo HD",
+      "logo": "https://img.tvcluboficial.com/natgeo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/706.m3u8"
+    },
+    {
+      "nombre": "Nat Geo Wild",
+      "logo": "https://img.tvcluboficial.com/natgeowild.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/709.m3u8"
+    }
+  ],
+
+  "🎵 Música": [
+    {
+      "nombre": "Bandamax",
+      "logo": "https://img.tvcluboficial.com/bandamax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/83.m3u8"
+    },
+    {
+      "nombre": "Bandamax HD",
+      "logo": "https://img.tvcluboficial.com/bandamax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/84.m3u8"
+    },
+    {
+      "nombre": "Canal de la Musica",
+      "logo": "https://img.tvcluboficial.com/canaldelamusica.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/111.m3u8"
+    },
+    {
+      "nombre": "Music Now",
+      "logo": "https://img.tvcluboficial.com/play.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/698.m3u8"
+    },
+    {
+      "nombre": "Quiero Musica",
+      "logo": "https://img.tvcluboficial.com/quieromusica.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/779.m3u8"
+    },
+    {
+      "nombre": "Retro Music",
+      "logo": "https://img.tvcluboficial.com/retromusic.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/791.m3u8"
+    },
+    {
+      "nombre": "Ritmoson Latino",
+      "logo": "https://img.tvcluboficial.com/ritmoson.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/792.m3u8"
+    },
+    {
+      "nombre": "Telehit",
+      "logo": "https://img.tvcluboficial.com/telehitmusica.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/878.m3u8"
+    },
+    {
+      "nombre": "Telehit HD",
+      "logo": "https://img.tvcluboficial.com/telehitmusica.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/879.m3u8"
+    },
+    {
+      "nombre": "TLR (Teleritmo)",
+      "logo": "https://img.tvcluboficial.com/teleritmo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/916.m3u8"
+    },
+    {
+      "nombre": "TLR HD",
+      "logo": "https://img.tvcluboficial.com/teleritmo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/917.m3u8"
+    },
+    {
+      "nombre": "TLR HD",
+      "logo": "https://img.tvcluboficial.com/teleritmo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/918.m3u8"
+    },
+    {
+      "nombre": "Tu Musica HD",
+      "logo": "https://img.tvcluboficial.com/tumusicahd.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/951.m3u8"
+    },
+    {
+      "nombre": "VH1",
+      "logo": "https://img.tvcluboficial.com/vh1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1016.m3u8"
+    },
+    {
+      "nombre": "VH1 HD",
+      "logo": "https://img.tvcluboficial.com/vh1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1017.m3u8"
+    }
+  ],
+
+  "🍽️ Cocina y Lifestyle": [
+    {
+      "nombre": "El Gourmet",
+      "logo": "https://img.tvcluboficial.com/elgourmet.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/349.m3u8"
+    },
+    {
+      "nombre": "Food Network",
+      "logo": "https://img.tvcluboficial.com/foodnetwork.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/424.m3u8"
+    },
+    {
+      "nombre": "Hola TV",
+      "logo": "https://img.tvcluboficial.com/hola.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/564.m3u8"
+    },
+    {
+      "nombre": "Más chic",
+      "logo": "https://img.tvcluboficial.com/maschic.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/643.m3u8"
+    }
+  ],
+
+  "🗺️ Internacionales": [
+    {
+      "nombre": "America TV | Peru",
+      "logo": "https://img.tvcluboficial.com/americaperu.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/35.m3u8"
+    },
+    {
+      "nombre": "America TV | Peru op. 2",
+      "logo": "https://img.tvcluboficial.com/americaperu.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1115.m3u8"
+    },
+    {
+      "nombre": "America | Argentina",
+      "logo": "https://img.tvcluboficial.com/ar_america.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1068.m3u8"
+    },
+    {
+      "nombre": "Antena 3",
+      "logo": "https://img.tvcluboficial.com/antena3.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/45.m3u8"
+    },
+    {
+      "nombre": "ATV | Peru",
+      "logo": "https://img.tvcluboficial.com/pe_atv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1063.m3u8"
+    },
+    {
+      "nombre": "Canal 10 | Nicaragua",
+      "logo": "https://img.tvcluboficial.com/ni_canal10.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1076.m3u8"
+    },
+    {
+      "nombre": "Canal 12 | El Salvador",
+      "logo": "https://img.tvcluboficial.com/sa_canal12.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1083.m3u8"
+    },
+    {
+      "nombre": "Canal 2 | Nicaragua",
+      "logo": "https://img.tvcluboficial.com/ni_canal2.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1075.m3u8"
+    },
+    {
+      "nombre": "Canal 3 | El Salvador",
+      "logo": "https://img.tvcluboficial.com/sa_canal3.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1080.m3u8"
+    },
+    {
+      "nombre": "Canal 4 | El Salvador",
+      "logo": "https://img.tvcluboficial.com/sa_canal4.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1081.m3u8"
+    },
+    {
+      "nombre": "Canal 5 Honduras",
+      "logo": "https://img.tvcluboficial.com/ho_canal5.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/109.m3u8"
+    },
+    {
+      "nombre": "Canal 6 | Costa Rica",
+      "logo": "https://img.tvcluboficial.com/cr_canal6.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1084.m3u8"
+    },
+    {
+      "nombre": "Canal 6 | El Salvador",
+      "logo": "https://img.tvcluboficial.com/sa_canal6.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1082.m3u8"
+    },
+    {
+      "nombre": "Canal Uno (1) | Colombia",
+      "logo": "https://img.tvcluboficial.com/co_uno.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1014.m3u8"
+    },
+    {
+      "nombre": "Caracol | Colombia",
+      "logo": "https://img.tvcluboficial.com/caracol.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/126.m3u8"
+    },
+    {
+      "nombre": "Caracol Internacional",
+      "logo": "https://img.tvcluboficial.com/caracol.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/127.m3u8"
+    },
+    {
+      "nombre": "Chilevision (CHV) | Chile",
+      "logo": "https://img.tvcluboficial.com/ch_chilevision.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/155.m3u8"
+    },
+    {
+      "nombre": "Ecuavisa | Ecuador",
+      "logo": "https://img.tvcluboficial.com/ecuavisa.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/338.m3u8"
+    },
+    {
+      "nombre": "El Nueve (9) | Argentina",
+      "logo": "https://img.tvcluboficial.com/elnueveargentina.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/353.m3u8"
+    },
+    {
+      "nombre": "El Trece (13) Argentina",
+      "logo": "https://img.tvcluboficial.com/el13argentina.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/362.m3u8"
+    },
+    {
+      "nombre": "El Trece (13) Chile",
+      "logo": "https://img.tvcluboficial.com/eltrecechile.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/360.m3u8"
+    },
+    {
+      "nombre": "Globo | Brasil",
+      "logo": "https://img.tvcluboficial.com/tvglobo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1103.m3u8"
+    },
+    {
+      "nombre": "HCH",
+      "logo": "https://img.tvcluboficial.com/hchhonduras.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/547.m3u8"
+    },
+    {
+      "nombre": "La 1 HD",
+      "logo": "https://img.tvcluboficial.com/la1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/588.m3u8"
+    },
+    {
+      "nombre": "La 2 HD",
+      "logo": "https://img.tvcluboficial.com/la2hd.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/589.m3u8"
+    },
+    {
+      "nombre": "La Sexta HD",
+      "logo": "https://img.tvcluboficial.com/lasexta.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/603.m3u8"
+    },
+    {
+      "nombre": "Latina | Peru",
+      "logo": "https://img.tvcluboficial.com/latinatv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/765.m3u8"
+    },
+    {
+      "nombre": "Latina | Uruguay",
+      "logo": "https://img.tvcluboficial.com/latinatv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/609.m3u8"
+    },
+    {
+      "nombre": "Mega | Chile",
+      "logo": "https://img.tvcluboficial.com/mega.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/651.m3u8"
+    },
+    {
+      "nombre": "Mega",
+      "logo": "https://img.tvcluboficial.com/mega.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/652.m3u8"
+    },
+    {
+      "nombre": "Mega ES HD",
+      "logo": "https://img.tvcluboficial.com/mega.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/653.m3u8"
+    },
+    {
+      "nombre": "Neox (ES)",
+      "logo": "https://img.tvcluboficial.com/neox.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/717.m3u8"
+    },
+    {
+      "nombre": "Nova (ES)",
+      "logo": "https://img.tvcluboficial.com/nova.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/740.m3u8"
+    },
+    {
+      "nombre": "Panamericana | Peru",
+      "logo": "https://img.tvcluboficial.com/pe_panamericana.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1064.m3u8"
+    },
+    {
+      "nombre": "RCN HD | Colombia",
+      "logo": "https://img.tvcluboficial.com/rcn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1146.m3u8"
+    },
+    {
+      "nombre": "RCN | Colombia",
+      "logo": "https://img.tvcluboficial.com/rcn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/785.m3u8"
+    },
+    {
+      "nombre": "RCN Novelas",
+      "logo": "https://img.tvcluboficial.com/rcnnovelas.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/788.m3u8"
+    },
+    {
+      "nombre": "RTS | Ecuador",
+      "logo": "https://img.tvcluboficial.com/ec_rts.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1090.m3u8"
+    },
+    {
+      "nombre": "TC | Ecuador",
+      "logo": "https://img.tvcluboficial.com/tc.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/861.m3u8"
+    },
+    {
+      "nombre": "TeleAmazonas | Ecuador",
+      "logo": "https://img.tvcluboficial.com/teleamazonas.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/867.m3u8"
+    },
+    {
+      "nombre": "Telecaribe | Colombia",
+      "logo": "https://img.tvcluboficial.com/co_telecaribe.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1066.m3u8"
+    },
+    {
+      "nombre": "Telecinco HD",
+      "logo": "https://img.tvcluboficial.com/telecinco.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/871.m3u8"
+    },
+    {
+      "nombre": "Telefe | Argentina",
+      "logo": "https://img.tvcluboficial.com/telefe.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/874.m3u8"
+    },
+    {
+      "nombre": "Telemax",
+      "logo": "https://img.tvcluboficial.com/telemax.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/883.m3u8"
+    },
+    {
+      "nombre": "Telemundo",
+      "logo": "https://img.tvcluboficial.com/telemundo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/888.m3u8"
+    },
+    {
+      "nombre": "Telemundo HD",
+      "logo": "https://img.tvcluboficial.com/telemundo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/889.m3u8"
+    },
+    {
+      "nombre": "Telemundo Internacional",
+      "logo": "https://img.tvcluboficial.com/telemuno.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1108.m3u8"
+    },
+    {
+      "nombre": "Teletica (Canal 7) | Costa Rica",
+      "logo": "https://img.tvcluboficial.com/cr_teletica.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1073.m3u8"
+    },
+    {
+      "nombre": "Televicentro (TVC) | Ecuador",
+      "logo": "https://img.tvcluboficial.com/televicentro.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/966.m3u8"
+    },
+    {
+      "nombre": "Trece",
+      "logo": "https://img.tvcluboficial.com/trece_colombia.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/943.m3u8"
+    },
+    {
+      "nombre": "TV Chile",
+      "logo": "https://img.tvcluboficial.com/tvchile.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/958.m3u8"
+    },
+    {
+      "nombre": "TVE",
+      "logo": "https://img.tvcluboficial.com/tve.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/968.m3u8"
+    },
+    {
+      "nombre": "TVE HD",
+      "logo": "https://img.tvcluboficial.com/tve.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/969.m3u8"
+    },
+    {
+      "nombre": "UniMas",
+      "logo": "https://img.tvcluboficial.com/unimas.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/982.m3u8"
+    },
+    {
+      "nombre": "Univision",
+      "logo": "https://img.tvcluboficial.com/univision.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1009.m3u8"
+    },
+    {
+      "nombre": "Univision Tlnovelas",
+      "logo": "https://img.tvcluboficial.com/tlnovelasunivision.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1013.m3u8"
+    },
+    {
+      "nombre": "VTV Plus HD",
+      "logo": "https://img.tvcluboficial.com/ur_vtvplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1142.m3u8"
+    },
+    {
+      "nombre": "VTV Plus | Uruguay",
+      "logo": "https://img.tvcluboficial.com/ur_vtvplus.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1072.m3u8"
+    },
+    {
+      "nombre": "VTV | Uruaguay",
+      "logo": "https://img.tvcluboficial.com/vtv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1028.m3u8"
+    },
+    {
+      "nombre": "Wapa PR",
+      "logo": "https://img.tvcluboficial.com/wapa.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1030.m3u8"
+    }
+  ],
+
+  "📻 Variedades": [
+    {
+      "nombre": "Az Clic",
+      "logo": "https://img.tvcluboficial.com/azclic.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/64.m3u8"
+    },
+    {
+      "nombre": "AZ Corazon",
+      "logo": "https://img.tvcluboficial.com/azcorazon.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/66.m3u8"
+    },
+    {
+      "nombre": "Az Corazón HD",
+      "logo": "https://img.tvcluboficial.com/azcorazon.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/68.m3u8"
+    },
+    {
+      "nombre": "Azteca 7",
+      "logo": "https://img.tvcluboficial.com/azteca7.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/72.m3u8"
+    },
+    {
+      "nombre": "Azteca 7 HD",
+      "logo": "https://img.tvcluboficial.com/azteca7.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/74.m3u8"
+    },
+    {
+      "nombre": "Azteca Uno",
+      "logo": "https://img.tvcluboficial.com/azteca1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/76.m3u8"
+    },
+    {
+      "nombre": "Azteca Uno (Calidad Baja)",
+      "logo": "https://img.tvcluboficial.com/azteca1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/75.m3u8"
+    },
+    {
+      "nombre": "Azteca Uno HD",
+      "logo": "https://img.tvcluboficial.com/azteca1.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/78.m3u8"
+    },
+    {
+      "nombre": "BitMe",
+      "logo": "https://img.tvcluboficial.com/bitme.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/92.m3u8"
+    },
+    {
+      "nombre": "Canal 5",
+      "logo": "https://img.tvcluboficial.com/canal5.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/106.m3u8"
+    },
+    {
+      "nombre": "Canal 5 HD",
+      "logo": "https://img.tvcluboficial.com/canal5.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/108.m3u8"
+    },
+    {
+      "nombre": "Canal de las Estrellas",
+      "logo": "https://img.tvcluboficial.com/mx_lasestrellas.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/114.m3u8"
+    },
+    {
+      "nombre": "Canal de las Estrellas HD",
+      "logo": "https://img.tvcluboficial.com/mx_lasestrellas.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/118.m3u8"
+    },
+    {
+      "nombre": "Canal+ Toros",
+      "logo": "https://img.tvcluboficial.com/toros.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/121.m3u8"
+    },
+    {
+      "nombre": "Distrito Comedia",
+      "logo": "https://img.tvcluboficial.com/distritocomedia.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/293.m3u8"
+    },
+    {
+      "nombre": "DHE",
+      "logo": "https://img.tvcluboficial.com/dhe.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/242.m3u8"
+    },
+    {
+      "nombre": "Estrella TV",
+      "logo": "https://img.tvcluboficial.com/estrellatv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/409.m3u8"
+    },
+    {
+      "nombre": "Europa Europa",
+      "logo": "https://img.tvcluboficial.com/europa.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/413.m3u8"
+    },
+    {
+      "nombre": "Foro TV",
+      "logo": "https://img.tvcluboficial.com/forotv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/429.m3u8"
+    },
+    {
+      "nombre": "Fox (ES) HD",
+      "logo": "https://img.tvcluboficial.com/fox.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/430.m3u8"
+    },
+    {
+      "nombre": "Gala TV",
+      "logo": "https://img.tvcluboficial.com/galatv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/481.m3u8"
+    },
+    {
+      "nombre": "Gala TV HD",
+      "logo": "https://img.tvcluboficial.com/galatv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/482.m3u8"
+    },
+    {
+      "nombre": "Gamavision",
+      "logo": "https://img.tvcluboficial.com/gamavision.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/483.m3u8"
+    },
+    {
+      "nombre": "Garage TV HD",
+      "logo": "https://img.tvcluboficial.com/garagetv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/485.m3u8"
+    },
+    {
+      "nombre": "HTV",
+      "logo": "https://img.tvcluboficial.com/htv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/568.m3u8"
+    },
+    {
+      "nombre": "Imagen Television",
+      "logo": "https://img.tvcluboficial.com/imagentv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/576.m3u8"
+    },
+    {
+      "nombre": "Imagen Televisión HD",
+      "logo": "https://img.tvcluboficial.com/imagentv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/577.m3u8"
+    },
+    {
+      "nombre": "Multimedios",
+      "logo": "https://img.tvcluboficial.com/multimedios.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/690.m3u8"
+    },
+    {
+      "nombre": "Multimedios (Monterrey)",
+      "logo": "https://img.tvcluboficial.com/multimedios.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/691.m3u8"
+    },
+    {
+      "nombre": "Multimedios (Monterrey) HD",
+      "logo": "https://img.tvcluboficial.com/multimedios.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/692.m3u8"
+    },
+    {
+      "nombre": "Multimedios HD",
+      "logo": "https://img.tvcluboficial.com/multimedios.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/693.m3u8"
+    },
+    {
+      "nombre": "Multimedios Plus",
+      "logo": "https://img.tvcluboficial.com/multimedios.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/694.m3u8"
+    },
+    {
+      "nombre": "NBC Universo",
+      "logo": "https://img.tvcluboficial.com/nbcuniverso.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/714.m3u8"
+    },
+    {
+      "nombre": "Pasiones HD",
+      "logo": "https://img.tvcluboficial.com/pasiones.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/757.m3u8"
+    },
+    {
+      "nombre": "Tele",
+      "logo": "https://img.tvcluboficial.com/play.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/866.m3u8"
+    },
+    {
+      "nombre": "Tlnovelas",
+      "logo": "https://img.tvcluboficial.com/tlnovelas.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/912.m3u8"
+    },
+    {
+      "nombre": "Tlnovelas HD",
+      "logo": "https://img.tvcluboficial.com/tlnovelas.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/915.m3u8"
+    },
+    {
+      "nombre": "Unicable",
+      "logo": "https://img.tvcluboficial.com/unicable.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/978.m3u8"
+    },
+    {
+      "nombre": "Unicable HD",
+      "logo": "https://img.tvcluboficial.com/unicable.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/980.m3u8"
+    },
+    {
+      "nombre": "Unicable HD",
+      "logo": "https://img.tvcluboficial.com/unicable.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/981.m3u8"
+    }
+  ],
+
+  "⛪ Religión": [
+    {
+      "nombre": "Enlace",
+      "logo": "https://img.tvcluboficial.com/enlace.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1092.m3u8"
+    },
+    {
+      "nombre": "EWTN",
+      "logo": "https://img.tvcluboficial.com/ewtn.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1093.m3u8"
+    },
+    {
+      "nombre": "Maria Vision",
+      "logo": "https://img.tvcluboficial.com/mariavision.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1097.m3u8"
+    }
+  ],
+
+  "🎭 Novelas": [
+    {
+      "nombre": "ATV: Novelas Turcas",
+      "logo": "https://img.tvcluboficial.com/atv.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1120.m3u8"
+    },
+    {
+      "nombre": "Novelisima",
+      "logo": "https://img.tvcluboficial.com/novelisima.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1149.m3u8"
+    },
+    {
+      "nombre": "Novelisima HD",
+      "logo": "https://img.tvcluboficial.com/novelisima.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/1150.m3u8"
+    }
+  ],
+
+  "🎭 Comedia Clásica": [
+    {
+      "nombre": "Alf 24/7",
+      "logo": "https://img.tvcluboficial.com/alf.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/28.m3u8"
+    },
+    {
+      "nombre": "Cantinflas 24/7",
+      "logo": "https://img.tvcluboficial.com/cantinflas.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/123.m3u8"
+    },
+    {
+      "nombre": "Candy Candy 24/7",
+      "logo": "",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/122.m3u8"
+    },
+    {
+      "nombre": "Chapulin Colorado 24/7",
+      "logo": "https://img.tvcluboficial.com/chapulincolorado.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/152.m3u8"
+    },
+    {
+      "nombre": "Chespirito 24/7",
+      "logo": "https://img.tvcluboficial.com/chespirito.jpg",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/153.m3u8"
+    },
+    {
+      "nombre": "El Chavo del 8 24/7",
+      "logo": "https://img.tvcluboficial.com/elchavodel8.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/344.m3u8"
+    },
+    {
+      "nombre": "El Conde Patula 24/7",
+      "logo": "https://img.tvcluboficial.com/elcondepatula.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/345.m3u8"
+    },
+    {
+      "nombre": "El Principe del Rap 24/7",
+      "logo": "https://img.tvcluboficial.com/elprincipedelrap.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/357.m3u8"
+    },
+    {
+      "nombre": "Hercules 24/7",
+      "logo": "https://img.tvcluboficial.com/247.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/550.m3u8"
+    },
+    {
+      "nombre": "Ironman 24/7",
+      "logo": "https://img.tvcluboficial.com/ironman.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/582.m3u8"
+    },
+    {
+      "nombre": "Johnny Bravo 24/7",
+      "logo": "https://img.tvcluboficial.com/johnnybravo.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/584.m3u8"
+    },
+    {
+      "nombre": "La Hora Pico 24/7",
+      "logo": "https://img.tvcluboficial.com/lahorapico.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/593.m3u8"
+    },
+    {
+      "nombre": "La Rosa de Guadalupe 24/7",
+      "logo": "https://img.tvcluboficial.com/larosadeguadalupe.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/601.m3u8"
+    },
+    {
+      "nombre": "Le Temes a la Oscuridad 24/7",
+      "logo": "https://img.tvcluboficial.com/letemesalaoscuridad.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/611.m3u8"
+    },
+    {
+      "nombre": "Malcolm 24/7",
+      "logo": "https://img.tvcluboficial.com/malcolm.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/640.m3u8"
+    },
+    {
+      "nombre": "Malcolm HD 24/7",
+      "logo": "https://img.tvcluboficial.com/malcolm.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/641.m3u8"
+    },
+    {
+      "nombre": "Mr. Bean 24/7",
+      "logo": "https://img.tvcluboficial.com/mrbean.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/670.m3u8"
+    },
+    {
+      "nombre": "Padre de Familia 24/7",
+      "logo": "https://img.tvcluboficial.com/padredefamilia.png",
+      "url": "https://m3u.tvcluboficial.com/free/Isroir/IYh/747.m3u8"
+    }
+  ]
 }
-
-
