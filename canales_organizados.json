@@ -1,5 +1,5 @@
 {
-  "📺 Entretenimiento": [
+  "Entretenimiento": [
     {
       "nombre": "A&E",
       "logo": "https://img.tvcluboficial.com/ae.png",
@@ -372,7 +372,7 @@
     }
   ],
 
-  "🏆 Deportes": [
+  "Deportes": [
     {
       "nombre": "Afizzionados HD",
       "logo": "https://img.tvcluboficial.com/afizzionados.png",
@@ -1015,7 +1015,7 @@
     }
   ],
 
-  "🎬 Cine": [
+  "Cine": [
     {
       "nombre": "A3Cine",
       "logo": "https://img.tvcluboficial.com/a3cine.png",
@@ -1278,7 +1278,7 @@
     }
   ],
 
-  "📺 Series": [
+  "Series": [
     {
       "nombre": "A3Series",
       "logo": "https://img.tvcluboficial.com/a3series.png",
@@ -1341,7 +1341,7 @@
     }
   ],
 
-  "👶 Infantiles": [
+  "Infantiles": [
     {
       "nombre": "Animaniacs 24/7",
       "logo": "https://img.tvcluboficial.com/animaniacs.png",
@@ -1804,7 +1804,7 @@
     }
   ],
 
-  "📡 Noticias": [
+  "Noticias": [
     {
       "nombre": "ADN 40",
       "logo": "https://img.tvcluboficial.com/adn40.png",
@@ -1842,7 +1842,7 @@
     }
   ],
 
-  "🌍 Documentales": [
+  "Documentales": [
     {
       "nombre": "Animal Planet",
       "logo": "https://img.tvcluboficial.com/animalplanet.png",
@@ -1980,7 +1980,7 @@
     }
   ],
 
-  "🎵 Música": [
+  "Música": [
     {
       "nombre": "Bandamax",
       "logo": "https://img.tvcluboficial.com/bandamax.png",
@@ -2058,7 +2058,7 @@
     }
   ],
 
-  "🍽️ Cocina y Lifestyle": [
+  "Cocina y Lifestyle": [
     {
       "nombre": "El Gourmet",
       "logo": "https://img.tvcluboficial.com/elgourmet.png",
@@ -2081,7 +2081,7 @@
     }
   ],
 
-  "🗺️ Internacionales": [
+  "Internacionales": [
     {
       "nombre": "America TV | Peru",
       "logo": "https://img.tvcluboficial.com/americaperu.png",
@@ -2384,7 +2384,7 @@
     }
   ],
 
-  "📻 Variedades": [
+  "Variedades": [
     {
       "nombre": "Az Clic",
       "logo": "https://img.tvcluboficial.com/azclic.png",
@@ -2587,7 +2587,7 @@
     }
   ],
 
-  "⛪ Religión": [
+  "     Religión": [
     {
       "nombre": "Enlace",
       "logo": "https://img.tvcluboficial.com/enlace.png",
@@ -2605,7 +2605,7 @@
     }
   ],
 
-  "🎭 Novelas": [
+  "Novelas": [
     {
       "nombre": "ATV: Novelas Turcas",
       "logo": "https://img.tvcluboficial.com/atv.png",
@@ -2623,7 +2623,7 @@
     }
   ],
 
-  "🎭 Comedia Clásica": [
+  "Comedia": [
     {
       "nombre": "Alf 24/7",
       "logo": "https://img.tvcluboficial.com/alf.png",
