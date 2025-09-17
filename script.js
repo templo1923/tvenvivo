@@ -19,6 +19,238 @@ let deferredPrompt = null;
 let isAppInstalled = false;
 let playlists = JSON.parse(localStorage.getItem('playlists')) || {};
 
+
+<script>
+        // ===== NUEVA CONFIGURACIÓN DE PROXIES MEJORADA =====
+        const PROXY_SERVERS = [
+            'https://corsproxy.io/?',
+            'https://api.allorigins.win/raw?url=',
+            'https://cors-anywhere.herokuapp.com/',
+            'https://proxy.cors.sh/'
+        ];
+
+        let currentProxyIndex = 0;
+        let currentHls = null;
+        let currentChannel = null;
+        let retryCount = 0;
+        const MAX_RETRIES = 3;
+        let compatibilityMode = false;
+
+        function getProxiedUrl(url) {
+            // Si la URL ya es de un proxy conocido, no aplicar otro proxy
+            if (PROXY_SERVERS.some(proxy => url.includes(proxy.replace(/[?\/]/g, '')))) {
+                return url;
+            }
+            
+            // Para streams http, siempre usar proxy
+            if (url.startsWith('http://')) {
+                return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
+            }
+            
+            // Para streams https, también usar proxy pero con opción directa como fallback
+            return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
+        }
+
+        function rotateProxy() {
+            currentProxyIndex = (currentProxyIndex + 1) % PROXY_SERVERS.length;
+            console.log(`Cambiando a proxy: ${PROXY_SERVERS[currentProxyIndex]}`);
+        }
+
+        // ===== FUNCIÓN MEJORADA PARA CAMBIAR CANAL =====
+        function changeChannel(videoUrl, channelName, channelDescription) {
+            if (!navigator.onLine) {
+                mostrarError('No hay conexión a internet. No se puede cargar el canal.');
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'flex';
+            document.getElementById('error-message').style.display = 'none';
+            
+            document.querySelector('.player-placeholder').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
+            
+            var video = document.getElementById('video');
+            
+            // Limpiar recursos anteriores
+            if (currentHls) {
+                currentHls.destroy();
+            }
+            
+            video.pause();
+            video.src = '';
+            
+            // Estrategia de reproducción mejorada
+            if (Hls.isSupported()) {
+                currentHls = new Hls({
+                    debug: false,
+                    enableWorker: true,
+                    lowLatencyMode: true,
+                    backBufferLength: 30,
+                    maxBufferLength: 30,
+                    manifestLoadingTimeOut: 10000,
+                    manifestLoadingMaxRetry: 4,
+                    manifestLoadingRetryDelay: 1000,
+                    levelLoadingTimeOut: 10000,
+                    levelLoadingMaxRetry: 4,
+                    levelLoadingRetryDelay: 1000,
+                    fragLoadingTimeOut: 20000,
+                    fragLoadingMaxRetry: 6,
+                    fragLoadingRetryDelay: 1000
+                });
+                
+                // Intentar con proxy
+                const proxiedUrl = getProxiedUrl(videoUrl);
+                console.log("Intentando con URL:", proxiedUrl);
+                
+                currentHls.loadSource(proxiedUrl);
+                currentHls.attachMedia(video);
+                
+                currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    console.log("Manifiesto analizado correctamente");
+                    document.getElementById('loading').style.display = 'none';
+                    retryCount = 0;
+                    
+                    video.play().catch(e => {
+                        console.error("Error al reproducir:", e);
+                        mostrarError('Error al reproducir: ' + e.message);
+                    });
+                });
+                
+                currentHls.on(Hls.Events.ERROR, function(event, data) {
+                    console.error("Error HLS:", data);
+                    
+                    if (data.fatal) {
+                        switch(data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                console.error('Error de red, intentando con otro proxy...');
+                                rotateProxy();
+                                setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 1000);
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                console.error('Error de medios, intentando recuperar...');
+                                currentHls.recoverMediaError();
+                                break;
+                            default:
+                                console.error('Error fatal, reiniciando...');
+                                currentHls.destroy();
+                                tryReconnect(videoUrl, channelName, channelDescription);
+                                break;
+                        }
+                    }
+                });
+                
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Para Safari y navegadores que soportan HLS nativo
+                const proxiedUrl = getProxiedUrl(videoUrl);
+                video.src = proxiedUrl;
+                
+                video.addEventListener('loadedmetadata', function() {
+                    document.getElementById('loading').style.display = 'none';
+                    retryCount = 0;
+                    
+                    video.play().catch(e => {
+                        mostrarError('Error al reproducir: ' + e.message);
+                    });
+                });
+                
+                video.addEventListener('error', function() {
+                    console.error("Error en video element");
+                    tryReconnect(videoUrl, channelName, channelDescription);
+                });
+                
+            } else {
+                mostrarError("Tu navegador no soporta la reproducción de este formato.");
+            }
+            
+            currentChannel = {
+                url: videoUrl,
+                name: channelName,
+                description: channelDescription
+            };
+        }
+
+        // ===== FUNCIÓN MEJORADA DE REINTENTO =====
+        function tryReconnect(videoUrl, channelName, channelDescription) {
+            if (retryCount < MAX_RETRIES) {
+                retryCount++;
+                mostrarError(`Error de conexión. Reintentando... (${retryCount}/${MAX_RETRIES})`);
+                
+                // Rotar proxy antes de reintentar
+                rotateProxy();
+                
+                setTimeout(() => {
+                    changeChannel(videoUrl, channelName, channelDescription);
+                }, 2000);
+            } else {
+                // Intentar método alternativo después de agotar reintentos
+                mostrarError('No se pudo conectar. Intentando método alternativo...');
+                tryAlternativeMethod(videoUrl, channelName, channelDescription);
+                retryCount = 0;
+            }
+        }
+
+        // ===== MÉTODO ALTERNATIVO PARA STREAMS BLOQUEADOS =====
+        function tryAlternativeMethod(videoUrl, channelName, channelDescription) {
+            console.log("Probando método alternativo para:", videoUrl);
+            
+            const video = document.getElementById('video');
+            
+            // Si estamos en modo compatibilidad, intentar sin proxy
+            if (compatibilityMode) {
+                console.log("Intentando sin proxy en modo compatibilidad");
+                video.src = videoUrl;
+                
+                video.addEventListener('loadedmetadata', function() {
+                    document.getElementById('loading').style.display = 'none';
+                    video.play().catch(e => {
+                        mostrarError('Error final: ' + e.message);
+                    });
+                });
+                
+                video.addEventListener('error', function() {
+                    mostrarError('No se pudo conectar al canal después de varios intentos.');
+                });
+            } else {
+                // Si no es un stream reconocido, mostrar error final
+                mostrarError('No se pudo conectar al canal después de varios intentos. Activa el modo compatibilidad e intenta nuevamente.');
+            }
+        }
+
+        function mostrarError(mensaje) {
+            const errorDiv = document.getElementById('error-message');
+            if (errorDiv) {
+                errorDiv.textContent = mensaje;
+                errorDiv.style.display = 'flex';
+            }
+        }
+
+        // Simular cambio de canal para demostración
+        document.getElementById('toggle-channels-btn').addEventListener('click', function() {
+            // Simulamos un canal de prueba
+            changeChannel(
+                'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
+                'Canal de Prueba',
+                'Deportes'
+            );
+        });
+
+        // Modo compatibilidad
+        document.getElementById('compatibility-mode-btn').addEventListener('click', function() {
+            compatibilityMode = !compatibilityMode;
+            this.innerHTML = compatibilityMode ? 
+                '<i class="fas fa-cog"></i> Modo Normal' : 
+                '<i class="fas fa-cog"></i> Modo Compatibilidad';
+                
+            this.style.background = compatibilityMode ? 
+                'linear-gradient(90deg, #22c55e, #16a34a)' : 
+                'linear-gradient(90deg, #f59e0b, #d97706)';
+                
+            alert(compatibilityMode ? 
+                'Modo compatibilidad activado. Se intentará conectar sin proxy.' : 
+                'Modo compatibilidad desactivado. Se usará proxy nuevamente.');
+        });
+
+
 // --- SOLUCIÓN DE PROXY DE VERCEL (ÚNICA MODIFICACIÓN) ---
 function getProxiedUrl(url) {
     // Si la URL ya está siendo procesada por el proxy, no la volvemos a modificar.
@@ -283,3 +515,4 @@ const video=document.getElementById("video");video.addEventListener("play",()=>{
 function setupMediaSession(){navigator.mediaSession.setActionHandler("play",()=>{document.getElementById("video").play()});navigator.mediaSession.setActionHandler("pause",null);navigator.mediaSession.setActionHandler("previoustrack",()=>{navigateToPreviousChannel()});navigator.mediaSession.setActionHandler("nexttrack",()=>{navigateToNextChannel()})}
 function updateMediaMetadata(channelName,category,logo){if("mediaSession"in navigator){navigator.mediaSession.metadata=new MediaMetadata({title:channelName,artist:category,artwork:[{src:logo||"icons/icon-192.png",sizes:"192x192",type:"image/png"},{src:logo||"icons/icon-512.png",sizes:"512x512",type:"image/png"}]})}}
 document.addEventListener("DOMContentLoaded",function(){cargarCanales();document.getElementById("toggle-channels-btn").addEventListener("click",toggleChannels);disableSeekAndPauseControls();preventVideoPause();setupDoubleClickFullscreen();setupFloatingButton();setupHeaderSearch();setupTheme();setupViewToggle();setupSportsInfoButton();window.addEventListener("resize",adjustCategoryScroll);setupTouchGestures();setupBackgroundPlayback();setupShareFunctionality();setupPlaylistFunctionality();loadChannelFromURL();initPWA()});
+
