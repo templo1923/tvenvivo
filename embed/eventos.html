@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canales de Deportes - Reproductor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Aquí va todo el CSS que me pasaste para el reproductor */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        body { background: linear-gradient(0deg, #0d1b2a, #1b263b); color: #e0e0e0; overflow-x: hidden; }
+        header { background: linear-gradient(90deg, #1e3a8a, #60a5fa); padding: 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5); }
+        .header-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .header-title h1 { color: #ffffff; font-size: 30px; }
+        .soccer-ball { font-size: 38px; color: #ffffff; animation: spin 3s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .back-button { background: #2a2a2a; border-radius: 50%; width: 50px; height: 50px; color: #ffffff; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .content-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; text-align: center; }
+        .live-text { font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 20px; background: linear-gradient(90deg, #ef4444, #f87171); padding: 10px 20px; border-radius: 12px; display: inline-block; }
+        .embed-responsive { position: relative; width: 100%; padding-top: 56.25%; /* Proporción 16:9 */ border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .embed-responsive-item { position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none; }
+        .reload-button { padding: 14px 30px; border: none; border-radius: 12px; background: linear-gradient(90deg, #60a5fa, #3b82f6); color: #ffffff; cursor: pointer; font-size: 20px; font-weight: 600; margin-top: 20px; }
+        /* ... y el resto de los estilos del reproductor de Quetzalito ... */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-title" style="display: flex; align-items: center; gap: 15px;">
+                <span class="soccer-ball">⚽</span>
+                <h1>Tu Sitio Web</h1>
+            </div>
+            <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i></a>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <p class="live-text">EN VIVO</p>
+
+        <div class="embed-responsive">
+            <iframe class="embed-responsive-item" id="videoFrame" allowfullscreen></iframe>
+        </div>
+
+        <button type="button" class="reload-button" onclick="location.reload()">
+            <i class="fas fa-redo"></i> Recargar
+        </button>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const iframe = document.getElementById("videoFrame");
+            const params = new URLSearchParams(window.location.search);
+            const encodedUrl = params.get("r"); // Buscamos el mismo parámetro "r"
+
+            if (encodedUrl) {
+                try {
+                    const decodedUrl = atob(encodedUrl);
+                    iframe.src = decodedUrl;
+                } catch (e) {
+                    document.querySelector('.content-container').innerHTML = "<h2 style='color:white;'>URL inválida.</h2>";
+                }
+            } else {
+                document.querySelector('.content-container').innerHTML = "<h2 style='color:white;'>No se especificó un canal.</h2>";
+            }
+        });
+    </script>
+</body>
+</html>
