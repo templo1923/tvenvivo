@@ -73,7 +73,7 @@
             <button id="push-unsubscribe" class="control-button" style="display: none;"><i class="fas fa-bell-slash"></i> Desactivar Notificaciones</button>
         </div>
 
-<div class="view-toggle" id="view-toggle">
+        <div class="view-toggle" id="view-toggle">
             <button class="view-toggle-btn active" data-view="grid"><i class="fas fa-th"></i> Cuadrícula</button>
             <button class="view-toggle-btn" data-view="list"><i class="fas fa-list"></i> Lista</button>
         </div>
@@ -82,16 +82,17 @@
             <div class="section-buttons" id="section-buttons"></div>
             <div id="channels-container"></div>
         </div>
-        <div class="no-results" id="no-results">
-             </div>
+        <div class="no-results" id="no-results"></div>
     </div>
+    
     <div class="floating-button" id="back-to-player"><i class="fas fa-arrow-up"></i></div>
     <button class="sports-info-btn" id="sports-info-btn"><i class="fas fa-info"></i></button>
     <button id="install-button" class="install-button"><i class="fas fa-download"></i> Instalar App</button>
+    
     <div id="offline-message" class="offline-message">
         <div class="offline-content">
             <i class="fas fa-wifi"></i>
-            <p>Estás sin conexión. Algunas funciones pueden no estar disponibles.</p>
+            <p>Estás sin conexión. Some functions may not be available.</p>
         </div>
     </div>
 
@@ -112,6 +113,7 @@
             </div>
         </div>
     </div>
+    
     <div class="modal-overlay" id="share-modal">
         <div class="modal-content">
             <h3 class="modal-title">Compartir Canal</h3>
@@ -129,6 +131,7 @@
             <button class="modal-button secondary" id="close-share-modal">Cerrar</button>
         </div>
     </div>
+    
     <div class="modal-overlay" id="playlist-modal">
         <div class="modal-content">
             <h3 class="modal-title">Mis Listas de Reproducción</h3>
@@ -142,8 +145,9 @@
             <button class="modal-button secondary" id="close-playlist-modal">Cerrar</button>
         </div>
     </div>
+    
     <div id="share-toast" class="share-toast"></div>
 
-    <script src="push-notifications.js"></script>
-    <script src="script.js"></script> </body>
+    <script src="script.js"></script>
+</body>
 </html>
