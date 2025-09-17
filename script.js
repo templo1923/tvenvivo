@@ -12,106 +12,426 @@
         let streamCache = JSON.parse(localStorage.getItem('streamCache')) || {};
         let currentView = localStorage.getItem('viewPreference') || 'grid';
 
-        // Pega este bloque completo al inicio de tu script
+        // Nuevo: Servidores proxy para evitar CORS y contenido mixto
         const PROXY_SERVERS = [
             'https://corsproxy.io/?',
-            // 'https://api.codetabs.com/v1/proxy?quest=', // A veces falla, la comento por si acaso
+            'https://api.codetabs.com/v1/proxy?quest=',
+            'https://cors-anywhere.herokuapp.com/',
             'https://proxy.cors.sh/'
-        ];
+        ];
         let currentProxyIndex = 0;
 
+        // Función para obtener URL a través de proxy
         function getProxiedUrl(url) {
-            if (url.startsWith('http://')) {
-                // Para streams inseguros (http), siempre usar proxy para evitar errores de contenido mixto
-                return PROXY_SERVERS[currentProxyIndex] + url;
+            // Si ya es una URL local o relativa, no usar proxy
+            if (url.startsWith('/') || url.startsWith(window.location.origin) || url.startsWith('data:')) {
+                return url;
             }
-            // Para streams https que puedan tener CORS, también usamos proxy.
-            // Si tienes un stream https que sabes que funciona directo, puedes añadir una excepción aquí.
-            return PROXY_SERVERS[currentProxyIndex] + url;
+            
+            // Para el archivo JSON de canales, usar proxy
+            if (url.includes('canales_organizados.json')) {
+                return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
+            }
+            
+            // Para streams HTTP, usar proxy para convertirlos a HTTPS
+            if (url.startsWith('http://')) {
+                return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
+            }
+            
+            // Para otros casos, devolver la URL original
+            return url;
         }
 
+        // Función para rotar proxy si falla
         function rotateProxy() {
             currentProxyIndex = (currentProxyIndex + 1) % PROXY_SERVERS.length;
-            console.log(`Proxy fallido, cambiando a: ${PROXY_SERVERS[currentProxyIndex]}`);
+            console.log(`Cambiando a proxy: ${PROXY_SERVERS[currentProxyIndex]}`);
         }
 
-        // Función para deshabilitar controles de progreso y pausa
-        function disableSeekAndPauseControls() {
-            const video = document.getElementById('video');
-            if (!video) return;
-
-            // Prevenir interacción con la barra de progreso y pausa
-            const existingStyle = document.getElementById('hide-controls-style');
-            if (!existingStyle) {
-                const style = document.createElement('style');
-                style.id = 'hide-controls-style';
-                style.innerHTML = `
-                    /* Ocultar barra de progreso y botón de play/pause */
-                    #video::-webkit-media-controls-timeline,
-                    #video::-webkit-media-controls-play-button,
-                    #video::-webkit-media-controls-pause-button,
-                    #video::-webkit-media-controls-current-time-display,
-                    #video::-webkit-media-controls-time-remaining-display,
-                    #video::-webkit-media-controls-timeline-container {
-                        display: none !important;
+        // Función para cargar canales desde JSON (MODIFICADA)
+        async function cargarCanales() {
+            if (canalesCargados) return;
+            
+            try {
+                mostrarLoading(true);
+                
+                // Intentar cargar desde múltiples ubicaciones
+                const posiblesUbicaciones = [
+                    'canales_organizados.json',
+                    '/canales_organizados.json',
+                    './canales_organizados.json',
+                    'https://raw.githubusercontent.com/tu_usuario/tu_repo/main/canales_organizados.json'
+                ];
+                
+                let response = null;
+                let lastError = null;
+                
+                for (let i = 0; i < posiblesUbicaciones.length; i++) {
+                    try {
+                        const url = getProxiedUrl(posiblesUbicaciones[i]);
+                        console.log(`Intentando cargar canales desde: ${url}`);
+                        
+                        response = await fetch(url);
+                        if (response.ok) {
+                            todosCanales = await response.json();
+                            console.log('Canales cargados exitosamente desde:', posiblesUbicaciones[i]);
+                            break;
+                        }
+                    } catch (error) {
+                        lastError = error;
+                        console.error(`Error cargando desde ${posiblesUbicaciones[i]}:`, error);
+                        
+                        // Rotar proxy para el próximo intento
+                        if (i < posiblesUbicaciones.length - 1) {
+                            rotateProxy();
+                        }
                     }
-                    
-                    /* Ocultar en pantalla completa también */
-                    video:fullscreen::-webkit-media-controls-timeline,
-                    video:fullscreen::-webkit-media-controls-play-button,
-                    video:fullscreen::-webkit-media-controls-pause-button,
-                    video:fullscreen::-webkit-media-controls-current-time-display,
-                    video:fullscreen::-webkit-media-controls-time-remaining-display {
-                        display: none !important;
+                }
+                
+                if (!response || !response.ok) {
+                    throw lastError || new Error('No se pudo cargar el archivo de canales desde ninguna ubicación');
+                }
+                
+                canalesCargados = true;
+                
+                crearBotonesCategorias();
+                
+                if (Object.keys(todosCanales).length > 0) {
+                    const primeraCategoria = Object.keys(todosCanales)[0];
+                    mostrarCategoria(primeraCategoria);
+                }
+                
+                inicializarBusqueda();
+                mostrarLoading(false);
+                
+                document.getElementById('toggle-favorites-btn').addEventListener('click', mostrarFavoritos);
+                
+                loadPlaybackPosition();
+            } catch (error) {
+                console.error('Error cargando canales:', error);
+                
+                // Intentar cargar una versión de respaldo desde localStorage
+                try {
+                    const backup = localStorage.getItem('canalesBackup');
+                    if (backup) {
+                        todosCanales = JSON.parse(backup);
+                        canalesCargados = true;
+                        crearBotonesCategorias();
+                        
+                        if (Object.keys(todosCanales).length > 0) {
+                            const primeraCategoria = Object.keys(todosCanales)[0];
+                            mostrarCategoria(primeraCategoria);
+                        }
+                        
+                        mostrarLoading(false);
+                        showToast('Usando datos de respaldo. Algunos canales pueden estar desactualizados.');
+                        return;
                     }
-                `;
-                document.head.appendChild(style);
+                } catch (backupError) {
+                    console.error('Error cargando respaldo:', backupError);
+                }
+                
+                mostrarError('Error al cargar la lista de canales. Verifica tu conexión e intenta recargar la página.');
+                mostrarLoading(false);
             }
         }
 
-        // Función para forzar la reproducción si se intenta pausar
-        function preventVideoPause() {
-            const video = document.getElementById('video');
-            if (!video) return;
+        // Función para crear botones de categorías
+        function crearBotonesCategorias() {
+            const contenedor = document.getElementById('section-buttons');
+            if (!contenedor) return;
+            
+            contenedor.innerHTML = '';
+            
+            Object.keys(todosCanales).forEach(categoria => {
+                if (todosCanales[categoria].length > 0) {
+                    const boton = document.createElement('div');
+                    boton.className = 'section-button';
+                    boton.innerHTML = `<i class="fas fa-folder"></i> ${categoria}`;
+                    boton.onclick = () => {
+                        showingFavorites = false;
+                        document.querySelectorAll('.section-button').forEach(b => b.classList.remove('active'));
+                        boton.classList.add('active');
+                        mostrarCategoria(categoria);
+                        
+                        setTimeout(() => {
+                            smoothScrollTo('channels-container');
+                        }, 100);
+                    };
+                    contenedor.appendChild(boton);
+                }
+            });
+            
+            if (contenedor.firstChild) {
+                contenedor.firstChild.classList.add('active');
+            }
+            
+            setTimeout(adjustCategoryScroll, 100);
+        }
 
-            video.addEventListener('pause', () => {
-                // Si hay un canal cargado y el video se ha pausado, forzar su reproducción.
-                if (currentChannel && video.paused) {
-                    // Usamos un pequeño timeout para evitar bucles infinitos en algunos navegadores.
+        // Función para mostrar canales de una categoría
+        function mostrarCategoria(categoria) {
+            const canales = todosCanales[categoria];
+            if (!canales) return;
+            
+            document.querySelectorAll('.channel-list').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            const seccionId = `categoria-${categoria.replace(/\W+/g, '-').toLowerCase()}`;
+            let seccion = document.getElementById(seccionId);
+            
+            if (!seccion) {
+                seccion = document.createElement('div');
+                seccion.id = seccionId;
+                seccion.className = 'channel-list';
+                document.getElementById('channels-container').appendChild(seccion);
+            }
+            
+            seccion.innerHTML = `
+                <h2><i class="fas fa-folder"></i> ${categoria}</h2>
+                <div class="channel-grid"></div>
+            `;
+            
+            const grid = seccion.querySelector('.channel-grid');
+            canales.forEach(canal => {
+                const item = document.createElement('div');
+                item.className = 'channel-item';
+                
+                const logoSrc = canal.logo || canal['tvg-logo'] || '';
+                const channelId = `${categoria}-${canal.nombre}`;
+                const isFavorite = favorites[channelId] !== undefined;
+                
+                item.innerHTML = `
+                    <div class="image-container">
+                        <img src="${logoSrc}" 
+                             alt="${canal.nombre}" 
+                             onerror="handleImageError(this)">
+                        <div class="favorite-icon ${isFavorite ? 'active' : ''}" onclick="toggleFavorite('${canal.nombre}', '${categoria}', event)">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="channel-name">${canal.nombre}</div>
+                    <div class="channel-description">${categoria}</div>
+                `;
+                
+                const streamUrl = canal.url || canal.link || '';
+                item.onclick = () => {
+                    cambiarCanal(streamUrl, canal.nombre, categoria, logoSrc);
+                    toggleChannels();
+                    
                     setTimeout(() => {
-                        video.play().catch(e => console.warn("Reanudación forzada falló:", e));
-                    }, 150);
-                }
+                        smoothScrollTo('player-container');
+                    }, 300);
+                };
+                grid.appendChild(item);
             });
+            
+            seccion.style.display = 'block';
         }
 
-        // Función para habilitar pantalla completa con doble clic/tap
-        function setupDoubleClickFullscreen() {
-            const videoPlayer = document.getElementById('video-player');
-            if (!videoPlayer) return;
-
-            videoPlayer.addEventListener('dblclick', () => {
-                if (!document.fullscreenElement) {
-                    videoPlayer.requestFullscreen().catch(err => {
-                        console.error(`Error al activar pantalla completa: ${err.message}`);
+        // Función para cambiar de canal (MODIFICADA)
+        function changeChannel(videoUrl, channelName, channelDescription) {
+            // Verificar conexión antes de intentar cargar un canal
+            if (!navigator.onLine) {
+                mostrarError('No hay conexión a internet. No se puede cargar el canal.');
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'flex';
+            document.getElementById('error-message').style.display = 'none';
+            
+            document.querySelector('.player-placeholder').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
+            
+            document.querySelector('.channel-details').innerHTML = `
+                <p><i class="fas fa-info-circle"></i> ${channelName}</p>
+                <p><i class="fas fa-film"></i> Calidad: HD</p>
+                <p><i class="fas fa-clock"></i> Estado: Conectando...</p>
+                <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
+            `;
+            
+            document.getElementById('live-indicator-small').style.display = 'inline-flex';
+            
+            document.querySelectorAll('.channel-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            const items = document.querySelectorAll('.channel-item');
+            for (let item of items) {
+                if (item.querySelector('.channel-name').textContent === channelName) {
+                    item.classList.add('active');
+                    break;
+                }
+            }
+            
+            var video = document.getElementById('video');
+            
+            if (currentHls) {
+                currentHls.destroy();
+            }
+            
+            if (playbackPositionInterval) {
+                clearInterval(playbackPositionInterval);
+            }
+            
+            video.pause();
+            video.src = '';
+            
+            // Nuevo: Usar proxy para streams HTTP
+            const proxiedUrl = getProxiedUrl(videoUrl);
+            console.log(`Reproduciendo: ${channelName} desde URL: ${proxiedUrl}`);
+            
+            if (Hls.isSupported()) {
+                currentHls = new Hls({
+                    debug: false,
+                    enableWorker: true,
+                    lowLatencyMode: true,
+                    backBufferLength: 90,
+                    xhrSetup: function(xhr, url) {
+                        // Asegurar que todas las solicitudes sean a través de proxy si es necesario
+                        if (url.startsWith('http://')) {
+                            xhr.open('GET', getProxiedUrl(url), true);
+                        }
+                    }
+                });
+                
+                currentHls.loadSource(proxiedUrl);
+                currentHls.attachMedia(video);
+                
+                currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    addToStreamCache(videoUrl, proxiedUrl);
+                    document.getElementById('loading').style.display = 'none';
+                    retryCount = 0;
+                    
+                    document.querySelector('.channel-details').innerHTML = `
+                        <p><i class="fas fa-info-circle"></i> ${channelName}</p>
+                        <p><i class="fas fa-film"></i> Calidad: HD</p>
+                        <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
+                        <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
+                    `;
+                    
+                    video.play().catch(e => {
+                        mostrarError('Error al reproducir: ' + e.message);
                     });
-                } else {
-                    document.exitFullscreen();
+                    
+                    playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
+                });
+                
+                currentHls.on(Hls.Events.ERROR, function(event, data) {
+                    console.error('Error HLS:', data);
+                    if (data.fatal) {
+                        switch(data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                mostrarError('Error de red. Reintentando...');
+                                rotateProxy();
+                                setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 2000);
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                mostrarError('Error de medio. Recargando...');
+                                currentHls.recoverMediaError();
+                                break;
+                            default:
+                                mostrarError('Error desconocido. Reintentando...');
+                                rotateProxy();
+                                setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 2000);
+                                break;
+                        }
+                    }
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Para Safari y otros navegadores que soportan HLS nativamente
+                video.src = proxiedUrl;
+                video.addEventListener('loadedmetadata', function() {
+                    addToStreamCache(videoUrl, proxiedUrl);
+                    document.getElementById('loading').style.display = 'none';
+                    retryCount = 0;
+                    
+                    document.querySelector('.channel-details').innerHTML = `
+                        <p><i class="fas fa-info-circle"></i> ${channelName}</p>
+                        <p><i class="fas fa-film"></i> Calidad: HD</p>
+                        <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
+                        <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
+                    `;
+                    
+                    video.play().catch(e => {
+                        mostrarError('Error al reproducir: ' + e.message);
+                    });
+                    
+                    playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
+                });
+                
+                video.addEventListener('error', function() {
+                    mostrarError('Error al cargar el video. Reintentando...');
+                    rotateProxy();
+                    setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 2000);
+                });
+            } else {
+                mostrarError("Tu navegador no soporta la reproducción de este formato.");
+            }
+            
+            currentChannel = {
+                url: videoUrl,
+                name: channelName,
+                description: channelDescription
+            };
+        }
+
+        // Función para manejar errores de carga de imágenes (MEJORADA)
+        function handleImageError(img) {
+            img.onerror = null;
+            
+            // Intentar con diferentes servidores de imágenes
+            const originalSrc = img.src;
+            const imageServers = [
+                'https://images.weserv.nl/?url=',
+                'https://cdn.jsdelivr.net/gh/tu_usuario/tu_repo@main/',
+                'https://raw.githubusercontent.com/tu_usuario/tu_repo/main/'
+            ];
+            
+            let attempts = 0;
+            const maxAttempts = imageServers.length;
+            
+            function tryNextServer() {
+                if (attempts >= maxAttempts) {
+                    // Si todos los servidores fallan, mostrar ícono por defecto
+                    img.style.display = 'none';
+                    const container = img.parentElement;
+                    const defaultIcon = document.createElement('div');
+                    defaultIcon.className = 'default-icon';
+                    defaultIcon.innerHTML = '<i class="fas fa-tv"></i>';
+                    container.appendChild(defaultIcon);
+                    return;
                 }
-            });
+                
+                const server = imageServers[attempts];
+                attempts++;
+                
+                // Extraer la URL real de la imagen (eliminar parámetros de caché si existen)
+                let cleanUrl = originalSrc.split('?')[0];
+                
+                // Crear nueva URL con el servidor de imágenes
+                const newSrc = server + encodeURIComponent(cleanUrl);
+                
+                // Crear una nueva imagen para probar
+                const testImage = new Image();
+                testImage.onload = function() {
+                    // Si se carga correctamente, actualizar la imagen original
+                    img.src = newSrc;
+                    img.style.display = 'block';
+                    
+                    // Eliminar cualquier ícono por defecto existente
+                    const existingIcon = img.parentElement.querySelector('.default-icon');
+                    if (existingIcon) {
+                        existingIcon.remove();
+                    }
+                };
+                testImage.onerror = tryNextServer;
+                testImage.src = newSrc;
+            }
+            
+            tryNextServer();
         }
-        
-        // Función para detectar si es stream en vivo
-        function isLiveStream(videoElement) {
-            return videoElement && (videoElement.duration === Infinity || isNaN(videoElement.duration));
-        }
-
-        // Nuevas variables para funcionalidades PWA
-        let deferredPrompt = null;
-        let isAppInstalled = false;
-
-        // Variables para listas de reproducción
-        let playlists = JSON.parse(localStorage.getItem('playlists')) || {};
 
         // Función para desplazar suavemente a un elemento
         function smoothScrollTo(elementId) {
@@ -122,17 +442,6 @@
                     block: 'start'
                 });
             }
-        }
-
-        // Función para manejar errores de carga de imágenes
-        function handleImageError(img) {
-            img.onerror = null;
-            img.style.display = 'none';
-            const container = img.parentElement;
-            const defaultIcon = document.createElement('div');
-            defaultIcon.className = 'default-icon';
-            defaultIcon.innerHTML = '<i class="fas fa-tv"></i>';
-            container.appendChild(defaultIcon);
         }
 
         // Función para ajustar el scroll de categorías en móvil
@@ -246,134 +555,6 @@
             return null;
         }
 
-        // Función para cargar canales desde JSON
-        async function cargarCanales() {
-            if (canalesCargados) return;
-            
-            try {
-                mostrarLoading(true);
-                const response = await fetch('canales_organizados.json');
-                if (!response.ok) {
-                    throw new Error('Error al cargar el archivo JSON: ' + response.status);
-                }
-                todosCanales = await response.json();
-                
-                canalesCargados = true;
-                
-                crearBotonesCategorias();
-                
-                if (Object.keys(todosCanales).length > 0) {
-                    const primeraCategoria = Object.keys(todosCanales)[0];
-                    mostrarCategoria(primeraCategoria);
-                }
-                
-                inicializarBusqueda();
-                mostrarLoading(false);
-                
-                document.getElementById('toggle-favorites-btn').addEventListener('click', mostrarFavoritos);
-                
-                loadPlaybackPosition();
-            } catch (error) {
-                console.error('Error cargando canales:', error);
-                mostrarError('Error al cargar la lista de canales: ' + error.message);
-                mostrarLoading(false);
-            }
-        }
-
-        // Función para crear botones de categorías
-        function crearBotonesCategorias() {
-            const contenedor = document.getElementById('section-buttons');
-            if (!contenedor) return;
-            
-            contenedor.innerHTML = '';
-            
-            Object.keys(todosCanales).forEach(categoria => {
-                if (todosCanales[categoria].length > 0) {
-                    const boton = document.createElement('div');
-                    boton.className = 'section-button';
-                    boton.innerHTML = `</i> ${categoria}`;
-                    boton.onclick = () => {
-                        showingFavorites = false;
-                        document.querySelectorAll('.section-button').forEach(b => b.classList.remove('active'));
-                        boton.classList.add('active');
-                        mostrarCategoria(categoria);
-                        
-                        setTimeout(() => {
-                            smoothScrollTo('channels-container');
-                        }, 100);
-                    };
-                    contenedor.appendChild(boton);
-                }
-            });
-            
-            if (contenedor.firstChild) {
-                contenedor.firstChild.classList.add('active');
-            }
-            
-            setTimeout(adjustCategoryScroll, 100);
-        }
-
-        // Función para mostrar canales de una categoría
-        function mostrarCategoria(categoria) {
-            const canales = todosCanales[categoria];
-            if (!canales) return;
-            
-            document.querySelectorAll('.channel-list').forEach(el => {
-                el.style.display = 'none';
-            });
-            
-            const seccionId = `categoria-${categoria.replace(/\W+/g, '-').toLowerCase()}`;
-            let seccion = document.getElementById(seccionId);
-            
-            if (!seccion) {
-                seccion = document.createElement('div');
-                seccion.id = seccionId;
-                seccion.className = 'channel-list';
-                document.getElementById('channels-container').appendChild(seccion);
-            }
-            
-            seccion.innerHTML = `
-                <h2><i class="fas fa-folder"></i> ${categoria}</h2>
-                <div class="channel-grid"></div>
-            `;
-            
-            const grid = seccion.querySelector('.channel-grid');
-            canales.forEach(canal => {
-                const item = document.createElement('div');
-                item.className = 'channel-item';
-                
-                const logoSrc = canal.logo || canal['tvg-logo'] || '';
-                const channelId = `${categoria}-${canal.nombre}`;
-                const isFavorite = favorites[channelId] !== undefined;
-                
-                item.innerHTML = `
-                    <div class="image-container">
-                        <img src="${logoSrc}" 
-                             alt="${canal.nombre}" 
-                             onerror="handleImageError(this)">
-                        <div class="favorite-icon ${isFavorite ? 'active' : ''}" onclick="toggleFavorite('${canal.nombre}', '${categoria}', event)">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="channel-name">${canal.nombre}</div>
-                    <div class="channel-description">${categoria}</div>
-                `;
-                
-                const streamUrl = canal.url || canal.link || '';
-                item.onclick = () => {
-                    cambiarCanal(streamUrl, canal.nombre, categoria, logoSrc);
-                    toggleChannels();
-                    
-                    setTimeout(() => {
-                        smoothScrollTo('player-container');
-                    }, 300);
-                };
-                grid.appendChild(item);
-            });
-            
-            seccion.style.display = 'block';
-        }
-
         // Función para mostrar canales favoritos
         function mostrarFavoritos() {
             showingFavorites = true;
@@ -475,9 +656,6 @@
             `;
             
             document.getElementById('live-indicator-small').style.display = 'inline-flex';
-            
-            // Actualizar metadatos para media session
-            updateMediaMetadata(nombre, categoria, logo);
         }
 
         // Función para mostrar/ocultar canales
@@ -693,12 +871,6 @@
             const errorDiv = document.getElementById('error-message');
             if (errorDiv) {
                 errorDiv.textContent = mensaje;
-                if (reintentarCallback) {
-                    const button = document.createElement('button');
-                    button.textContent = 'Reintentar';
-                    button.onclick = reintentarCallback;
-                    errorDiv.appendChild(button);
-                }
                 errorDiv.style.display = 'flex';
                 setTimeout(() => {
                     errorDiv.style.display = 'none';
@@ -718,168 +890,6 @@
                 mostrarError('No se pudo conectar al canal después de varios intentos, Recarga el reproductor y/o Cambia El Canal.');
                 retryCount = 0;
             }
-        }
-
-        function changeChannel(videoUrl, channelName, channelDescription) {
-            // Verificar conexión antes de intentar cargar un canal
-            if (!navigator.onLine) {
-                mostrarError('No hay conexión a internet. No se puede cargar el canal.');
-                return;
-            }
-            
-            document.getElementById('loading').style.display = 'flex';
-            document.getElementById('error-message').style.display = 'none';
-            
-            document.querySelector('.player-placeholder').style.display = 'none';
-            document.getElementById('video').style.display = 'block';
-            
-            document.querySelector('.channel-details').innerHTML = `
-                <p><i class="fas fa-info-circle"></i> ${channelName}</p>
-                <p><i class="fas fa-film"></i> Calidad: HD</p>
-                <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
-                <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
-            `;
-            
-            document.getElementById('live-indicator-small').style.display = 'inline-flex';
-            
-            document.querySelectorAll('.channel-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            const items = document.querySelectorAll('.channel-item');
-            for (let item of items) {
-                if (item.querySelector('.channel-name').textContent === channelName) {
-                    item.classList.add('active');
-                    break;
-                }
-            }
-            
-            var video = document.getElementById('video');
-            
-            if (currentHls) {
-                currentHls.destroy();
-            }
-            
-            if (playbackPositionInterval) {
-                clearInterval(playbackPositionInterval);
-            }
-            
-            video.pause();
-            video.src = '';
-            
-            // CONFIGURACIÓN OPTIMIZADA DE HLS
-            if (Hls.isSupported()) {
-                currentHls = new Hls({
-                    debug: false,
-                    enableWorker: true,
-                    lowLatencyMode: true,
-                    
-                    // Buffering configuration
-                    backBufferLength: 30,
-                    maxBufferLength: 30,
-                    maxMaxBufferLength: 60,
-                    maxBufferSize: 60 * 1000 * 1000, // 60MB
-                    maxBufferHole: 0.5,
-                    
-                    // Live streaming configuration
-                    liveSyncDurationCount: 3,
-                    liveMaxLatencyDurationCount: 10,
-                    liveDurationInfinity: true,
-                    
-                    // ABR configuration
-                    abrEwmaDefaultEstimate: 500000,
-                    abrEwmaSlowLive: 3,
-                    abrEwmaFastLive: 2,
-                    abrEwmaDefaultLive: 1,
-                    
-                    // Performance
-                    stretchShortVideoTrack: true,
-                    maxFragLookUpTolerance: 0.2,
-                    emeEnabled: true,
-                    
-                    // Timeouts and retries
-                    manifestLoadingTimeOut: 10000,
-                    manifestLoadingMaxRetry: 3,
-                    manifestLoadingRetryDelay: 1000,
-                    levelLoadingTimeOut: 10000,
-                    levelLoadingMaxRetry: 3,
-                    levelLoadingRetryDelay: 1000,
-                    fragLoadingTimeOut: 20000,
-                    fragLoadingMaxRetry: 6,
-                    fragLoadingRetryDelay: 1000,
-                    
-                    // Additional optimizations
-                    enableDateRange: false,
-                    enableCEA708Captions: false,
-                    requestTimeout: 10000,
-                    levelLoadTimeout: 10000,
-                    fragLoadTimeout: 20000
-                });
-                
-                const proxiedUrl = getProxiedUrl(videoUrl);
-                currentHls.loadSource(proxiedUrl);
-                currentHls.attachMedia(video);
-                
-                currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
-                    addToStreamCache(videoUrl, videoUrl);
-                    document.getElementById('loading').style.display = 'none';
-                    retryCount = 0;
-                    
-                    video.play().catch(e => {
-                        mostrarError('Error al reproducir: ' + e.message);
-                    });
-                    
-                    playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
-                });
-                
-currentHls.on(Hls.Events.ERROR, function(event, data) {
-    if (data.fatal) {
-        console.error('Error fatal de HLS:', data.details);
-        switch(data.type) {
-            case Hls.ErrorTypes.NETWORK_ERROR:
-                // Si hay un error de red, rotamos el proxy y reintentamos
-                mostrarError(`Error de conexión. Reintentando con otro servidor...`);
-                rotateProxy();
-                setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 1000);
-                break;
-            case Hls.ErrorTypes.MEDIA_ERROR:
-                console.error('Error de media, intentando recuperar...');
-                currentHls.recoverMediaError();
-                break;
-            default:
-                // Si es otro error fatal, lo destruimos y reintentamos
-                currentHls.destroy();
-                setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 1000);
-                break;
-        }
-    }
-});                
-            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = videoUrl;
-                video.addEventListener('loadedmetadata', function() {
-                    addToStreamCache(videoUrl, videoUrl);
-                    document.getElementById('loading').style.display = 'none';
-                    retryCount = 0;
-                    
-                    video.play().catch(e => {
-                        mostrarError('Error al reproducir: ' + e.message);
-                    });
-                    
-                    playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
-                });
-                
-                video.addEventListener('error', function() {
-                    tryReconnect(videoUrl, channelName, channelDescription);
-                });
-            } else {
-                mostrarError("Tu navegador no soporta la reproducción de este formato.");
-            }
-            
-            currentChannel = {
-                url: videoUrl,
-                name: channelName,
-                description: channelDescription
-            };
         }
 
         function setupFloatingButton() {
@@ -1035,13 +1045,11 @@ currentHls.on(Hls.Events.ERROR, function(event, data) {
         // Verificar si la PWA está instalada
         function checkIfAppIsInstalled() {
             if (window.matchMedia('(display-mode: standalone)').matches) {
-                isAppInstalled = true;
                 document.body.classList.add('pwa-installed');
                 console.log('La aplicación está ejecutándose como PWA instalada');
             }
             
             window.matchMedia('(display-mode: standalone)').addListener((e) => {
-                isAppInstalled = e.matches;
                 document.body.classList.toggle('pwa-installed', e.matches);
             });
         }
@@ -1075,7 +1083,6 @@ currentHls.on(Hls.Events.ERROR, function(event, data) {
             });
             
             window.addEventListener('appinstalled', () => {
-                isAppInstalled = true;
                 deferredPrompt = null;
                 console.log('PWA instalada con éxito');
                 
@@ -1231,347 +1238,17 @@ currentHls.on(Hls.Events.ERROR, function(event, data) {
             }
         }
 
-        // Función para gestionar listas de reproducción
-        function setupPlaylistFunctionality() {
-            const managePlaylistsBtn = document.getElementById('manage-playlists-btn');
-            const playlistModal = document.getElementById('playlist-modal');
-            const closePlaylistModal = document.getElementById('close-playlist-modal');
-            const createPlaylistBtn = document.getElementById('create-playlist-btn');
-            const newPlaylistNameInput = document.getElementById('new-playlist-name');
-            const playlistList = document.getElementById('playlist-list');
-            
-            managePlaylistsBtn.addEventListener('click', () => {
-                renderPlaylists();
-                playlistModal.classList.add('active');
-            });
-            
-            closePlaylistModal.addEventListener('click', () => {
-                playlistModal.classList.remove('active');
-            });
-            
-            createPlaylistBtn.addEventListener('click', () => {
-                const name = newPlaylistNameInput.value.trim();
-                if (name) {
-                    createPlaylist(name);
-                    newPlaylistNameInput.value = '';
-                }
-            });
-            
-            // Cerrar modal al hacer clic fuera
-            playlistModal.addEventListener('click', (e) => {
-                if (e.target === playlistModal) {
-                    playlistModal.classList.remove('active');
-                }
-            });
-        }
-
-        // Crear una nueva lista de reproducción
-        function createPlaylist(name) {
-            if (playlists[name]) {
-                showToast('Ya existe una lista con ese nombre');
-                return;
+        // Al cargar la página, guardar una copia de los canales en localStorage
+        // para tener un respaldo en caso de que falle la carga en el futuro
+        window.addEventListener('beforeunload', function() {
+            if (Object.keys(todosCanales).length > 0) {
+                localStorage.setItem('canalesBackup', JSON.stringify(todosCanales));
             }
-            
-            playlists[name] = [];
-            savePlaylists();
-            renderPlaylists();
-            showToast(`Lista "${name}" creada`);
-        }
-
-        // Guardar listas en localStorage
-        function savePlaylists() {
-            localStorage.setItem('playlists', JSON.stringify(playlists));
-        }
-
-        // Renderizar listas de reproducción
-        function renderPlaylists() {
-            const playlistList = document.getElementById('playlist-list');
-            playlistList.innerHTML = '';
-            
-            Object.keys(playlists).forEach(playlistName => {
-                const playlistItem = document.createElement('div');
-                playlistItem.className = 'playlist-item';
-                
-                playlistItem.innerHTML = `
-                    <div class="playlist-info">
-                        <strong>${playlistName}</strong>
-                        <span>(${playlists[playlistName].length} canales)</span>
-                    </div>
-                    <div class="playlist-actions">
-                        <button class="playlist-action-btn play-playlist" data-playlist="${playlistName}">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <button class="playlist-action-btn add-to-playlist" data-playlist="${playlistName}">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                        <button class="playlist-action-btn delete-playlist" data-playlist="${playlistName}">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                `;
-                
-                playlistList.appendChild(playlistItem);
-            });
-            
-            // Añadir event listeners a los botones
-            document.querySelectorAll('.play-playlist').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const playlistName = btn.dataset.playlist;
-                    playPlaylist(playlistName);
-                });
-            });
-            
-            document.querySelectorAll('.add-to-playlist').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const playlistName = btn.dataset.playlist;
-                    addCurrentChannelToPlaylist(playlistName);
-                });
-            });
-            
-            document.querySelectorAll('.delete-playlist').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const playlistName = btn.dataset.playlist;
-                    deletePlaylist(playlistName);
-                });
-            });
-        }
-
-        // Reproducir una lista de reproducción
-        function playPlaylist(playlistName) {
-            const channels = playlists[playlistName];
-            if (channels.length === 0) {
-                showToast('La lista está vacía');
-                return;
-            }
-            
-            let currentIndex = 0;
-            
-            function playNextChannel() {
-                if (currentIndex < channels.length) {
-                    const channel = channels[currentIndex];
-                    cambiarCanal(channel.url, channel.name, channel.category, channel.logo);
-                    currentIndex++;
-                    
-                    // Reproducir siguiente canal cuando termine el actual
-                    const video = document.getElementById('video');
-                    video.onended = playNextChannel;
-                }
-            }
-            
-            playNextChannel();
-            showToast(`Reproduciendo lista: ${playlistName}`);
-        }
-
-        // Añadir canal actual a la lista de reproducción
-        function addCurrentChannelToPlaylist(playlistName) {
-            if (!currentChannel) {
-                showToast('No hay ningún canal reproduciéndose');
-                return;
-            }
-            
-            // Verificar si el canal ya está en la lista
-            const alreadyInPlaylist = playlists[playlistName].some(
-                channel => channel.name === currentChannel.name && channel.category === currentChannel.description
-            );
-            
-            if (alreadyInPlaylist) {
-                showToast('Este canal ya está en la lista');
-                return;
-            }
-            
-            playlists[playlistName].push({
-                name: currentChannel.name,
-                url: currentChannel.url,
-                category: currentChannel.description,
-                logo: currentChannel.logo
-            });
-            
-            savePlaylists();
-            showToast(`Canal añadido a "${playlistName}"`);
-        }
-
-        // Eliminar lista de reproducción
-        function deletePlaylist(playlistName) {
-            if (confirm(`¿Estás seguro de que quieres eliminar la lista "${playlistName}"?`)) {
-                delete playlists[playlistName];
-                savePlaylists();
-                renderPlaylists();
-                showToast(`Lista "${playlistName}" eliminada`);
-            }
-        }
-        
-        // Gestos táctiles
-        function setupTouchGestures() {
-            const videoPlayer = document.getElementById('video-player');
-            let startX = 0;
-            let startY = 0;
-            let distX = 0;
-            let distY = 0;
-            let startTime = 0;
-            const minSwipeDist = 50;
-            const maxSwipeTime = 500;
-            
-            videoPlayer.addEventListener('touchstart', function(e) {
-                const touch = e.touches[0];
-                startX = touch.clientX;
-                startY = touch.clientY;
-                startTime = new Date().getTime();
-            }, { passive: true });
-            
-            videoPlayer.addEventListener('touchend', function(e) {
-                const touch = e.changedTouches[0];
-                distX = touch.clientX - startX;
-                distY = touch.clientY - startY;
-                const elapsedTime = new Date().getTime() - startTime;
-                
-                if (elapsedTime <= maxSwipeTime) {
-                    if (Math.abs(distX) >= minSwipeDist && Math.abs(distY) <= 100) {
-                        // Deslizamiento horizontal - Cambiar canal
-                        if (distX > 0) {
-                            navigateToPreviousChannel();
-                        } else {
-                            navigateToNextChannel();
-                        }
-                    } else if (Math.abs(distY) >= minSwipeDist && Math.abs(distX) <= 100) {
-                        // Deslizamiento vertical - Control de volumen
-                        const video = document.getElementById('video');
-                        if (distY > 0) {
-                            // Deslizar hacia abajo - Disminuir volumen
-                            video.volume = Math.max(0, video.volume - 0.1);
-                            showToast(`Volumen: ${Math.round(video.volume * 100)}%`);
-                        } else {
-                            // Deslizar hacia arriba - Aumentar volumen
-                            video.volume = Math.min(1, video.volume + 0.1);
-                            showToast(`Volumen: ${Math.round(video.volume * 100)}%`);
-                        }
-                    }
-                }
-            }, { passive: true });
-        }
-
-        // Navegar al canal anterior
-        function navigateToPreviousChannel() {
-            if (!currentChannel) return;
-            
-            const currentCategory = currentChannel.description;
-            const currentChannels = todosCanales[currentCategory];
-            
-            if (!currentChannels) return;
-            
-            const currentIndex = currentChannels.findIndex(c => c.nombre === currentChannel.name);
-            if (currentIndex > 0) {
-                const previousChannel = currentChannels[currentIndex - 1];
-                cambiarCanal(previousChannel.url, previousChannel.nombre, currentCategory, previousChannel.logo);
-            }
-        }
-
-        // Navegar al siguiente canal
-        function navigateToNextChannel() {
-            if (!currentChannel) return;
-            
-            const currentCategory = currentChannel.description;
-            const currentChannels = todosCanales[currentCategory];
-            
-            if (!currentChannels) return;
-            
-            const currentIndex = currentChannels.findIndex(c => c.nombre === currentChannel.name);
-            if (currentIndex < currentChannels.length - 1) {
-                const nextChannel = currentChannels[currentIndex + 1];
-                cambiarCanal(nextChannel.url, nextChannel.nombre, currentCategory, nextChannel.logo);
-            }
-        }
-
-        // Reproducción en segundo plano
-        function setupBackgroundPlayback() {
-            let wakeLock = null;
-            
-            // Solicitar Wake Lock
-            async function requestWakeLock() {
-                try {
-                    if ('wakeLock' in navigator) {
-                        wakeLock = await navigator.wakeLock.request('screen');
-                        console.log('Wake Lock activado');
-                    }
-                } catch (err) {
-                    console.error('Error al activar Wake Lock:', err);
-                }
-            }
-            
-            // Liberar Wake Lock
-            function releaseWakeLock() {
-                if (wakeLock) {
-                    wakeLock.release();
-                    wakeLock = null;
-                }
-            }
-            
-            // Activar Wake Lock cuando se reproduce video
-            const video = document.getElementById('video');
-            video.addEventListener('play', () => {
-                requestWakeLock();
-            });
-            
-            video.addEventListener('pause', () => {
-                // No liberamos el wakelock en pausa, porque estamos forzando la re-reproducción
-            });
-            
-            // Reactivar Wake Lock cuando la página vuelve a ser visible
-            document.addEventListener('visibilitychange', () => {
-                if (document.visibilityState === 'visible' && !video.paused) {
-                    requestWakeLock();
-                }
-            });
-            
-            // Configurar Media Session API
-            if ('mediaSession' in navigator) {
-                setupMediaSession();
-            }
-        }
-
-        // Configurar Media Session API
-        function setupMediaSession() {
-            navigator.mediaSession.setActionHandler('play', () => {
-                document.getElementById('video').play();
-            });
-            
-            // Eliminar el manejador de pausa
-            navigator.mediaSession.setActionHandler('pause', null);
-            
-            navigator.mediaSession.setActionHandler('previoustrack', () => {
-                navigateToPreviousChannel();
-            });
-            
-            navigator.mediaSession.setActionHandler('nexttrack', () => {
-                navigateToNextChannel();
-            });
-        }
-
-        // Actualizar metadatos de Media Session
-        function updateMediaMetadata(channelName, category, logo) {
-            if ('mediaSession' in navigator) {
-                navigator.mediaSession.metadata = new MediaMetadata({
-                    title: channelName,
-                    artist: category,
-                    artwork: [
-                        { src: logo || 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
-                        { src: logo || 'icons/icon-512.png', sizes: '512x512', type: 'image/png' }
-                    ]
-                });
-            }
-        }
+        });
 
         document.addEventListener('DOMContentLoaded', function() {
             cargarCanales();
             document.getElementById('toggle-channels-btn').addEventListener('click', toggleChannels);
-            
-            // Inicializaciones clave
-            disableSeekAndPauseControls(); // Oculta controles de pausa y seek
-            preventVideoPause();           // Previene la pausa mediante eventos
-            setupDoubleClickFullscreen();  // Habilita doble clic para fullscreen
-            
             setupFloatingButton();
             setupHeaderSearch();
             setupTheme();
@@ -1579,12 +1256,9 @@ currentHls.on(Hls.Events.ERROR, function(event, data) {
             setupSportsInfoButton();
             window.addEventListener('resize', adjustCategoryScroll);
             
-            // Demás inicializaciones
-            setupTouchGestures();
-            setupBackgroundPlayback();
+            // Nuevas inicializaciones
             setupShareFunctionality();
-            setupPlaylistFunctionality();
-            loadChannelFromURL();
+            loadChannelFromURL(); // Cargar canal desde URL si existe
             
             // Inicializar funcionalidades PWA
             initPWA();
