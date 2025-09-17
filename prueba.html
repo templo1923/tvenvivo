@@ -1372,6 +1372,132 @@
             flex: 1;
             font-size: 0.9rem;
         }
+                /* ============================================== */
+/* === ESTILOS PARA LAYOUT MÓVIL DE 2 COLUMNAS === */
+/* ============================================== */
+
+@media screen and (max-width: 768px) {  
+    /* 1. Contenedor principal de las dos columnas */
+    .channels-layout-container {
+        display: flex; /* Activa el layout de columnas */
+        gap: 10px;     /* Espacio entre las columnas */
+        
+        /* Altura calculada para permitir el scroll interno.
+           Ajusta el valor (280px) si es necesario para tu layout.
+           Esto resta la altura del header, reproductor, etc., del alto total de la pantalla. */
+        height: calc(100vh - 280px); 
+    }
+
+    /* 2. Columna Izquierda (Categorías) */
+    .channels-layout-container .section-buttons {
+        flex: 0 0 120px; /* Ancho fijo de la columna (no crece, no se encoge) */
+        flex-direction: column; /* Apila los botones verticalmente */
+        overflow-y: auto;       /* Habilita el scroll vertical */
+        overflow-x: hidden;     /* Oculta el scroll horizontal que ya no se necesita */
+        padding-bottom: 0;      /* Elimina el padding inferior previo */
+        margin: 0;              /* Resetea márgenes */
+    }
+
+    /* 3. Columna Derecha (Canales) */
+    .channels-layout-container #channels-container {
+        flex-grow: 1;           /* Ocupa el espacio restante */
+        overflow-y: auto;       /* Habilita el scroll vertical */
+    }
+  
+    /* 4. Ajustes a los botones de categoría */
+    .channels-layout-container .section-button {
+        width: 100%;            /* Ocupa todo el ancho de su columna */
+        font-size: 0.8rem;      /* Letra un poco más pequeña */
+        padding: 10px 8px;      /* Ajusta el espaciado interno */
+        justify-content: flex-start; /* Alinea el texto a la izquierda */
+    }
+
+    /* 5. Ajustes al contenedor de la cuadrícula de canales */
+    .channels-layout-container .channel-list {
+        padding: 10px 5px; /* Reduce el padding para dar más espacio */
+        margin-top: 0;
+    }
+  
+    .channels-layout-container .channel-grid {
+        /* Ajusta el tamaño mínimo de los logos para que quepan mejor */
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 10px; /* Reduce el espacio entre logos */
+    }
+  
+    /* 6. Oculta el #channels-container original para evitar duplicados si JS lo muestra */
+    .container > #channels-container {
+      display: none;
+    }
+
+    /* 7. Estilos para las barras de scroll (opcional pero recomendado) */
+    .channels-layout-container .section-buttons::-webkit-scrollbar,
+    .channels-layout-container #channels-container::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .channels-layout-container .section-buttons::-webkit-scrollbar-track,
+    .channels-layout-container #channels-container::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+    }
+
+    .channels-layout-container .section-buttons::-webkit-scrollbar-thumb,
+    .channels-layout-container #channels-container::-webkit-scrollbar-thumb {
+        background-color: #052bb6;
+        border-radius: 1px;
+    }
+    /* ===================================================== */
+/* === AJUSTES PARA VISTA DE LISTA EN PANTALLAS PEQUEÑAS === */
+/* ===================================================== */
+
+/* ==================================================================== */
+/* === AJUSTES PARA VISTA DE LISTA EN PANTALLAS PEQUEÑAS (ACTUALIZADO) === */
+/* ==================================================================== */
+
+/* Ajustamos el item para que sea un poco más compacto */
+/* ============================================== */
+/* === ALINEACIÓN A LA IZQUIERDA (MÓVIL LISTA) === */
+/* ============================================== */
+
+/* 1. Eliminamos el padding lateral del contenedor principal de la lista */
+.channels-layout-container .channel-list.list-view {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 2. Corregimos el item y le damos un padding interno para que no se pegue al borde */
+.channels-layout-container .channel-list.list-view .channel-item {
+    padding: 1px 1px;   /* 6px arriba/abajo, 8px a los lados (dentro del item) */
+    margin-bottom: 1px;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color); /* Añade una línea sutil de separación */
+}
+
+/* Hacemos la imagen del canal AÚN más pequeña para ganar espacio valioso */
+.channels-layout-container .channel-list.list-view .channel-item .image-container {
+    width: 40px;        /* Cambiado de 45px a 40px */
+    height: 40px;       /* Cambiado de 45px a 40px */
+    margin-right: 3px;  /* Cambiado de 10px a 8px */
+    flex-shrink: 0;
+}
+
+/* Ajustamos el nombre del canal con una fuente más pequeña y legible */
+.channels-layout-container .channel-list.list-view .channel-name {
+    font-size: 0.85rem; /* Cambiado de 0.9rem a 0.85rem, es un ajuste sutil pero efectivo */
+    font-weight: 500;   /* Un grosor de letra un poco más fino ayuda a la legibilidad en tamaños pequeños */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Ocultamos la descripción (esto se mantiene de la petición anterior) */
+.channels-layout-container .channel-list.list-view .channel-description {
+    display: none;
+}
+}
+
+
+
+        
     </style>
 </head>
 <body ondragstart="return false;">
