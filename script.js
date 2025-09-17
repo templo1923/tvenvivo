@@ -12,6 +12,29 @@
         let streamCache = JSON.parse(localStorage.getItem('streamCache')) || {};
         let currentView = localStorage.getItem('viewPreference') || 'grid';
 
+        // Pega este bloque completo al inicio de tu script
+        const PROXY_SERVERS = [
+            'https://corsproxy.io/?',
+            // 'https://api.codetabs.com/v1/proxy?quest=', // A veces falla, la comento por si acaso
+            'https://proxy.cors.sh/'
+        ];
+        let currentProxyIndex = 0;
+
+        function getProxiedUrl(url) {
+            if (url.startsWith('http://')) {
+                // Para streams inseguros (http), siempre usar proxy para evitar errores de contenido mixto
+                return PROXY_SERVERS[currentProxyIndex] + url;
+            }
+            // Para streams https que puedan tener CORS, también usamos proxy.
+            // Si tienes un stream https que sabes que funciona directo, puedes añadir una excepción aquí.
+            return PROXY_SERVERS[currentProxyIndex] + url;
+        }
+
+        function rotateProxy() {
+            currentProxyIndex = (currentProxyIndex + 1) % PROXY_SERVERS.length;
+            console.log(`Proxy fallido, cambiando a: ${PROXY_SERVERS[currentProxyIndex]}`);
+        }
+
         // Función para deshabilitar controles de progreso y pausa
         function disableSeekAndPauseControls() {
             const video = document.getElementById('video');
@@ -793,7 +816,8 @@
                     fragLoadTimeout: 20000
                 });
                 
-                currentHls.loadSource(videoUrl);
+                const proxiedUrl = getProxiedUrl(videoUrl);
+                currentHls.loadSource(proxiedUrl);
                 currentHls.attachMedia(video);
                 
                 currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
@@ -808,24 +832,28 @@
                     playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
                 });
                 
-                currentHls.on(Hls.Events.ERROR, function(event, data) {
-                    console.error('Error HLS:', data);
-                    if (data.fatal) {
-                        switch(data.type) {
-                            case Hls.ErrorTypes.NETWORK_ERROR:
-                                tryReconnect(videoUrl, channelName, channelDescription);
-                                break;
-                            case Hls.ErrorTypes.MEDIA_ERROR:
-                                mostrarError('Error de medio. Recargando...');
-                                currentHls.recoverMediaError();
-                                break;
-                            default:
-                                mostrarError('Error irreparable');
-                                currentHls.destroy();
-                                break;
-                        }
-                    }
-                });
+currentHls.on(Hls.Events.ERROR, function(event, data) {
+    if (data.fatal) {
+        console.error('Error fatal de HLS:', data.details);
+        switch(data.type) {
+            case Hls.ErrorTypes.NETWORK_ERROR:
+                // Si hay un error de red, rotamos el proxy y reintentamos
+                mostrarError(`Error de conexión. Reintentando con otro servidor...`);
+                rotateProxy();
+                setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 1000);
+                break;
+            case Hls.ErrorTypes.MEDIA_ERROR:
+                console.error('Error de media, intentando recuperar...');
+                currentHls.recoverMediaError();
+                break;
+            default:
+                // Si es otro error fatal, lo destruimos y reintentamos
+                currentHls.destroy();
+                setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 1000);
+                break;
+        }
+    }
+});                
             } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = videoUrl;
                 video.addEventListener('loadedmetadata', function() {
