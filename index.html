@@ -8,10 +8,236 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#1e3a8a">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        :root {
+            --bg-primary: #0d1b2a;
+            --bg-secondary: #1b263b;
+            --text-primary: #e0e0e0;
+            --text-secondary: #8b949e;
+            --header-bg: linear-gradient(90deg, #1e3a8a, #60a5fa);
+            --shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+            --card-bg: linear-gradient(135deg, #1e293b, #334155);
+            --border-color: #334155;
+        }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            padding-bottom: 100px;
+        }
+
+        /* Header */
+        header {
+            background: var(--header-bg);
+            padding: 5px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-title h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .soccer-ball {
+            font-size: 34px;
+            color: #ffffff;
+            animation: spin 3s linear infinite, bounce 1.2s ease-in-out infinite, glow 2s ease-in-out infinite;
+            filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.6));
+            transform-origin: center;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.6)); }
+            50% { filter: drop-shadow(0 3px 12px rgba(96, 165, 250, 0.9)); }
+        }
+
+        /* Reproductor de video */
+        .player-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        #video-player {
+            background-color: black;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            min-height: 280px;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+        }
+
+        .player-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a202c, #2d3748);
+            color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .player-placeholder i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #60a5fa;
+        }
+
+        /* Botones de control */
+        .control-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .control-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: linear-gradient(90deg, #1c04f2, #3b82f6);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .control-button:hover {
+            background: linear-gradient(90deg, #1206f0, #08027c);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Loading y mensajes de error */
+        .loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.75);
+            color: #e0e0e0;
+            z-index: 10;
+            border-radius: 10px;
+        }
+
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #60a5fa;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        .error-message {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(18, 0, 0);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0;
+            text-align: center;
+            font-size: 1rem;
+            z-index: 10;
+            box-sizing: border-box;
+        }
+
+        /* Botón de compatibilidad */
+        .control-button.compatibility {
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+        }
+
+        .control-button.compatibility:hover {
+            background: linear-gradient(90deg, #d97706, #b45309);
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .header-title h1 {
+                font-size: 15px;
+            }
+
+            .soccer-ball {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 <body ondragstart="return false;">
 
@@ -21,129 +247,259 @@
                 <span class="soccer-ball">⚽</span>
                 <h1>Maik Sport</h1>
             </div>
-            <div class="header-search">
-                <button class="search-toggle" id="search-toggle"><i class="fas fa-search"></i></button>
-                <div class="header-search-form" id="header-search-form">
-                    <input type="text" class="header-search-input" id="header-search-input" placeholder="Buscar canal..." autocomplete="off">
-                    <button class="header-search-close" id="header-search-close"><i class="fas fa-times"></i></button>
-                    <div class="search-suggestions" id="search-suggestions"></div>
-                </div>
-                <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
-                <a href="television.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
-            </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="player-container" id="player-container">
-            <div id="video-player">
-                <div class="player-placeholder">
-                    <i class="fas fa-play-circle"></i>
-                    <h3>Selecciona un canal para comenzar</h3>
-                    <p>El contenido aparecerá aquí</p>
-                </div>
-                <video id="video" controls style="display: none;"></video>
-                <div class="error-message" id="error-message">Error al cargar el canal. Intenta nuevamente.</div>
-                <div class="loading" id="loading">
-                    <div class="loading-spinner"></div>
-                    <p>Cargando canal...</p>
-                </div>
+    <div class="player-container" id="player-container">
+        <div id="video-player">
+            <div class="player-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <h3>Selecciona un canal para comenzar</h3>
+                <p>El contenido aparecerá aquí</p>
             </div>
-            <div class="channel-info">
-                <h3>Información del Canal <span class="live-indicator-small" id="live-indicator-small" style="display: none;"><i class="fas fa-circle"></i> EN VIVO</span></h3>
-                <div class="channel-details">
-                    <p><i class="fas fa-info-circle"></i> Selecciona un canal para ver su información</p>
-                    <p><i class="fas fa-film"></i> Calidad: -</p>
-                    <p><i class="fas fa-clock"></i> Estado: -</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="control-buttons">
-            <button class="control-button" id="toggle-channels-btn"><i class="fas fa-list"></i> Mostrar Canales</button>
-            <button class="control-button favorites" id="toggle-favorites-btn"><i class="fas fa-heart"></i> Ver Favoritos</button>
-            <button class="control-button share-button" id="share-channel-btn"><i class="fas fa-share-alt"></i> Compartir Canal</button>
-            <button class="control-button playlist-button" id="manage-playlists-btn"><i class="fas fa-list-ol"></i> Listas de Reproducción</button>
-        </div>
-
-        <div id="notifications-panel" class="notifications-panel" style="display: none;">
-            <h3>Notificaciones</h3>
-            <p>Recibe alertas sobre tus canales favoritos</p>
-            <button id="push-subscribe" class="control-button"><i class="fas fa-bell"></i> Activar Notificaciones</button>
-            <button id="push-unsubscribe" class="control-button" style="display: none;"><i class="fas fa-bell-slash"></i> Desactivar Notificaciones</button>
-        </div>
-
-<div class="view-toggle" id="view-toggle">
-            <button class="view-toggle-btn active" data-view="grid"><i class="fas fa-th"></i> Cuadrícula</button>
-            <button class="view-toggle-btn" data-view="list"><i class="fas fa-list"></i> Lista</button>
-        </div>
-
-        <div class="channels-layout-container">
-            <div class="section-buttons" id="section-buttons"></div>
-            <div id="channels-container"></div>
-        </div>
-        <div class="no-results" id="no-results">
-             </div>
-    </div>
-    <div class="floating-button" id="back-to-player"><i class="fas fa-arrow-up"></i></div>
-    <button class="sports-info-btn" id="sports-info-btn"><i class="fas fa-info"></i></button>
-    <button id="install-button" class="install-button"><i class="fas fa-download"></i> Instalar App</button>
-    <div id="offline-message" class="offline-message">
-        <div class="offline-content">
-            <i class="fas fa-wifi"></i>
-            <p>Estás sin conexión. Algunas funciones pueden no estar disponibles.</p>
-        </div>
-    </div>
-
-    <nav class="bottom-nav">
-        <a href="home.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
-        <a href="agenda.html" class="nav-item"><i class="fas fa-calendar-alt"></i> Agenda</a>
-        <a href="television.html" class="nav-item"><i class="fas fa-tv"></i> TV</a>
-        <a href="Tvenvivo.html" class="nav-item active"><i class="fas fa-broadcast-tower"></i> TV En Vivo</a>
-    </nav>
-
-    <div class="modal-overlay" id="continue-modal">
-        <div class="modal-content">
-            <h3 class="modal-title">Continuar reproducción</h3>
-            <p>¿Deseas continuar viendo <span id="last-channel-name"></span> desde donde lo dejaste?</p>
-            <div class="modal-buttons">
-                <button class="modal-button primary" id="continue-yes">Sí, continuar</button>
-                <button class="modal-button secondary" id="continue-no">No, empezar de nuevo</button>
+            <video id="video" controls style="display: none;"></video>
+            <div class="error-message" id="error-message">Error al cargar el canal. Intenta nuevamente.</div>
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Cargando canal...</p>
             </div>
         </div>
     </div>
-    <div class="modal-overlay" id="share-modal">
-        <div class="modal-content">
-            <h3 class="modal-title">Compartir Canal</h3>
-            <p>Comparte este canal con otros</p>
-            <div class="share-options">
-                <input type="text" id="share-url" readonly>
-                <button class="control-button" id="copy-share-url"><i class="fas fa-copy"></i> Copiar Enlace</button>
-                <div class="social-share-buttons">
-                    <button class="social-share-btn whatsapp" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
-                    <button class="social-share-btn facebook" data-platform="facebook"><i class="fab fa-facebook"></i></button>
-                    <button class="social-share-btn twitter" data-platform="twitter"><i class="fab fa-twitter"></i></button>
-                    <button class="social-share-btn telegram" data-platform="telegram"><i class="fab fa-telegram"></i></button>
-                </div>
-            </div>
-            <button class="modal-button secondary" id="close-share-modal">Cerrar</button>
-        </div>
-    </div>
-    <div class="modal-overlay" id="playlist-modal">
-        <div class="modal-content">
-            <h3 class="modal-title">Mis Listas de Reproducción</h3>
-            <div class="playlist-container">
-                <div class="create-playlist">
-                    <input type="text" id="new-playlist-name" placeholder="Nombre de la lista">
-                    <button class="control-button" id="create-playlist-btn"><i class="fas fa-plus"></i> Crear</button>
-                </div>
-                <div class="playlist-list" id="playlist-list"></div>
-            </div>
-            <button class="modal-button secondary" id="close-playlist-modal">Cerrar</button>
-        </div>
-    </div>
-    <div id="share-toast" class="share-toast"></div>
 
-    <script src="push-notifications.js"></script>
-    <script src="script.js"></script> </body>
+    <div class="control-buttons">
+        <button class="control-button" id="toggle-channels-btn"><i class="fas fa-list"></i> Mostrar Canales</button>
+        <button class="control-button compatibility" id="compatibility-mode-btn"><i class="fas fa-cog"></i> Modo Compatibilidad</button>
+    </div>
+
+    <script>
+        // ===== NUEVA CONFIGURACIÓN DE PROXIES MEJORADA =====
+        const PROXY_SERVERS = [
+            'https://corsproxy.io/?',
+            'https://api.allorigins.win/raw?url=',
+            'https://cors-anywhere.herokuapp.com/',
+            'https://proxy.cors.sh/'
+        ];
+
+        let currentProxyIndex = 0;
+        let currentHls = null;
+        let currentChannel = null;
+        let retryCount = 0;
+        const MAX_RETRIES = 3;
+        let compatibilityMode = false;
+
+        function getProxiedUrl(url) {
+            // Si la URL ya es de un proxy conocido, no aplicar otro proxy
+            if (PROXY_SERVERS.some(proxy => url.includes(proxy.replace(/[?\/]/g, '')))) {
+                return url;
+            }
+            
+            // Para streams http, siempre usar proxy
+            if (url.startsWith('http://')) {
+                return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
+            }
+            
+            // Para streams https, también usar proxy pero con opción directa como fallback
+            return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
+        }
+
+        function rotateProxy() {
+            currentProxyIndex = (currentProxyIndex + 1) % PROXY_SERVERS.length;
+            console.log(`Cambiando a proxy: ${PROXY_SERVERS[currentProxyIndex]}`);
+        }
+
+        // ===== FUNCIÓN MEJORADA PARA CAMBIAR CANAL =====
+        function changeChannel(videoUrl, channelName, channelDescription) {
+            if (!navigator.onLine) {
+                mostrarError('No hay conexión a internet. No se puede cargar el canal.');
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'flex';
+            document.getElementById('error-message').style.display = 'none';
+            
+            document.querySelector('.player-placeholder').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
+            
+            var video = document.getElementById('video');
+            
+            // Limpiar recursos anteriores
+            if (currentHls) {
+                currentHls.destroy();
+            }
+            
+            video.pause();
+            video.src = '';
+            
+            // Estrategia de reproducción mejorada
+            if (Hls.isSupported()) {
+                currentHls = new Hls({
+                    debug: false,
+                    enableWorker: true,
+                    lowLatencyMode: true,
+                    backBufferLength: 30,
+                    maxBufferLength: 30,
+                    manifestLoadingTimeOut: 10000,
+                    manifestLoadingMaxRetry: 4,
+                    manifestLoadingRetryDelay: 1000,
+                    levelLoadingTimeOut: 10000,
+                    levelLoadingMaxRetry: 4,
+                    levelLoadingRetryDelay: 1000,
+                    fragLoadingTimeOut: 20000,
+                    fragLoadingMaxRetry: 6,
+                    fragLoadingRetryDelay: 1000
+                });
+                
+                // Intentar con proxy
+                const proxiedUrl = getProxiedUrl(videoUrl);
+                console.log("Intentando con URL:", proxiedUrl);
+                
+                currentHls.loadSource(proxiedUrl);
+                currentHls.attachMedia(video);
+                
+                currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    console.log("Manifiesto analizado correctamente");
+                    document.getElementById('loading').style.display = 'none';
+                    retryCount = 0;
+                    
+                    video.play().catch(e => {
+                        console.error("Error al reproducir:", e);
+                        mostrarError('Error al reproducir: ' + e.message);
+                    });
+                });
+                
+                currentHls.on(Hls.Events.ERROR, function(event, data) {
+                    console.error("Error HLS:", data);
+                    
+                    if (data.fatal) {
+                        switch(data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                console.error('Error de red, intentando con otro proxy...');
+                                rotateProxy();
+                                setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 1000);
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                console.error('Error de medios, intentando recuperar...');
+                                currentHls.recoverMediaError();
+                                break;
+                            default:
+                                console.error('Error fatal, reiniciando...');
+                                currentHls.destroy();
+                                tryReconnect(videoUrl, channelName, channelDescription);
+                                break;
+                        }
+                    }
+                });
+                
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Para Safari y navegadores que soportan HLS nativo
+                const proxiedUrl = getProxiedUrl(videoUrl);
+                video.src = proxiedUrl;
+                
+                video.addEventListener('loadedmetadata', function() {
+                    document.getElementById('loading').style.display = 'none';
+                    retryCount = 0;
+                    
+                    video.play().catch(e => {
+                        mostrarError('Error al reproducir: ' + e.message);
+                    });
+                });
+                
+                video.addEventListener('error', function() {
+                    console.error("Error en video element");
+                    tryReconnect(videoUrl, channelName, channelDescription);
+                });
+                
+            } else {
+                mostrarError("Tu navegador no soporta la reproducción de este formato.");
+            }
+            
+            currentChannel = {
+                url: videoUrl,
+                name: channelName,
+                description: channelDescription
+            };
+        }
+
+        // ===== FUNCIÓN MEJORADA DE REINTENTO =====
+        function tryReconnect(videoUrl, channelName, channelDescription) {
+            if (retryCount < MAX_RETRIES) {
+                retryCount++;
+                mostrarError(`Error de conexión. Reintentando... (${retryCount}/${MAX_RETRIES})`);
+                
+                // Rotar proxy antes de reintentar
+                rotateProxy();
+                
+                setTimeout(() => {
+                    changeChannel(videoUrl, channelName, channelDescription);
+                }, 2000);
+            } else {
+                // Intentar método alternativo después de agotar reintentos
+                mostrarError('No se pudo conectar. Intentando método alternativo...');
+                tryAlternativeMethod(videoUrl, channelName, channelDescription);
+                retryCount = 0;
+            }
+        }
+
+        // ===== MÉTODO ALTERNATIVO PARA STREAMS BLOQUEADOS =====
+        function tryAlternativeMethod(videoUrl, channelName, channelDescription) {
+            console.log("Probando método alternativo para:", videoUrl);
+            
+            const video = document.getElementById('video');
+            
+            // Si estamos en modo compatibilidad, intentar sin proxy
+            if (compatibilityMode) {
+                console.log("Intentando sin proxy en modo compatibilidad");
+                video.src = videoUrl;
+                
+                video.addEventListener('loadedmetadata', function() {
+                    document.getElementById('loading').style.display = 'none';
+                    video.play().catch(e => {
+                        mostrarError('Error final: ' + e.message);
+                    });
+                });
+                
+                video.addEventListener('error', function() {
+                    mostrarError('No se pudo conectar al canal después de varios intentos.');
+                });
+            } else {
+                // Si no es un stream reconocido, mostrar error final
+                mostrarError('No se pudo conectar al canal después de varios intentos. Activa el modo compatibilidad e intenta nuevamente.');
+            }
+        }
+
+        function mostrarError(mensaje) {
+            const errorDiv = document.getElementById('error-message');
+            if (errorDiv) {
+                errorDiv.textContent = mensaje;
+                errorDiv.style.display = 'flex';
+            }
+        }
+
+        // Simular cambio de canal para demostración
+        document.getElementById('toggle-channels-btn').addEventListener('click', function() {
+            // Simulamos un canal de prueba
+            changeChannel(
+                'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
+                'Canal de Prueba',
+                'Deportes'
+            );
+        });
+
+        // Modo compatibilidad
+        document.getElementById('compatibility-mode-btn').addEventListener('click', function() {
+            compatibilityMode = !compatibilityMode;
+            this.innerHTML = compatibilityMode ? 
+                '<i class="fas fa-cog"></i> Modo Normal' : 
+                '<i class="fas fa-cog"></i> Modo Compatibilidad';
+                
+            this.style.background = compatibilityMode ? 
+                'linear-gradient(90deg, #22c55e, #16a34a)' : 
+                'linear-gradient(90deg, #f59e0b, #d97706)';
+                
+            alert(compatibilityMode ? 
+                'Modo compatibilidad activado. Se intentará conectar sin proxy.' : 
+                'Modo compatibilidad desactivado. Se usará proxy nuevamente.');
+        });
+    </script>
+</body>
 </html>
