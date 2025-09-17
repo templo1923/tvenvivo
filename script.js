@@ -16,11 +16,277 @@ const MAX_RETRIES = 3;
 let streamCache = JSON.parse(localStorage.getItem('streamCache')) || {};
 let currentView = localStorage.getItem('viewPreference') || 'grid';
 
-// --- NUEVA FUNCIÓN DE PROXY DE VERCEL ---
-// Usa el proxy que creaste en el archivo vercel.json.
+
+// ===== NUEVA CONFIGURACIÓN DE PROXIES MEJORADA =====
+const PROXY_SERVERS = [
+    'https://corsproxy.io/?',
+    'https://api.allorigins.win/raw?url=',
+    'https://cors-anywhere.herokuapp.com/',
+    'https://proxy.cors.sh/'
+];
+
+let currentProxyIndex = 0;
+
 function getProxiedUrl(url) {
-    return `/proxy/${url}`;
+    // Si la URL ya es de un proxy conocido, no aplicar otro proxy
+    if (PROXY_SERVERS.some(proxy => url.includes(proxy.replace(/[?\/]/g, '')))) {
+        return url;
+    }
+    
+    // Para streams http, siempre usar proxy
+    if (url.startsWith('http://')) {
+        return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
+    }
+    
+    // Para streams https, también usar proxy pero con opción directa como fallback
+    return PROXY_SERVERS[currentProxyIndex] + encodeURIComponent(url);
 }
+
+function rotateProxy() {
+    currentProxyIndex = (currentProxyIndex + 1) % PROXY_SERVERS.length;
+    console.log(`Cambiando a proxy: ${PROXY_SERVERS[currentProxyIndex]}`);
+}
+
+// ===== FUNCIÓN MEJORADA PARA CAMBIAR CANAL =====
+function changeChannel(videoUrl, channelName, channelDescription) {
+    if (!navigator.onLine) {
+        mostrarError('No hay conexión a internet. No se puede cargar el canal.');
+        return;
+    }
+    
+    document.getElementById('loading').style.display = 'flex';
+    document.getElementById('error-message').style.display = 'none';
+    
+    document.querySelector('.player-placeholder').style.display = 'none';
+    document.getElementById('video').style.display = 'block';
+    
+    // Actualizar información del canal
+    document.querySelector('.channel-details').innerHTML = `
+        <p><i class="fas fa-info-circle"></i> ${channelName}</p>
+        <p><i class="fas fa-film"></i> Calidad: HD</p>
+        <p><i class="fas fa-clock"></i> Estado: Conectando...</p>
+        <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
+    `;
+    
+    document.getElementById('live-indicator-small').style.display = 'inline-flex';
+    
+    // Resaltar canal seleccionado
+    document.querySelectorAll('.channel-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    const items = document.querySelectorAll('.channel-item');
+    for (let item of items) {
+        if (item.querySelector('.channel-name').textContent === channelName) {
+            item.classList.add('active');
+            break;
+        }
+    }
+    
+    var video = document.getElementById('video');
+    
+    // Limpiar recursos anteriores
+    if (currentHls) {
+        currentHls.destroy();
+    }
+    
+    if (playbackPositionInterval) {
+        clearInterval(playbackPositionInterval);
+    }
+    
+    video.pause();
+    video.src = '';
+    
+    // Estrategia de reproducción mejorada
+    if (Hls.isSupported()) {
+        currentHls = new Hls({
+            debug: false,
+            enableWorker: true,
+            lowLatencyMode: true,
+            backBufferLength: 30,
+            maxBufferLength: 30,
+            manifestLoadingTimeOut: 10000,
+            manifestLoadingMaxRetry: 4,
+            manifestLoadingRetryDelay: 1000,
+            levelLoadingTimeOut: 10000,
+            levelLoadingMaxRetry: 4,
+            levelLoadingRetryDelay: 1000,
+            fragLoadingTimeOut: 20000,
+            fragLoadingMaxRetry: 6,
+            fragLoadingRetryDelay: 1000
+        });
+        
+        // Intentar con proxy
+        const proxiedUrl = getProxiedUrl(videoUrl);
+        console.log("Intentando con URL:", proxiedUrl);
+        
+        currentHls.loadSource(proxiedUrl);
+        currentHls.attachMedia(video);
+        
+        currentHls.on(Hls.Events.MANIFEST_PARSED, function() {
+            console.log("Manifiesto analizado correctamente");
+            addToStreamCache(videoUrl, videoUrl);
+            document.getElementById('loading').style.display = 'none';
+            retryCount = 0;
+            
+            // Actualizar estado
+            document.querySelector('.channel-details').innerHTML = `
+                <p><i class="fas fa-info-circle"></i> ${channelName}</p>
+                <p><i class="fas fa-film"></i> Calidad: HD</p>
+                <p><i class="fas fa-clock"></i> Estado: Transmitiendo</p>
+                <p><i class="fas fa-align-left"></i> ${channelDescription}</p>
+            `;
+            
+            video.play().catch(e => {
+                console.error("Error al reproducir:", e);
+                mostrarError('Error al reproducir: ' + e.message);
+            });
+            
+            playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
+        });
+        
+        currentHls.on(Hls.Events.ERROR, function(event, data) {
+            console.error("Error HLS:", data);
+            
+            if (data.fatal) {
+                switch(data.type) {
+                    case Hls.ErrorTypes.NETWORK_ERROR:
+                        console.error('Error de red, intentando con otro proxy...');
+                        rotateProxy();
+                        setTimeout(() => changeChannel(videoUrl, channelName, channelDescription), 1000);
+                        break;
+                    case Hls.ErrorTypes.MEDIA_ERROR:
+                        console.error('Error de medios, intentando recuperar...');
+                        currentHls.recoverMediaError();
+                        break;
+                    default:
+                        console.error('Error fatal, reiniciando...');
+                        currentHls.destroy();
+                        tryReconnect(videoUrl, channelName, channelDescription);
+                        break;
+                }
+            }
+        });
+        
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        // Para Safari y navegadores que soportan HLS nativo
+        const proxiedUrl = getProxiedUrl(videoUrl);
+        video.src = proxiedUrl;
+        
+        video.addEventListener('loadedmetadata', function() {
+            addToStreamCache(videoUrl, videoUrl);
+            document.getElementById('loading').style.display = 'none';
+            retryCount = 0;
+            
+            video.play().catch(e => {
+                mostrarError('Error al reproducir: ' + e.message);
+            });
+            
+            playbackPositionInterval = setInterval(savePlaybackPosition, 5000);
+        });
+        
+        video.addEventListener('error', function() {
+            console.error("Error en video element");
+            tryReconnect(videoUrl, channelName, channelDescription);
+        });
+        
+    } else {
+        mostrarError("Tu navegador no soporta la reproducción de este formato.");
+    }
+    
+    currentChannel = {
+        url: videoUrl,
+        name: channelName,
+        description: channelDescription
+    };
+}
+
+// ===== FUNCIÓN MEJORADA DE REINTENTO =====
+function tryReconnect(videoUrl, channelName, channelDescription) {
+    if (retryCount < MAX_RETRIES) {
+        retryCount++;
+        mostrarError(`Error de conexión. Reintentando... (${retryCount}/${MAX_RETRIES})`);
+        
+        // Rotar proxy antes de reintentar
+        rotateProxy();
+        
+        setTimeout(() => {
+            changeChannel(videoUrl, channelName, channelDescription);
+        }, 2000);
+    } else {
+        // Intentar método alternativo después de agotar reintentos
+        mostrarError('No se pudo conectar. Intentando método alternativo...');
+        tryAlternativeMethod(videoUrl, channelName, channelDescription);
+        retryCount = 0;
+    }
+}
+
+// ===== MÉTODO ALTERNATIVO PARA STREAMS BLOQUEADOS =====
+function tryAlternativeMethod(videoUrl, channelName, channelDescription) {
+    console.log("Probando método alternativo para:", videoUrl);
+    
+    const video = document.getElementById('video');
+    
+    // Intentar con iframe como último recurso (para algunos streams)
+    if (videoUrl.includes('m3u8') || videoUrl.includes('stream')) {
+        // Crear iframe temporal para bypass CORS
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = videoUrl;
+        document.body.appendChild(iframe);
+        
+        setTimeout(() => {
+            document.body.removeChild(iframe);
+            
+            // Intentar de nuevo con el proxy actual
+            changeChannel(videoUrl, channelName, channelDescription);
+        }, 3000);
+    } else {
+        // Si no es un stream reconocido, mostrar error final
+        mostrarError('No se pudo conectar al canal después de varios intentos. Intenta recargar la página o selecciona otro canal.');
+    }
+}
+
+// ===== INICIALIZACIÓN MEJORADA =====
+document.addEventListener('DOMContentLoaded', function() {
+    cargarCanales();
+    document.getElementById('toggle-channels-btn').addEventListener('click', toggleChannels);
+    
+    // Inicializaciones clave
+    disableSeekAndPauseControls();
+    preventVideoPause();
+    setupDoubleClickFullscreen();
+    
+    setupFloatingButton();
+    setupHeaderSearch();
+    setupTheme();
+    setupViewToggle();
+    setupSportsInfoButton();
+    window.addEventListener('resize', adjustCategoryScroll);
+    
+    // Demás inicializaciones
+    setupTouchGestures();
+    setupBackgroundPlayback();
+    setupShareFunctionality();
+    setupPlaylistFunctionality();
+    loadChannelFromURL();
+    
+    // Inicializar funcionalidades PWA
+    initPWA();
+    
+    // Precargar el primer proxy para mejor performance
+    preloadProxies();
+});
+
+// ===== PRECARGAR PROXIES PARA MEJOR PERFORMANCE =====
+function preloadProxies() {
+    // Precargar el primer proxy para reducir latencia
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'preconnect';
+    preloadLink.href = new URL(PROXY_SERVERS[0]).origin;
+    document.head.appendChild(preloadLink);
+}
+
 
 // --- RESTO DE TUS FUNCIONES (SIN CAMBIOS) ---
 
@@ -599,3 +865,4 @@ document.addEventListener('DOMContentLoaded', function() {
     loadChannelFromURL();
     initPWA();
 });
+
