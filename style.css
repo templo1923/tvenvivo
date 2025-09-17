@@ -38,7 +38,7 @@
         /* Header */
         header {
             background: var(--header-bg);
-            padding: 15px 20px;
+            padding: 5px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -222,10 +222,10 @@
             background: #2a2a2a;
             border: none;
             border-radius: 50%;
-            width: 45px;
-            height: 45px;
+            width: 30px;
+            height: 30px;
             color: #ffffff;
-            font-size: 18px;
+            font-size: 10px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -256,10 +256,10 @@
             background: #2a2a2a;
             border: none;
             border-radius: 50%;
-            width: 45px;
-            height: 45px;
+            width: 30px;
+            height: 30px;
             color: #ffffff;
-            font-size: 20px;
+            font-size: 10px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -346,7 +346,7 @@
             }
             
             .header-title h1 {
-                font-size: 22px;
+                font-size: 15px;
             }
 
             .soccer-ball {
@@ -354,15 +354,15 @@
             }
 
             .back-button {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
             }
 
             .search-toggle {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
+                width: 30px;
+                height: 30px;
+                font-size: 10px;
             }
 
             .header-search-form {
@@ -370,9 +370,9 @@
             }
 
             .voice-search-btn, .theme-toggle {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
+                width: 30px;
+                height: 30px;
+                font-size: 10px;
                 margin-left: 5px;
             }
         }
@@ -542,11 +542,11 @@
         .section-buttons {
             display: flex;
             overflow-x: auto;
-            gap: 10px;
+            gap: 1px;
             margin: 20px 0;
-            padding-bottom: 10px;
+            padding-bottom: 1px;
             scrollbar-width: thin;
-            scrollbar-color: #019b13 #012c72;
+            scrollbar-color: #1b263b #4b6aa4;
             justify-content: flex-start;
             scroll-behavior: smooth;
         }
@@ -562,12 +562,12 @@
 
         .section-buttons::-webkit-scrollbar-thumb {
             background-color: #052bb6;
-            border-radius: 10px;
+            border-radius: 1px;
         }
 
         .section-button {
-            background: linear-gradient(90deg, #60a5fa, #010393);
-            padding: 10px 20px;
+            background: linear-gradient(90deg, #1b2931, #114b92);
+            padding: 8px 20px;
             border-radius: 10px;
             cursor: pointer;
             font-size: 0.9rem;
@@ -584,7 +584,7 @@
         }
 
         .section-button:hover {
-            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            background: linear-gradient(90deg, #00ef3c, #006c05);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
@@ -616,13 +616,13 @@
 
         .channel-list h2 {
             color: #60a5fa;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
             border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         .channel-grid {
@@ -649,9 +649,9 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            background-color: #2d3748;
+            background-color: #e7e8eb;
             border-radius: 12px;
-            padding: 5px;
+            padding: 1px;
             position: relative;
         }
 
@@ -699,8 +699,8 @@
             top: -5px;
             right: -5px;
             background: rgba(0, 0, 0, 0.7);
-            width: 20px;
-            height: 20px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1431,7 +1431,7 @@
     .channels-layout-container .section-buttons::-webkit-scrollbar-thumb,
     .channels-layout-container #channels-container::-webkit-scrollbar-thumb {
         background-color: #052bb6;
-        border-radius: 10px;
+        border-radius: 1px;
     }
     /* ===================================================== */
 /* === AJUSTES PARA VISTA DE LISTA EN PANTALLAS PEQUEÑAS === */
@@ -1462,8 +1462,8 @@
 
 /* Hacemos la imagen del canal AÚN más pequeña para ganar espacio valioso */
 .channels-layout-container .channel-list.list-view .channel-item .image-container {
-    width: 50px;        /* Cambiado de 45px a 40px */
-    height: 50px;       /* Cambiado de 45px a 40px */
+    width: 40px;        /* Cambiado de 45px a 40px */
+    height: 40px;       /* Cambiado de 45px a 40px */
     margin-right: 3px;  /* Cambiado de 10px a 8px */
     flex-shrink: 0;
 }
