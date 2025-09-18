@@ -1,224 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quezalmaik IPTV</title>
 
-    <body ondragstart="return false;">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Meta PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Seguridad básica -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com;" />
+</head>
+<body>
+
+  <!-- Contenedor principal -->
+  <div id="app">
     <header>
-        <div class="header-content">
-            <div class="header-title">
-                <span class="soccer-ball">⚽</span>
-                <h1>Maik Sport</h1>
-            </div>
-            
-            <div class="header-search">
-                <button class="search-toggle" id="search-toggle">
-                    <i class="fas fa-search"></i>
-                </button>
-                
-                <div class="header-search-form" id="header-search-form">
-                    <input type="text" class="header-search-input" id="header-search-input" placeholder="Buscar canal..." autocomplete="off">
-                    <button class="header-search-close" id="header-search-close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <div class="search-suggestions" id="search-suggestions"></div>
-                </div>
-                
-                <!-- BOTÓN DE FAVORITOS (REEMPLAZA AL DE MICRÓFONO) -->
-                <button class="favorites-toggle" id="favorites-toggle">
-                    <i class="fas fa-heart"></i>
-                </button>
-                
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <a href="television.html" class="back-button"><i class="fas fa-arrow-left"></i></a>
-            </div>
-        </div>
+      <h1>Quezalmaik IPTV</h1>
+      <button id="modoOscuroToggle"><i class="fas fa-moon"></i></button>
     </header>
 
-    <div class="container">
-        <div class="player-container" id="player-container">
-            <div id="video-player">
-                <div class="player-placeholder">
-                    <i class="fas fa-play-circle"></i>
-                    <h3>Selecciona un canal para comenzar</h3>
-                    <p>El contenido aparecerá aquí</p>
-                </div>
-                <video id="video" controls style="display: none;"></video>
-                
-                <div class="error-message" id="error-message">
-                    Error al cargar el canal. Intenta nuevamente.
-                </div>
-                <div class="loading" id="loading">
-                    <div class="loading-spinner"></div>
-                    <p>Cargando canal...</p>
-                </div>
-            </div>
-            
-            <div class="channel-info">
-                <h3>
-                    Información del Canal
-                    <span class="live-indicator-small" id="live-indicator-small" style="display: none;">
-                        <i class="fas fa-circle"></i> EN VIVO
-                    </span>
-                </h3>
-                <div class="channel-details">
-                    <p><i class="fas fa-info-circle"></i> Selecciona un canal para ver su información</p>
-                    <p><i class="fas fa-film"></i> Calidad: -</p>
-                    <p><i class="fas fa-clock"></i> Estado: -</p>
-                </div>
-            </div>
-        </div>
+    <!-- Buscador -->
+    <input type="text" id="buscador" placeholder="Buscar canal..." />
 
-        <div class="control-buttons">
-            <button class="control-button" id="toggle-channels-btn">
-                <i class="fas fa-list"></i> Mostrar Canales
-            </button>
-            <!-- ELIMINADO: Botón de favoritos que estaba aquí -->
-            <button class="control-button share-button" id="share-channel-btn">
-                <i class="fas fa-share-alt"></i> Compartir Canal
-            </button>
-            <button class="control-button playlist-button" id="manage-playlists-btn">
-                <i class="fas fa-list-ol"></i> Listas de Reproducción
-            </button>
-        </div>
+    <!-- Lista de canales -->
+    <div id="canalesContainer"></div>
 
-        <!-- Panel de notificaciones -->
-        <div id="notifications-panel" class="notifications-panel" style="display: none;">
-            <h3>Notificaciones</h3>
-            <p>Recibe alertas sobre tus canales favoritos</p>
-            <button id="push-subscribe" class="control-button">
-                <i class="fas fa-bell"></i> Activar Notificaciones
-            </button>
-            <button id="push-unsubscribe" class="control-button" style="display: none;">
-                <i class="fas fa-bell-slash"></i> Desactivar Notificaciones
-            </button>
-        </div>
-
-        <div class="view-toggle" id="view-toggle">
-            <button class="view-toggle-btn active" data-view="grid">
-                <i class="fas fa-th"></i> Cuadrícula
-            </button>
-            <button class="view-toggle-btn" data-view="list">
-                <i class="fas fa-list"></i> Lista
-            </button>
-        </div>
-
-        <!-- Contenedor para el layout de dos columnas en móvil -->
-        <div class="channels-layout-container" id="channels-layout-container">
-            <div class="section-buttons" id="section-buttons">
-                <!-- Los botones de categorías se generarán aquí dinámicamente -->
-            </div>
-
-            <div id="channels-container">
-                <!-- Las listas de canales se generarán aquí dinámicamente -->
-            </div>
-        </div>
-
-        <div class="no-results" id="no-results">
-            <i class="fas fa-search"></i>
-            <h3>No se encontraron resultados</h3>
-            <p>Intenta con otros términos de búsqueda</p>
-        </div>
+    <!-- Reproductor -->
+    <div id="playerContainer">
+      <video id="video" controls autoplay></video>
+      <div id="loading">Cargando canal...</div>
+      <div class="channel-details"></div>
     </div>
 
-    <div class="floating-button" id="back-to-player">
-        <i class="fas fa-arrow-up"></i>
+    <!-- Botones flotantes -->
+    <div id="botonesFlotantes">
+      <button id="favoritosBtn"><i class="fas fa-star"></i></button>
+      <button id="instalarBtn"><i class="fas fa-download"></i></button>
     </div>
+  </div>
 
-    <button class="sports-info-btn" id="sports-info-btn">
-        <i class="fas fa-info"></i>
-    </button>
-
-    <!-- Botón de instalación de PWA -->
-    <button id="install-button" class="install-button">
-        <i class="fas fa-download"></i> Instalar App
-    </button>
-
-    <!-- Mensaje de offline -->
-    <div id="offline-message" class="offline-message">
-        <div class="offline-content">
-            <i class="fas fa-wifi"></i>
-            <p>Estás sin conexión. Algunas funciones pueden no estar disponibles.</p>
-        </div>
-    </div>
-
-    <nav class="bottom-nav">
-        <a href="home.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
-        <a href="agenda.html" class="nav-item"><i class="fas fa-calendar-alt"></i> Agenda</a>
-        <a href="television.html" class="nav-item"><i class="fas fa-tv"></i> TV</a>
-        <a href="Tvenvivo.html" class="nav-item active"><i class="fas fa-broadcast-tower"></i> TV En Vivo</a>
-    </nav>
-
-    <!-- Modal para continuar reproducción -->
-    <div class="modal-overlay" id="continue-modal">
-        <div class="modal-content">
-            <h3 class="modal-title">Continuar reproducción</h3>
-            <p>¿Deseas continuar viendo <span id="last-channel-name"></span> desde donde lo dejaste?</p>
-            <div class="modal-buttons">
-                <button class="modal-button primary" id="continue-yes">Sí, continuar</button>
-                <button class="modal-button secondary" id="continue-no">No, empezar de nuevo</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para compartir -->
-    <div class="modal-overlay" id="share-modal">
-        <div class="modal-content">
-            <h3 class="modal-title">Compartir Canal</h3>
-            <p>Comparte este canal con otros</p>
-            <div class="share-options">
-                <input type="text" id="share-url" readonly>
-                <button class="control-button" id="copy-share-url">
-                    <i class="fas fa-copy"></i> Copiar Enlace
-                </button>
-                <div class="social-share-buttons">
-                    <button class="social-share-btn whatsapp" data-platform="whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </button>
-                    <button class="social-share-btn facebook" data-platform="facebook">
-                        <i class="fab fa-facebook"></i>
-                    </button>
-                    <button class="social-share-btn twitter" data-platform="twitter">
-                        <i class="fab fa-twitter"></i>
-                    </button>
-                    <button class="social-share-btn telegram" data-platform="telegram">
-                        <i class="fab fa-telegram"></i>
-                    </button>
-                </div>
-            </div>
-            <button class="modal-button secondary" id="close-share-modal">Cerrar</button>
-        </div>
-    </div>
-
-    <!-- Modal para listas de reproducción -->
-    <div class="modal-overlay" id="playlist-modal">
-        <div class="modal-content">
-            <h3 class="modal-title">Mis Listas de Reproducción</h3>
-            <div class="playlist-container">
-                <div class="create-playlist">
-                    <input type="text" id="new-playlist-name" placeholder="Nombre de la lista">
-                    <button class="control-button" id="create-playlist-btn">
-                        <i class="fas fa-plus"></i> Crear
-                    </button>
-                </div>
-                <div class="playlist-list" id="playlist-list">
-                    <!-- Las listas se generarán aquí dinámicamente -->
-                </div>
-            </div>
-            <button class="modal-button secondary" id="close-playlist-modal">Cerrar</button>
-        </div>
-    </div>
-
-    <!-- Toast para notificaciones -->
-    <div id="share-toast" class="share-toast"></div>
-
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="js/main.js"></script>
 </body>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
-    
 </html>
-
-
-
