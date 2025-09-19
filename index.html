@@ -10,13 +10,9 @@
     <!-- Web App Manifest -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#1e3a8a">
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css/style.css" />
-   <!-- Seguridad básica -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com;" />
+    <link rel="stylesheet" href="css/style.css" />
+    
 </head>
-<body>
- <!-- No borres nada, solo asegúrate de que los <script> y <style> estén afuera -->
 <body ondragstart="return false;">
     <header>
         <div class="header-content">
@@ -228,15 +224,8 @@
 
     <!-- Toast para notificaciones -->
     <div id="share-toast" class="share-toast"></div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script src="js/main.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
-
-
-
-
-
