@@ -1,1 +1,3 @@
-console.log('player.js cargado correctamente');
+window.iniciarReproductor = function iniciarReproductor({ url, nombre, categoria, logo }) {
+  // Aquí va toda la lógica del nuevo reproductor
+};
