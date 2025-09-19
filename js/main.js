@@ -419,7 +419,13 @@
             
             const streamUrl = canal.url || canal.link || '';
             item.onclick = () => {
-                cambiarCanal(streamUrl, canal.nombre, categoria, logoSrc);
+                window.iniciarReproductor({
+  url: streamUrl,
+  nombre: canal.nombre,
+  categoria: categoria,
+  logo: logoSrc
+});
+
                 toggleChannels();
                 
                 setTimeout(() => {
@@ -1032,7 +1038,13 @@
                             
                             const streamUrl = canal.url || canal.link || '';
                             item.onclick = () => {
-                                cambiarCanal(streamUrl, canal.nombre, categoria, logoSrc);
+                               window.iniciarReproductor({
+  url: streamUrl,
+  nombre: canal.nombre,
+  categoria: categoria,
+  logo: logoSrc
+});
+
                                 toggleChannels();
                                 
                                 setTimeout(() => {
@@ -1518,5 +1530,6 @@
         // Configurar el nuevo botón de favoritos
         setupFavoritesToggle();
     });
+
 
 
