@@ -35,10 +35,10 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
+/* ========== HEADER CORREGIDO ========== */
 header {
     background: var(--header-bg);
-    padding: 5px 20px;
+    padding: 5px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -52,12 +52,14 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+    padding: 0 20px;
 }
 
 .header-title {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-shrink: 0;
 }
 
 .header-title h1 {
@@ -67,6 +69,7 @@ header {
     letter-spacing: 1.2px;
     text-transform: uppercase;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
 }
 
 .soccer-ball {
@@ -92,36 +95,18 @@ header {
     50% { filter: drop-shadow(0 3px 12px rgba(96, 165, 250, 0.9)); }
 }
 
-.back-button {
-    background: #2a2a2a;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    color: #ffffff;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-    transition: background 0.3s, transform 0.2s;
-    text-decoration: none;
-}
-
-.back-button:hover {
-    background: #60a5fa;
-    transform: scale(1.1);
-}
-
-/* Barra de búsqueda en el header */
+/* Botones del header */
 .header-search {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: nowrap;
 }
 
-.search-toggle {
+.search-toggle,
+.favorites-toggle,
+.theme-toggle,
+.back-button {
     background: #2a2a2a;
     border: none;
     border-radius: 50%;
@@ -135,13 +120,45 @@ header {
     justify-content: center;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
     transition: all 0.3s;
+    flex-shrink: 0;
 }
 
-.search-toggle:hover {
+.search-toggle:hover,
+.theme-toggle:hover,
+.back-button:hover {
     background: #60a5fa;
     transform: scale(1.1);
 }
 
+.back-button {
+    text-decoration: none;
+}
+
+/* Botón de favoritos específico */
+.favorites-toggle {
+    color: #ff1500;
+}
+
+.favorites-toggle:hover {
+    background: #ff1500;
+    color: white;
+    transform: scale(1.1);
+}
+
+.favorites-toggle.active {
+    background: #ff1500;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 21, 0, 0.5);
+    animation: pulse-heart 1.5s infinite;
+}
+
+@keyframes pulse-heart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Formulario de búsqueda */
 .header-search-form {
     display: none;
     position: relative;
@@ -187,7 +204,6 @@ header {
     font-size: 16px;
 }
 
-/* Search suggestions */
 .search-suggestions {
     position: absolute;
     top: 100%;
@@ -217,63 +233,68 @@ header {
     background: rgba(96, 165, 250, 0.2);
 }
 
-/* Voice search button */
-.voice-search-btn {
-    background: #2a2a2a;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    color: #ffffff;
-    font-size: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s;
-    margin-left: 10px;
+/* ========== RESPONSIVE HEADER ========== */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 15px;
+        gap: 10px;
+    }
+    
+    .header-title h1 {
+        font-size: 18px;
+    }
+    
+    .soccer-ball {
+        font-size: 24px;
+    }
+    
+    .header-search {
+        gap: 8px;
+    }
+    
+    .search-toggle,
+    .favorites-toggle,
+    .theme-toggle,
+    .back-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .header-search-form {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        z-index: 1001;
+        background: rgba(30, 41, 59, 0.95);
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    .header-search-input {
+        font-size: 16px;
+    }
 }
 
-.voice-search-btn:hover {
-    background: #60a5fa;
-    transform: scale(1.1);
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-title h1 {
+        font-size: 22px;
+    }
+    
+    .header-search-form {
+        width: 200px;
+    }
 }
 
-.voice-search-btn.listening {
-    background: #ef4444;
-    animation: pulse 1.5s infinite;
+@media (min-width: 1200px) {
+    .header-content {
+        padding: 0;
+    }
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-/* Theme toggle */
-.theme-toggle {
-    background: #2a2a2a;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    color: #ffffff;
-    font-size: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s;
-    margin-left: 10px;
-}
-
-.theme-toggle:hover {
-    background: #60a5fa;
-    transform: scale(1.1);
-}
-
+/* ========== ESTILOS EXISTENTES (TODO EL RESTO) ========== */
 /* Bottom Navigation */
 .bottom-nav {
     position: fixed;
@@ -343,37 +364,6 @@ header {
 
     .bottom-nav a i {
         font-size: 16px;
-    }
-    
-    .header-title h1 {
-        font-size: 15px;
-    }
-
-    .soccer-ball {
-        font-size: 28px;
-    }
-
-    .back-button {
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
-    }
-
-    .search-toggle {
-        width: 30px;
-        height: 30px;
-        font-size: 10px;
-    }
-
-    .header-search-form {
-        width: 200px;
-    }
-
-    .voice-search-btn, .theme-toggle {
-        width: 30px;
-        height: 30px;
-        font-size: 10px;
-        margin-left: 5px;
     }
 }
 
@@ -530,12 +520,20 @@ header {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-.control-button.favorites {
-    background: linear-gradient(90deg, #f50f0b, #0622d9);
+.control-button.share-button {
+    background: linear-gradient(90deg, #10b981, #059669);
 }
 
-.control-button.favorites:hover {
-    background: linear-gradient(90deg, #ee0e02, #07ff56);
+.control-button.share-button:hover {
+    background: linear-gradient(90deg, #059669, #047857);
+}
+
+.control-button.playlist-button {
+    background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+}
+
+.control-button.playlist-button:hover {
+    background: linear-gradient(90deg, #7c3aed, #6d28d9);
 }
 
 /* Botones de sección */
@@ -758,16 +756,6 @@ header {
     margin: 0 auto 15px;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .error-message {
     position: absolute;
     top: 0;
@@ -896,19 +884,6 @@ footer {
         flex: 0 0 5px;
     }
 
-    /* Ajustes para la búsqueda en header en móvil */
-    .header-search-form {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        z-index: 1001;
-        background: rgba(30, 41, 59, 0.95);
-        padding: 10px;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    }
-    
     /* Ajustes para la información del canal en móvil */
     .channel-info {
         padding: 15px;
@@ -1201,14 +1176,6 @@ body.pwa-installed header {
 }
 
 /* Estilos para compartir */
-.share-button {
-    background: linear-gradient(90deg, #10b981, #059669);
-}
-
-.share-button:hover {
-    background: linear-gradient(90deg, #059669, #047857);
-}
-
 .share-options {
     margin: 20px 0;
     text-align: center;
