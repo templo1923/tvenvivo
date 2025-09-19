@@ -1,53 +1,3 @@
-// js/main.js
-
-document.addEventListener('DOMContentLoaded', () => {
-  // 1) Prueba rápida con una URL real de tu JSON
-  // Reemplaza esta URL con una de tu canales_organizados.json:
-  const urlDePrueba = 'https://ejemplo.com/stream/playlist.m3u8';
-
-  // 2) Si quieres, primero carga tu JSON y luego el primer canal:
-  // cargarPrimerCanalDesdeJson();
-
-  // Prueba directa:
-  if (window.iniciarReproductor) {
-    window.iniciarReproductor({
-      url: urlDePrueba,
-      nombre: 'Canal de prueba',
-      categoria: 'General',
-      logo: ''
-    });
-  }
-});
-
-// Ejemplo para cargar tu JSON y reproducir el primer canal automáticamente
-async function cargarPrimerCanalDesdeJson() {
-  try {
-    const res = await fetch('canales_organizados.json', { cache: 'no-cache' });
-    const data = await res.json();
-
-    // Adapta esto a la estructura real de tu JSON
-    // Aquí supongo que es un array de canales [{ nombre, url, ... }]
-    const primerCanal = data[0];
-    if (!primerCanal || !primerCanal.url) {
-      console.warn('No hay canales válidos en el JSON.');
-      return;
-    }
-
-    window.iniciarReproductor({
-      url: primerCanal.url,
-      nombre: primerCanal.nombre || 'Canal',
-      categoria: primerCanal.categoria || '',
-      logo: primerCanal.logo || ''
-    });
-  } catch (e) {
-    console.error('Error cargando canales:', e);
-  }
-}
-
-
-
-
-
 // Variables globales
     let currentHls = null;
     let currentChannel = null;
@@ -1568,4 +1518,5 @@ async function cargarPrimerCanalDesdeJson() {
         // Configurar el nuevo botón de favoritos
         setupFavoritesToggle();
     });
+
 
